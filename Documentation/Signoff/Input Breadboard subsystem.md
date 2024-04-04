@@ -96,6 +96,8 @@ Lastly, the diode block is the easiest to both understand and calculate. Since t
 | PLA Filament    | 1         | https://rb.gy/h0clh3      | $ 27.98  |
 |                 |           | Total:                    | $ 108.54 |
 
+## Citation:
+[1] “1926.403 - general requirements.,” Occupational Safety and Health Administration, https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 (accessed Mar. 31, 2024). 
 
 
 
