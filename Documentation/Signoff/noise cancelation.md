@@ -1,9 +1,9 @@
 # Noise Cancelation and Amplification Subsystem
 The purpose of this subsystem is to familiarize students with the application of op amps. Students can build an inverting or non-inverting amplifier circuit with the LM741 chip depending on if they want the output to cancel or amplify the original signal.
 ## Constraints
-| No. | Constraints | Origiin |
+| No. | Constraints | Origin |
 |-----|-------------|---------|
-|1.   | must have input voltage of max 5.5 V | System Constraint|
+|1.   | must have input voltage of max 5.5 V | System constraint|
 | 2. | Bias current must be lower than 0.5 mA | System constraint|
 |3. | Speakers shall output between 20 Hz and 20 kHz | Listening range for humans |
 
