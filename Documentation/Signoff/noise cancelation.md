@@ -11,7 +11,6 @@ The purpose of this subsystem is to familiarize students with the application of
 
 2.	For this kit to follow safety requirements, any circuit that the students build shall not be over 0.5 mA.
 
-
 3.	Students shall be able to hear the speakers output because it is crucial for the purpose of the subsystem. 
 
 # Buildable schematic
@@ -60,7 +59,7 @@ In the results from figure 6, the green wave represents the input signal of a 1 
 | Mini Speaker | $3.15 | 2 | $6.30 |
 | 20 kΩ resistors | $0.10 | 10 | $1.00 |
 | 40 kΩ resistors | $1.87 | 5 | $9.35 |
-Total coast for subsystem: $19.47 ( not including tax or shipping)
+Total cost for subsystem: $19.47 ( not including tax or shipping)
 
 # References 
 [1] “CMS-28528N-L152 CUI Devices | Audio Products | DigiKey.” Digikey.Com, www.digikey.com/en/products/detail/cui-devices/CMS-28528N-L152/6137734. Accessed 9 Apr. 2024. 
