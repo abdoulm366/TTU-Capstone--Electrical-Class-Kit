@@ -9,25 +9,25 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 | Precision    | The board must be able to detect differences of at least 1.5 times the values (100 ohms versus 150 ohms) for any electrical component and must be accurate to within 10 percent of the component’s true value                         | Conceptual Design
 | Weight |The board must be light enough (less than 5 pounds) so that it can be held with minimal discomfort. | Conceptual Design
 | Variety    | The circuit components provided must vary in their values enough so that the changes they make would be perceptible to the function of the project (100, 500, 1000, 10000 ohms, etc.)                         | Conceptual Design
-| Speed | The board must be able to deduce the component’s value within 2 seconds of it being changed to ensure smooth operation of the other systems.| Conceptual Design |
+| Speed | The board must be able to deduce the component’s value within 1.25 seconds of it being changed to ensure smooth operation of the other systems.| Conceptual Design |
 
 ## Schematic:
 
-![Blocks](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/3742b745-e42a-4e8e-bf62-34e6e8e66ad5)
+![Blocks](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/036b846e-c349-44a9-a0fa-7b752ba558e2)
 
 Figure 1: Blocks
 
-![Sensor](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/444aa9f5-9170-4d9a-8af3-6043f7a8efde)
+![Sensor](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/7d827dbc-f07f-4d91-a223-57d7c0215520)
+
 
 Figure 2: Sensor Circuit
 
 The schematic is divided up into two separate pieces. The first piece (Figure 1) is comprised of all the blocks the user will be able to insert into the sensor circuit (Figure 2) along with the connector values. These values were chosen so that the user would have a wide range of resistances and capacitances to choose from. The titles of each block describe what is contained inside.
-The gold pieces in both the blocks and the sensor circuit represent contacts to allow the flow of current between the blocks and the sensor circuit when they are connected. The connector blocks are used to demonstrate series and parallel connections.  The user will take two of the blocks (either resistor or capactior) and slot them into the appropiate connector block. Then, they will take the connector block and slot it into the appropiate port of the sensor circuit. 
-Once the connector block is placed in the appropriate slot (left to right = Resistor, Capacitor, and Diode), then the reference circuit built into the sensor is completed, and that voltage is picked up and transmitted to one of the Uno’s analog input pins. Once the MCU receives this data, it will make adequate adjustments to other various parts of the project depending on what value was read in.
+The gold pieces in both the blocks and the sensor circuit represent contacts to allow the flow of current between the blocks and the sensor circuit when they are connected. The component blocks are slotted into the connector block before the whole assembly is inserted into the appropriate sensor circuit. This single block allows full plug and play functionality. Based on which values are read, the MCU's will read that data and send it off to the next one. Then, the final MCU will preform the necessary adjustments to the data and send that data off to other parts of the project. While the schematic won't show it, the connector block will be built into an l-shape. The top left corner is the origin of the connections. Any connections read to the immediate right of it will be read as a series connection, and any connection below the main block (into the schematic's z axis) will be read as a parallel connection. This allows for maximum interactivity, as the user can make any arrangement they want before they insert the connector block into the circuit. It can also be noted that the housing for this subsystem will be its own seperate design, but it was necessary to show a rough approximation in order to get the point across for this subsystem's work.
 
 ## Analysis:
 
-The analysis for this subsystem is straightforward. Simple voltage division equations can be used to determine the reading of the output voltage. This equation, in its general form reads, $V\_{\\text{out}} = V\_{s}(\\frac{R\_{\\text{block}}}{{R\_{\\text{reference}} + R}\_{\\text{block}}})$. The calculated output voltage will not be necessary for the sake of the Uno, as it will read and convert this voltage to a corresponding resistance value. As shown in the artice and video [2], the circuit can detect any resistance up to 10 Mega Ohms, which is more than the max value allowed by the blocks. As a result, the analysis is already complete, as the ciruit is already proven to be able to achieve the desired result(s).
+The analysis for this subsystem is straightforward. Simple voltage division equations can be used to determine the reading of the output voltage. This equation, in its general form reads, $V\_{\\text{out}} = V\_{s}(\\frac{R\_{\\text{block}}}{{R\_{\\text{reference}} + R}\_{\\text{block}}})$. The calculated output voltage will not be necessary for the sake of the Uno, as it will read and convert this voltage to a corresponding resistance value. As shown in the artice and video [2], the circuit can detect any resistance up to 10 Mega Ohms, which is more than the max value allowed by the blocks. As a result, the analysis is already complete, as the ciruit is already proven to be able to achieve the desired result(s). Since the input voltage is so low, there is little to no risk of any overcurrent in any part of the resistor circuit.
 
 The block resistors have a lower tolerance than the reference resistors (as can be seen above). This is because the reference resistors need to be as close as possible to their listed resistance value as posible, so that the voltage divider equation can work. The circuit for resistance sensing uses a mux [3] and some C code to automatically select which value to place in series with the block resistor, so that the user can make any arrangement of resistors they want.
 
@@ -74,9 +74,9 @@ Figure 8: 5 μF circuit
 | 5                     | 100k                        | 0.5              | 58.12      |
 | 5                     | 100k                        | 5                | 580.85     |
 
-As can be seen above in the table and the pictures, the time never exceeds 1.2 seconds, so the constraint of working within 2 seconds is easily met. The times are also different enough that there’s no chance of mistaking one value for another. Another point of reference is that the time in milliseconds is equal to 1.16 times the capacitance given in microFarads. As a result, a simple line of C code will be able to determine the capacitance based on the time alone, given the same resistane and input voltage.
+As can be seen above in the table and the pictures, the time never exceeds 1.2 seconds, so the constraint of working within 2 seconds is easily met. The closest any of the values come to exceeding this value is the 10μF capacitor value, but ample time is provided for it to still be read and utilized by the subsytem.  The times are also different enough that there’s no chance of mistaking one value for another. Another point of reference is that the time in milliseconds is equal to 1.16 times the capacitance given in μF. As a result, a simple C program will be sufficient to determine the capacitance based on the time alone, given the same resistane and input voltage.
 
-Lastly, the diode block is the easiest to both understand and calculate. Since the diode is a binary-acting device, its output voltage is either high or zero. Most diodes have a 0.7 voltage drop, and since the Peak Inverse Voltage is far less than even 5 volts, all it will have to do is block current going the other way. The analog in port will then find that the voltage is zero, and appropriate adjustments can be made to affect the rest of the project.
+Lastly, the diode block is the easiest to both understand and calculate. Since the diode is a binary-acting device, its output voltage is either high or zero. Most diodes have a 0.7 voltage drop, and since the Peak Inverse Voltage is far less than even 5 volts, all it will have to do is block current going the other way. The analog in port will then find that the voltage is zero, and appropriate adjustments can be made to affect the rest of the project. 
 
 ## B.O.M.
 | Component Type: | Quantity: | Link                      | Price:   |
@@ -85,11 +85,11 @@ Lastly, the diode block is the easiest to both understand and calculate. Since t
 | Capacitors      | 1         | https://shorturl.at/cCFLT | $ 16.99  |
 | Diodes          | 1         | https://shorturl.at/fswBG | $ 9.99   |
 | Breadboard      | 3         | https://shorturl.at/xzG47 | $ 16.50  |
-| Arduino Uno     | 1         | https://shorturl.at/hnxN1 | $ 27.60  |
+| Arduino Uno     | 3         | https://shorturl.at/hnxN1 | $ 82.80  |
 | PLA Filament    | 1         | https://rb.gy/h0clh3      | $ 27.98  |
-| Max 4167    | 1         | https://shorturl.at/EQUY7    | $ 6.18 |
+| Max 4167    | 3         | https://shorturl.at/EQUY7    | $ 18.54 |
 | Resistors (1% tolerance)    | 1         | https://shorturl.at/ajrDO      | $ 9.99  |
-|                 |           | Total:                    | $ 129.22|
+|                 |           | Total:                    | $ 196.78|
 
 ## Citation:
 [1] “1926.403 - general requirements.,” Occupational Safety and Health Administration, https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 (accessed Mar. 31, 2024). 
