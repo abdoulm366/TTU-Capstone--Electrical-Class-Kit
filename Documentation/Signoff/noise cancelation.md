@@ -24,9 +24,12 @@ Noise Cancelation Schematic
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/e898a0b1-e7b7-4364-b6e1-2eb49b439ed6)
 Kicad schematic:  Figure 2
 
-Students will build an inverting operational amplifier circuit with the output playing through speaker two. 
+Students will build an inverting operational amplifier circuit with the output playing through speaker two.
 
 # Analysis
+
+ The success of the subsystem is determined by the student’s ability to hear, through the speakers, how the circuit's gain influences the output sound. Physically representing the gain of the circuit with the output sound of speaker two allows students to understand how the gain affects the circuit. In this subsystem there will be two speakers outputting a signal. With one speaker playing a 1 kHz tone, and the other speaker plays the tone after it travels through the circuit. When students build the non-inverting amplifier circuit, the output sound will amplify the original tone. When students build the inverting amplifier circuit, the output sound will cancel the original tone. Students can toggle with a push button on speaker two, so it is easy to hear the difference between the signals. The purpose of this subsystem is to familiarize students with building simple op amp circuits and understanding how the gain influences the signal. 
+
 Non-Inverting Circuit 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/194ff1d5-a952-4309-af51-a0ffe399b073)
 LT spice simulation:  Figure 3 
@@ -37,7 +40,7 @@ Results of non-inverting amplifier
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/60b31682-d95b-410d-a7ae-58c25b92d611)
 LT spice simulation:  Figure 4 
 
-Figure 4 shows the input and output results of the circuit built in figure 3. The green wave represents a 1 kHz sine wave with an amplitude of 2, and the blue wave is the output signal of the non-inverting circuit. We can clearly see a gain of two between the blue and green signal. 
+Figure 4 shows the input and output results of the circuit built in figure 3. The green wave represents a 1 kHz sine wave with an amplitude of 2, and the blue wave is the output signal of the non-inverting circuit. With a gain of two, the signal will amplify the original sound.  
 
 Inverting Circuit
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/8486bd58-3b49-4bdb-9575-2cbb0f5e6dbf)
