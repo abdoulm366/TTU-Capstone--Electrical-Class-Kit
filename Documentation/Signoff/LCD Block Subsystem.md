@@ -19,7 +19,8 @@ the TFT LCD.
 
 Main Menu:
 
-<img src="media/image1.png" style="width:4.2in;height:4.2in" alt="A menu with text on a black background Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9b32419c-6592-4c8c-b5fa-9236d051d3a5)
+
 
 This shall be the display for the main menu. It will contain 4 buttons,
 the “User manual” which leads to a set of instruction on how to use the
@@ -30,7 +31,9 @@ section in which users can play with actual output on the car.
 
 User Manual:
 
-<img src="media/image2.png" style="width:3.09in;height:3.09in" /><img src="media/image3.png" style="width:3.08989in;height:3.08989in" alt="A screenshot of a user manual Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f)
+
 
 The presentation format will be just like a slide show. All the user
 will do is click on the button “Next” for the next slide until the last
@@ -44,7 +47,9 @@ input bread board subsystem. It shall contain a list of challenges such
 as “Have you tried driving the car in reverse?”, “I am trying to park,
 check the distance sensors of the car so I don’t hit anything”, etc…
 
-<img src="media/image4.png" style="width:3.28889in;height:3.28889in" /><img src="media/image5.png" style="width:3.28889in;height:3.28889in" alt="A screenshot of a game Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/95e91f05-4e2f-479c-a554-b7d963759f7b)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0e06d4c-3769-41aa-8f76-c277b16a248e)
+
 
 Learn to Code:
 
@@ -58,14 +63,16 @@ car’s head light control which will be able to change the car’s head
 light color, the birduino game which is an incoded game for the TFT LCD
 Touch Screen, the Fan ON/OFF which will turn on and off the car’s fan.
 
-<img src="media/image6.png" style="width:3.04444in;height:3.04444in" alt="A screenshot of a video game Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0fd1e55-b5d7-4bca-be09-41c6a98e0542)
+
 
 The first example is distance measuring with ultrasonic sensors. The
 sensor's output, or distance, is printed on the screen, and will allow
 the user to pick the units, centimeters or inches, with the touch
 screen.
 
-<img src="media/image7.png" style="width:3.04444in;height:3.04444in" alt="A screenshot of a game Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9341daf4-6e7f-4299-8d2d-67c7e083972a)
+
 
 The car’s head light control shall be done controlling an RGB LED with
 three RGB sliders that will change it’s the color. For example, if we
@@ -74,18 +81,21 @@ increase the brightness as we approach the maximum setting. So the
 sliders may range from 0 to 255, and we can use their combination to set
 any color to the RGB LED.
 
-<img src="media/image8.png" style="width:3.43333in;height:3.43333in" alt="A screenshot of a video game Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d54b888-ebdf-4eae-965e-a7d0b8475299)
+
 
 The Birduino game is a copie of a mobile game called Flappy Bird. It
 shall be played using the push button or directly on the touch screen.
 
-<img src="media/image9.png" style="width:3.43651in;height:3.43651in" alt="A screenshot of a game Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/747f0542-4bd5-4fb9-9e47-66f278e23ccb)
+
 
 The fan represents the A/C unit of the car. It shall be turned on using
 by pressing on the “Turn On Fan” button and turned off by pressing the
 “turn Off Fan” button.
 
-<img src="media/image10.png" style="width:3.39683in;height:3.39683in" alt="A screenshot of a computer screen Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d75f17c-c9ea-4969-92aa-f96c67de9c3b)
+
 
 ## Constraints/Specifications:
 
@@ -109,7 +119,8 @@ shows how the ground pin, the digital pins 8-13, and pin 14 are used.
 Because the TFT Screen already uses the 5V pins, the divice will utilize
 pin 13 as VCC by setting it to high in the setup part of the code.
 
-<img src="media/image11.png" style="width:5.61194in;height:4.91863in" alt="A circuit board with wires and a screen Description automatically generated" />
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/fb07657a-feee-411d-9a1e-5a86ea94a2bc)
+
 
 ## Analysis:
 
