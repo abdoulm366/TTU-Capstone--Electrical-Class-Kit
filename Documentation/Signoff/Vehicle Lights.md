@@ -7,7 +7,7 @@ The function of this subsystem is to allow users to interact with the car Headli
 |-|-|-|
 | variable type |The Arduino mega 2560 in this subsystem shall convert a string of numbers that range from 0 - 1,000,000 into floats to store decimal values for better precision.| [2] C++ data types, https://www.w3schools.com/cpp/cpp_data_types.asp (accessed Apr. 14, 2024).  |
 |Multiplexer voltage safety |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| datasheet requirement |
-|current safety |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more or less than that to prevent overcurrent damage and to ensure safe operation.| datasheet requirement  |
+|current safety |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more than that to prevent overcurrent damage and to ensure safe operation.| datasheet requirement  |
 | Socioeconomic | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| conceptual design| 
 
 
