@@ -6,7 +6,7 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 | Description   | Constraints/Specification:   | Source |
 |  -     |  -  |  -  |
 | Safety  | The board must ensure that no voltages in excess of 50 volts are exceeded in any portion of the subsystem.                               | OSHA 1926.403(i)(2)(i)
-| Precision    | The board must be able to detect differences of at least 1.5 times the values (100 ohms versus 150 ohms) for any electrical component and must be accurate to within 10 percent of the component’s true value                         | Conceptual Design
+| Precision    | The board must be able to detect differences of at least 1.5 times the values (100 ohms versus 150 ohms) for any electrical component and must be accurate to within 5 percent of the component’s true value                         | Conceptual Design
 | Weight |The board must be light enough (less than 3 pounds) so that it does not contribute significantly to the weight of the car. | Conceptual Design
 | Variety    | The circuit components provided must vary in their values enough so that the changes they make would be perceptible to the function of the project (100, 500, 1000, 10000 ohms, etc.)                         | Conceptual Design
 | Speed | The board must be able to determine the component’s value within 1.25 seconds of it being changed to ensure smooth operation of the other systems.| Conceptual Design |
