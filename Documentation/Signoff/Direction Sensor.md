@@ -13,10 +13,10 @@ The purpose of this subsystem is to automatically steer the vehicle. The subsyst
 
 
 ## Build a Schematic
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158520642/8401dfd1-140a-47d3-b71c-91bbf7031baf)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158520642/fd62d826-5fa5-4104-a595-721fcd8d69ec)
 Figure 1: Buildable Schematic
 
-<img width="581" alt="image" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158520642/e1aaa0f2-5995-4f72-9e7a-9d97811669e2">
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158520642/4b0739e9-92ac-4bfe-9c06-44663526d7eb)
 
 Figure 2: Prototype Schematic
 
