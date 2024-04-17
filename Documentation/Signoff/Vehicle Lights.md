@@ -1,6 +1,6 @@
 # Vehicle Lights signoff
 ## Function of subsystem 
-The function of this subsystem is to use a microcontroller to take a string and convert it into a floating-point value for better accuracy, then output that value to a SN74LV4052A IC chip which is a dual 4 to 1 multiplexer. The multiplexer will have an enable and two select lines that control which input is sent on through to the LEDs. The Select lines of the multiplexer will be switches confiugred to pins on the arduino and coded so that the arduino will determine the switches states and send the corresponding output either 0 or 1 to the select lines. One of the four inputs to the multiplexer will be active based on the select lines. The LEDs will then output based on what the input sent through tells it to do. 
+The function of this subsystem is to use a microcontroller to take in inputs and convert them into a floating-point value for better accuracy, then output that value to a SN74LV4052A IC chip which is a dual 4 to 1 multiplexer. The multiplexer will have an enable and two select lines that control which input is sent on through to the LEDs. The Select lines of the multiplexer will be switches confiugred to pins on the arduino and coded so that the arduino will determine the switches states and send the corresponding output either 0 or 1 to the select lines. One of the four inputs to the multiplexer will be active based on the select lines. The LEDs will then output based on what the input sent through tells it to do. 
 
 ## Constraints
 Table. 1 constraints
