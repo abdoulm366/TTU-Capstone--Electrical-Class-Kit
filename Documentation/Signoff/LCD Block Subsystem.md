@@ -120,6 +120,7 @@ Because the TFT Screen already uses the 5V pins, the divice will utilize
 pin 13 as VCC by setting it to high in the setup part of the code.
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/fb07657a-feee-411d-9a1e-5a86ea94a2bc)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf)
 
 
 ## Analysis:
