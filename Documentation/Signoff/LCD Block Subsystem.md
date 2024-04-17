@@ -2,25 +2,11 @@
 
 ## Subsystem Function:
 
-The LCD Block Subsystem serves as the primary connection point for
-client interaction within the device. A graphical showcase interface
-will be used to facilitate consistent correspondence between the client
-and the framework. The subsystem includes a Fluid Gem Display (LCD) that
-is constantly in communication with the Microcontroller Unit (MCU) to
-display the framework's current status, menu options, and results. The
-main menu displayed on the LCD provides clients with multiple options,
-such as accessing a computerized Client Manual, entering codes via an
-associated keypad (Subsystem 8), selecting from a rundown of client
-challenges (e.g., changing the car head lights colors), and drawing in
-with an implanted game like Flappy Bird, thus referred to as 'Birduino'.
+The purpose of this subsystem is to help the user understand all the kit functions, provide a digital user manual, provide the users with instructions/challenges/lessons, enable a digital interaction with the car and create a way for users can practice one of the key concepts in the ECE department, Coding. Hence, this LCD Block Subsystem serves as the primary interaction point between the user and the device as a whole. A graphical TFT LCD is used to facilitate this interaction. The subsystem includes a Fluid Gem Display (LCD) that is constantly in communication with the Microcontroller Unit (MCU) to display the framework's current status, menu options, and results. The main menu displayed on the LCD provides the user with multiple options, such as accessing a computerized Client Manual, entering codes via an associated keypad (Subsystem 8), selecting from a rundown of client challenges (e.g., changing the car headlights colors), and drawing in with an implanted game like Flappy Bird, thus referred to as 'Birduino'. This system will be placed on top of the car's hood.
 
-Below is are the different display screens that shall be generated via
-the TFT LCD.
+Described below is a more intuisive description of what the LDC is supposed to do/display. The display screens that shall be generated via the TFT LCD are as follows:
 
 Main Menu:
-
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9b32419c-6592-4c8c-b5fa-9236d051d3a5)
-
 
 This shall be the display for the main menu. It will contain 4 buttons,
 the “User manual” which leads to a set of instruction on how to use the
@@ -29,16 +15,19 @@ to try, the “learn to code” section which teaches the user how to code
 using the keypad section (*Subsystem 7*), the “Interact with car”
 section in which users can play with actual output on the car.
 
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9b32419c-6592-4c8c-b5fa-9236d051d3a5)
+
 User Manual:
-
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3)
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f)
-
 
 The presentation format will be just like a slide show. All the user
 will do is click on the button “Next” for the next slide until the last
 slide, where they will have to click on the button “Return to Menu”
 which will send them back to the main menu.
+
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f)
+
+
 
 Challenges:
 
