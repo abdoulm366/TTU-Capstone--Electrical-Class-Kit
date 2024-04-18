@@ -19,7 +19,9 @@ Table. 1 constraints
 
       
 ## Buildable Schematic
-![Screenshot (303)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/8b31c950-ad11-4793-9502-a96b6a01e7b5)
+![Screenshot (306)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/495583c6-7537-4e64-8d63-8ff877e68110)
+
+
 
 
 
