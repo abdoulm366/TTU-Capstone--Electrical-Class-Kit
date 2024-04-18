@@ -1,6 +1,6 @@
 # Vehicle Lights signoff
 ## Function of subsystem 
-The function of this subsystem is to use a microcontroller to output data to a dual 4 to 1 multiplexer. The multiplexer will have an enable and two select lines that control which one of the four inputs is sent through to the LEDs. The select lines of the multiplexer will be switches which will be configured to pins on the Arduino and coded.  The LEDs will then react based on what the input sent tells them to do. 
+The function of this subsystem is to demonstrate electrical concepts through physical means. The subsystem will control the car's lighting system based on user interaction. The subsystem will demonstrate those concepts by adjusting the brightness of the selected lights and the blinking speed of the turn indicators. 
 
 ## Constraints
 Table. 1 constraints
@@ -19,12 +19,14 @@ Table. 1 constraints
 
       
 ## Buildable Schematic
-![Screenshot (301)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/47991235-d246-4766-9161-b56f84a5202c)
+![Screenshot (303)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/8b31c950-ad11-4793-9502-a96b6a01e7b5)
+
+
 
 
 Figure 1. Car lights output schematic. 
 
-This buildable schematic is the car lights output in its entirety. First, the big block is an Arduino Atmega 2560 which was chosen to do the string to float conversions and output them to the multiplexer, the Arduino Atmega was chosen because it had a sufficient number of pins and is compatible with C language. This allows the Arduino Atmega to be able to convert strings to floating point values successfully using C language. The second smaller block will be an SN74LV4052A series IC chip. It is a dual 4-1 multiplexer which will be used to distribute four inputs for the left head/rear/turn lights to the first 4-1 and the other four inputs will be for the right head/rear/turn lights that will go to the second 4-1. This multiplexer chip was chosen for compatibility reasons with the Arduino and LEDs which is seen in the analysis of how it can be compatible with the other components within this subsystem. It also is to allow the user to use switches to interact with a multiplexer and its functionality only allowing one input the Arduino sends to go through at a time. As the functionality stated the select lines of the multiplexer will be switches, the switches chosen for this will be tactile push buttons so that when it is pushed the code reads its state and sends that to the select lines. To change the state of a switch back from 1 to 0 it has to be pushed again. The SN74LV4052A multiplexer and the LEDs will both be soldered to a PCB generated. The Arduino will be mounted inside of the cab toward the top middle and the PCB's for the LEDs will be mounted in the front end of the chassis(headlights) and rear end of the chassis (tail lights). 
+This buildable schematic is the car lights output in its entirety. First, the big block is an Arduino Atmega 2560 which was chosen to do the string to float conversions and output them to the multiplexer, the Arduino Atmega was chosen because it had a sufficient number of pins and is compatible with C language. This allows the Arduino Atmega to be able to convert strings to floating point values successfully using C language. The second smaller block will be an SN74LV4052A series IC chip. It is a dual 4-1 multiplexer which will be used to distribute four inputs for the left head/rear/turn lights to the first 4-1 and the other four inputs will be for the right head/rear/turn lights that will go to the second 4-1. This multiplexer chip was chosen for compatibility reasons with the Arduino and LEDs which is seen in the analysis of how it can be compatible with the other components within this subsystem. It also is to allow the user to use switches to interact with a multiplexer and its functionality only allowing one input the Arduino sends to go through at a time. As the functionality stated the select lines of the multiplexer will be switches, the switches chosen for this will be tactile push buttons so that when it is pushed the code reads its state and sends that to the select lines. To change the state of a switch back from 1 to 0 it has to be pushed again. The select switches and Inhibit switch are labeled in the schematic how they will be configured. The SN74LV4052A multiplexer and the LEDs will both be soldered to a PCB generated. The Arduino will be mounted inside of the cab toward the top middle and the PCB's for the LEDs will be mounted in the front end of the chassis(headlights) and rear end of the chassis (tail lights). 
 
 ## Analysis 
 
