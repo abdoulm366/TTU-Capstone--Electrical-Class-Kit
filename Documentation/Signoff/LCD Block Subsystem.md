@@ -2,63 +2,41 @@
 
 ## Subsystem Function:
 
-The purpose of this subsystem is to help the user understand all the kit functions, provide a digital user manual, provide the users with instructions/challenges/lessons, enable a digital interaction with the car and create a way for users can practice one of the key concepts in the ECE department, Coding. Hence, this LCD Block Subsystem serves as the primary interaction point between the user and the device as a whole. A graphical TFT LCD is used to facilitate this interaction. The subsystem includes a Fluid Gem Display (LCD) that is constantly in communication with the Microcontroller Unit (MCU) to display the framework's current status, menu options, and results. The main menu displayed on the LCD provides the user with multiple options, such as accessing a computerized Client Manual, entering codes via an associated keypad (Subsystem 8), selecting from a rundown of client challenges (e.g., changing the car headlights colors), and drawing in with an implanted game like Flappy Bird, thus referred to as 'Birduino'. This system will be placed on top of the car's hood.
+The purpose of this subsystem is to help ease the user's understanding of the kit's functionalities, provide a digital user manual, provide the users with instructions or guided learnig via challenges and lessons and enable a digital interaction with the car. Hence, this LCD Block Subsystem serves as the primary interaction point between the user and the device as a whole. A graphical TFT LCD is used to facilitate this interaction. The subsystem includes a Fluid Gem Display (LCD) that is constantly in communication with the Microcontroller Unit (MCU) to display the framework's current status, menu options, and results. The main menu displayed on the LCD provides the user with multiple options, such as accessing a digital User Manual, a selection of challenges (e.g., changing the car headlights colors), and drawing in with an implanted game like Flappy Bird, thus referred to as 'Birduino'. This system will be placed on top of the car's hood for a easy access.
 
-Described below is a more intuisive description of what the LDC is supposed to do/display. The display screens that shall be generated via the TFT LCD are as follows:
+Described below is a more intuisive description of what the LDC is supposed to do/display. 
+The display screens that shall be generated via the TFT LCD are as follows:
 
 Main Menu:
 
-This shall be the display for the main menu. It will contain 4 buttons,
-the “User manual” which leads to a set of instruction on how to use the
-device, the “Challenge” section which provide actual task for the user
-to try, the “learn to code” section which teaches the user how to code
-using the keypad section (*Subsystem 7*), the “Interact with car”
-section in which users can play with actual output on the car.
+This shall be the display for the main menu. It will contain 3 buttons, the “User manual” which leads to a set of instruction on how to use the device, the “Challenge” section which provide actual task for the user to try, and the “Interact with car” section in which users can play with actual output on the car.
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9b32419c-6592-4c8c-b5fa-9236d051d3a5)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/aace3b95-d6e0-49a4-8a69-43f5fd51c149)
 
 User Manual:
 
-The presentation format will be just like a slide show. All the user
-will do is click on the button “Next” for the next slide until the last
-slide, where they will have to click on the button “Return to Menu”
-which will send them back to the main menu.
+The presentation format will be just like a slide show. All the user will do is click on the button “Next” for the next slide until the last slide, where they will have to click on the button “Return to Menu” which will send them back to the main menu.
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3)
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f)
 
 
-
 Challenges:
 
-This section will be coded to interact with the other Subsystem like the
-input bread board subsystem. It shall contain a list of challenges such
-as “Have you tried driving the car in reverse?”, “I am trying to park,
-check the distance sensors of the car so I don’t hit anything”, etc…
+This section will be coded to interact with the other Subsystem like the input bread board subsystem, the Logic Gates Subsystem, the Vehicle Lights and others. These challenges will create an aspect of the guided learning experience to the user. It shall introduce a problem or challenge to the user, provide hints, and after the user successfully completes the challenge it shall provide a check mark and explain the concept learned by the user. For example, let's concider a challenge such as “Have you tried driving the car in reverse?”. After the user clicks on this challenge, they would be refered to Logic Gates Subsystem, would be provided 3 hints about different logic gates like AND, OR, and NOT. After the user successfully changes the dirrection of the wheels, they would receive a check mark and be provided with an explaination of the concept learned using logic gates.
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/95e91f05-4e2f-479c-a554-b7d963759f7b)
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0e06d4c-3769-41aa-8f76-c277b16a248e)
-
-
-Learn to Code:
-
-\*Discussed in substem 7\*
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/8245bbfa-30cd-4bad-ba81-8be7aa4a7350)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/716e4cc0-d68b-436b-8648-b1d8196a5772)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/48ffc31f-f1dd-4918-9817-9d066de188aa)
 
 Interact with car:
 
-The submenu “Interact with the car” will have 4 parts, the car’s
-proximity sensor which will display the closest object to the car, the
-car’s head light control which will be able to change the car’s head
-light color, the birduino game which is an incoded game for the TFT LCD
-Touch Screen, the Fan ON/OFF which will turn on and off the car’s fan.
+This submenu “Interact with the car” will have 4 parts, the car’s proximity sensor which will display the closest object to the car, the car’s head light control which will be able to change the car’s head light color, the birduino game which is an incoded game for the TFT LCD Touch Screen, the Fan ON/OFF which will turn on and off the car’s fan.
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0fd1e55-b5d7-4bca-be09-41c6a98e0542)
 
 
-The first example is distance measuring with ultrasonic sensors. The
-sensor's output, or distance, is printed on the screen, and will allow
-the user to pick the units, centimeters or inches, with the touch
-screen.
+The first example is distance measuring with ultrasonic sensors. The sensor's output, or distance, is printed on the screen, and will allow the user to pick the units, centimeters or inches, with the touch screen.
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9341daf4-6e7f-4299-8d2d-67c7e083972a)
 
