@@ -1,16 +1,15 @@
 # Vehicle Lights signoff
 ## Function of subsystem 
-The function of this subsystem is to demonstrate electrical concepts through physical means. The subsystem will control the car's lighting system based on user interaction. The subsystem will demonstrate those concepts by adjusting the brightness of the selected lights and the blinking speed of the turn indicators. 
+The function of this subsystem is to demonstrate Electrical and Computer Engineering concepts through physical means using the car's lighting system. This will allow users to interact with the car's lights and see the physical changes of the lights based on the user's input.  
 
 ## Constraints
-Table. 1 constraints
-|description| Constraint | source |
+Table. 1 Constraints
+|Description| Constraint | Source |
 |-|-|-|
-| Resistance variable type range |The Arduino mega 2560 in this subsystem shall convert a char string of resistance numbers that range from 0 - 1,000,000 into floats to store decimal values for better precision.| [2] C++ data types, https://www.w3schools.com/cpp/cpp_data_types.asp (accessed Apr. 14, 2024).  |
-| Capacitance Variable type range |The Arduino mega 2560 in this subsystem shall convert a string of Capacitance numbers that range from 1nF to 1mF into floats to store decimal values for better precision.|[2] C++ data types, https://www.w3schools.com/cpp/cpp_data_types.asp (accessed Apr. 14, 2024).  |
-|Multiplexer voltage safety |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| datasheet requirement |
-|current safety |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more than that to prevent overcurrent damage and to ensure safe operation.| datasheet requirement  |
-| Socioeconomic | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| conceptual design| 
+| Variable Type Range |The Arduino mega 2560 in this subsystem shall convert any ASCII variable type that ranges from 0 - 1,000,000 into a numeric variable type for better precision.| [2] C++ data types, https://www.w3schools.com/cpp/cpp_data_types.asp  |
+|Multiplexer Voltage Safety |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| Datasheet Requirement |
+|Current Safety |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more than that to prevent overcurrent damage and to ensure safe operation.| Datasheet Requirement  |
+| Socioeconomic | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| Conceptual Design| 
 
 
 
@@ -19,31 +18,28 @@ Table. 1 constraints
 
       
 ## Buildable Schematic
-![Screenshot (306)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/495583c6-7537-4e64-8d63-8ff877e68110)
+![Screenshot (308)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/e14289f0-04e0-41b9-8048-9e0202440a65)
+Figure 1. Car Lights Output Schematic. 
 
-
-
-
-
-
-Figure 1. Car lights output schematic. 
-
-This buildable schematic is the car lights output in its entirety. First, the big block is an Arduino Atmega 2560 which was chosen to do the string to float conversions and output them to the multiplexer, the Arduino Atmega was chosen because it had a sufficient number of pins and is compatible with C language. This allows the Arduino Atmega to be able to convert strings to floating point values successfully using C language. The second smaller block will be an SN74LV4052A series IC chip. It is a dual 4-1 multiplexer which will be used to distribute four inputs for the left head/rear/turn lights to the first 4-1 and the other four inputs will be for the right head/rear/turn lights that will go to the second 4-1. This multiplexer chip was chosen for compatibility reasons with the Arduino and LEDs which is seen in the analysis of how it can be compatible with the other components within this subsystem. It also is to allow the user to use switches to interact with a multiplexer and its functionality only allowing one input the Arduino sends to go through at a time. As the functionality stated the select lines of the multiplexer will be switches, the switches chosen for this will be tactile push buttons so that when it is pushed the code reads its state and sends that to the select lines. To change the state of a switch back from 1 to 0 it has to be pushed again. The select switches and Inhibit switch are labeled in the schematic how they will be configured. The SN74LV4052A multiplexer and the LEDs will both be soldered to a PCB generated. The Arduino will be mounted inside of the cab toward the top middle and the PCB's for the LEDs will be mounted in the front end of the chassis(headlights) and rear end of the chassis (tail lights). 
 
 ## Analysis 
 
-Analyzing the resistance Variable type constraint: 
-This constraint will be met by using Arduino ide software and C language to code the Arduino function atof() to convert from string into a float value. This will allow the Arduino then to convert the value and output it as a floating-point value so that the number is a lot more precise using decimal places instead of rounding off to the near whole value. These functions will allow us to convert the range 0 - 1M ohms char strings into floats. 
+### Arduino ATmega 2560
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/d0e7686c-21dd-4fcc-9fee-d720970ddbe7)
 
-Analyzing the capacitance Variable type constraint: 
-The Arduino will also be coded with the same function of C language on the Arduino ide software to convert the capacitance ranges of 1nF to 1mF from char strings into a floating-point value to ensure better accuracy by storing numbers with decimals instead of having to round off and causing less accurate values. 
+Figure 2. Arduino ATmega 2560
 
-Analyzing the multiplexer voltage Saftey: This constraint will be met by following datasheet requirements and limiting the input voltage to the Multiplexer to 5 volts. This will be met since the Arduino mega 2560 is only capable of outputting 5 volts maximum from its 5 volt port according to its datasheet information [1]. Since the Arduino Atmega 2560 can only output 5 volts maximum the the constraint has been met and there is no need to consider any extra precautions for the multiplexer's voltage safety. 
+The Arduino Atmega 2560 was chosen because it supplies enough pins allowing the subsystem to only need one Arduino, and it also meets compatibility of having a 5 volt output. 
+The variable type constraint will be met by using Arduino IDE software and C language to code the Arduino functions that will convert ASCII's into any numerical variable type. This will allow the Arduino then to convert the value and output it as an actual precise value. 
 
-Analyzing the current safety constraint:
-This requirement will be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The Multiplexer Datasheet also states that the Multiplexer can output 50mA [4], so there definitely needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. 
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/cfb00759-c936-40be-a4ed-3ab1712f1b45)
 
-below are the Current limitations calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
+Figure 3. SN74LV4052ADBR Multiplexer
+
+The SN74LV4052ADBR multiplexer was chosen because it allows the user to interact with the subsystem itself, and it is also compatible with the other components within this subsystem since it can operate at 5 volts and outputs more than enough current needed. The multiplexer voltage saftey constraint will be met by following datasheet requirements and limiting the input voltage to the Multiplexer to 5 volts. This will be met since the Arduino mega 2560 is only capable of outputting 5 volts maximum from its 5 volt port according to its datasheet information [1]. Since the Arduino Atmega 2560 can only output 5 volts maximum the constraint has been met and there is no need to consider any extra precautions for the multiplexer's voltage safety. 
+The current safety constraint requirement will also be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The multiplexer datasheet also states that the multiplexer can output 50mA [4], so there needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. 
+
+Below are the current limitation calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
 
 Red 5mm LEDs forward voltage is between 1.8 V and 2.1 V and 20mA max. so 2.0 V and 15mA would be a safe range [3][5].
 Resistance to get 15mA for a red LED.
@@ -62,12 +58,10 @@ $200 Ω  = \frac{5 - 2.0}{0.015}$
 
 $R = 200 Ω$
 
-resistance of 200 Ω seems to be the value that will keep the current flow to the LEDs safe preventing damage. 
+Resistance of 200 Ω shall keep the current flow to the LEDs safe, preventing damage. 
 
 
-A little functionality analysis on the buildable schematic explanation of the Multiplexer :
-
-The truth table below represents the functionality of the the SN74LV4052A multiplexers:
+The truth table below represents the functionality of the SN74LV4052A multiplexers:
 
 Table 2. Mux 1 functionality. 
 |INH | B | A | 1Y0 | 1Y1 | 1Y2 | 1Y3 |                                               
@@ -86,6 +80,19 @@ Table 3. Mux 2 functionality.
 | 0 | 1 | 0 | 0 | 0 | 1 | 0 |
 | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
 | 1 | X | X | X | X | X | X |
+
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/81fafd35-9ff0-4568-bc3c-0773f98e9089)
+
+Figure 4. Select Line / Enable Switches
+
+The multiplexer select lines will be tactile push buttons. The reason the tactile push buttons have been chosen for the select lines is that they can be coded to provide the user an experience where they can press the switches and they will remain in the same state, either 0 or 1, until they have been pressed again. This allows the users to select A and B and remain in the same states so that it will not  frequently change the input being passed through. 
+
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/c5ac830f-2bb1-4990-865d-90e1dc553631)
+
+Figure 5. Car LEDs.
+
+The LEDs that will be used in this subsystem will be 5mm LEDs, yellow and red. These LEDs were chosen because they are cost-efficent and they are smaller, taking up less room. These LEDs will be sufficient to represent the headlights using yellow and tail lights using red to accurately represent car lights.
+
 
 # BOM 
 Table 4. BOM
