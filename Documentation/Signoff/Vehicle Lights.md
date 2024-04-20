@@ -91,7 +91,7 @@ The multiplexer select lines will be tactile push buttons. The reason the tactil
 
 Figure 5. Car LEDs.
 
-The LEDs that will be used in this subsystem will be 5mm LEDs, yellow and red. These LEDs were chosen because they are cost-efficent and they are smaller, taking up less room. These LEDs will be sufficient to represent the headlights using yellow and tail lights using red to accurately represent car lights.
+The LEDs that will be used in this subsystem will be 5mm LEDs, yellow and red. These LEDs were chosen because they are cost-efficent and they are smaller, taking up less room. These LEDs will be sufficient to physically represent the headlights using yellow and tail lights using red to accurately represent the car lights. 
 
 
 # BOM 
