@@ -18,26 +18,34 @@ Table. 1 Constraints
 
       
 ## Buildable Schematic
-![Screenshot (308)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/e14289f0-04e0-41b9-8048-9e0202440a65)
+![Screenshot (310)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/c0ad3917-2459-4e67-bc44-0ffe850f7db6)
 Figure 1. Car Lights Output Schematic. 
 
+![Screenshot (312)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/0b6fa8b0-5c94-4d75-b529-286b28d583cc)
+Figure 2. Multiplexer PCB with mounting holes. 
+
+
+![Screenshot (313)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/8d364ede-1bb5-4efa-ad55-807552591bc9)
+Figure 3. PCB of the LEDs with current limiting resistors in series and mounting holes.
 
 ## Analysis 
 
 ### Arduino ATmega 2560
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/d0e7686c-21dd-4fcc-9fee-d720970ddbe7)
 
-Figure 2. Arduino ATmega 2560
+Figure 4. Arduino ATmega 2560
 
 The Arduino Atmega 2560 was chosen because it supplies enough pins allowing the subsystem to only need one Arduino, and it also meets compatibility of having a 5 volt output. 
-The variable type constraint will be met by using Arduino IDE software and C language to code the Arduino functions that will convert ASCII's into any numerical variable type. This will allow the Arduino then to convert the value and output it as an actual precise value. 
+The variable type constraint will be met by using Arduino IDE software and C language to code the Arduino functions that will convert ASCII's into any numerical variable type. This will allow the Arduino then to convert the value and output it as an actual precise value. It will also take in any inputs that are not ASCII and output them as they are or convert them as needed using C language libraries. 
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/cfb00759-c936-40be-a4ed-3ab1712f1b45)
+### Multiplexer
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/89394064-4bc7-4da3-8cb0-3c5bbf387919)
 
-Figure 3. SN74LV4052ADBR Multiplexer
+Figure 5. SN74LV4052ADBR Multiplexer
 
 The SN74LV4052ADBR multiplexer was chosen because it allows the user to interact with the subsystem itself, and it is also compatible with the other components within this subsystem since it can operate at 5 volts and outputs more than enough current needed. The multiplexer voltage saftey constraint will be met by following datasheet requirements and limiting the input voltage to the Multiplexer to 5 volts. This will be met since the Arduino mega 2560 is only capable of outputting 5 volts maximum from its 5 volt port according to its datasheet information [1]. Since the Arduino Atmega 2560 can only output 5 volts maximum the constraint has been met and there is no need to consider any extra precautions for the multiplexer's voltage safety. 
 The current safety constraint requirement will also be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The multiplexer datasheet also states that the multiplexer can output 50mA [4], so there needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. 
+ As Figure 2. shows the Multiplexer will have its own PCB that will be mounted somewhere in the center of the cab of the car near the Arduino so that the output of the multiplexer can still be connected to the front and back lights without taking up more space.  
 
 Below are the current limitation calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
 
@@ -81,17 +89,19 @@ Table 3. Mux 2 functionality.
 | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
 | 1 | X | X | X | X | X | X |
 
+### Select Line / Enable Switches
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/81fafd35-9ff0-4568-bc3c-0773f98e9089)
 
-Figure 4. Select Line / Enable Switches
+Figure 6. Select Line / Enable Switches
 
-The multiplexer select lines will be tactile push buttons. The reason the tactile push buttons have been chosen for the select lines is that they can be coded to provide the user an experience where they can press the switches and they will remain in the same state, either 0 or 1, until they have been pressed again. This allows the users to select A and B and remain in the same states so that it will not  frequently change the input being passed through. 
+The multiplexer select lines will be tactile push buttons. The reason the tactile push buttons have been chosen for the select lines is that they can be coded to provide the user an experience where they can press the switches and they will remain in the same state, either 0 or 1, until they have been pressed again. This allows the users to select A and B and remain in the same states until they press either switch again so that it will not frequently change the input being passed through without the user's desire.  These switches also operate on 5 volts so they are compatible for this subsystem as well. 
 
+### LEDs
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/c5ac830f-2bb1-4990-865d-90e1dc553631)
 
-Figure 5. Car LEDs.
+Figure 7. Car LEDs.
 
-The LEDs that will be used in this subsystem will be 5mm LEDs, yellow and red. These LEDs were chosen because they are cost-efficent and they are smaller, taking up less room. These LEDs will be sufficient to physically represent the headlights using yellow and tail lights using red to accurately represent the car lights. 
+The LEDs that will be used in this subsystem will be 5mm LEDs, yellow and red. These LEDs were chosen because they are cost-efficent and they are smaller, taking up less room. These LEDs will be sufficient to physically represent the headlights using yellow and tail lights using red to accurately represent the car lights. As you can see in Figure 3. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. 
 
 
 # BOM 
@@ -105,8 +115,8 @@ Table 4. BOM
 |Tactile Button switch (6mm) x 20 pack                        |	Adafruit.com 	| 1	      | $2.50	  | $2.50         |
 |Full-size Perma proto boards	                                | Adafruit.com	| 2	      | $39.90	| $39.90        |
 |20 ft each 18 AWG copper wire with shielded protction(6 different color)                | Amazon.com	| 1	      | $16.49	| $16.49        |
-|Resistors (pack of 25 200 ohms)	                                | Adafruit.com	| 2	      | $5.78 | $5.78        |
-|		                                                          |               |         | Total:  |	$119.42       |
+|Resistors (200 ohms)                                | Mouser.com	| 8	      | $4.56 | $4.56       |
+|		                                                          |               |         | Total:  |	$118.20      |
 
 ## References 
 
