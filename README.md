@@ -34,15 +34,17 @@ Carson Ray is an electrical engineering major at Tennessee Technological Univers
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Mr. Jesse Roberts - ECE Department
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The Primary stakeholder for this project is Dr. Kumar Yelamarthi. Dr. Yelamarthi is an Associate Dean of Academic Affairs, Professor of Electrical and Computer Engineering. 
+
+Another major stakeholder this project will have an affect on is highschool and incoming college freshman students, as it will be a kit that is designed to teach these level of students the concepts of Electrical and Computer engineering to help them better understand what the major is about. 
 
 ### Recognitions
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+The team would like to thank Mr. Jesse Roberts, Dr. Stephen Canfield, and Dr. Charles Van Neste for their valuable feedback and taking their time of day to work with us and help us improve on our ideas and goals of this project. 
 
 ## Repo Organization
 
