@@ -30,7 +30,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Carson Ray is an electrical engineering major at Tennessee Technological University. He is interested in power systems, Digital systems and electronics. Carson is Responsible for the vehicle lights system with background in digital logic and coding that will be implmented into the system.
 
 ### Faculty Supervisor
 
