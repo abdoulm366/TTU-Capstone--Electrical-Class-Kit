@@ -1,15 +1,16 @@
 # Closed Loop Control
 
 ## Function of the system
-The purpose of this subsystem is to drive and steer the vehicle. The subsystem will keep the car in the desired location while the car is moving on the designated mat. It will determine if the car has veered off course and adjust accordingly.
+The purpose of this subsystem is to drive and steer the vehicle. The subsystem will keep the car in the desired location while the car is moving. It will determine if the car has veered off course and adjust accordingly.
 
 ## Constraints
 | Description | Constraints/Specification | Source |
 |-------------|---------------------------|--------|
-| Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V to 13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V.  | [1], [3], [8] |
-| Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA. | [1], [3], [8] |
-| Precision | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU's sampling rate must be around 100Hz to achieve the speed. | [4] |
+| Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | [1], [3], [8] |
+| Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | [1], [3], [8] |
+| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU’s sampling rate must be around 100Hz to achieve the speed. | [4] |
 | Socioeconomic | The system shall be cost effective relating to the project's budget constraints. | Conceptual Design |
+
 
 
 ## Build a Schematic
