@@ -4,9 +4,26 @@
 
 The purpose of this subsystem is to help ease the user's understanding of the kit's functionalities, provide a digital user manual, provide the users with instructions or guided learnig via challenges and lessons and enable a digital interaction with the car. Hence, this LCD Block Subsystem serves as the primary interaction point between the user and the device as a whole. A graphical TFT LCD is used to facilitate this interaction. The subsystem includes a Fluid Gem Display (LCD) that is constantly in communication with the Microcontroller Unit (MCU) to display the framework's current status, menu options, and results. The main menu displayed on the LCD provides the user with multiple options, such as accessing a digital User Manual, a selection of challenges (e.g., changing the car headlights colors), and drawing in with an implanted game like Flappy Bird, thus referred to as 'Birduino'. This system will be placed on top of the car's hood for a easy access.
 
+## Constraints/Specifications:
+
+| Description       | Constraints/Specification:                                                                           | Source                         |
+|-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
+| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   | Conceptual Design              |
+| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | User Experience Research       |
+| Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement        |
+| Content           | The display content must be dynamic, supporting multiple languages and symbols for a wide user base. | Internationalization Standards |
+| Power Consumption | The LCD and associated subsystems should optimize for low power usage to extend operational time.    | Power Management Guidelines    |
+
+## Schematic:
+
+Below is the wiring diagram of the LCD, MCU and other aspects of the device are shown in the schematic below. The corresponding connections from the each appratus are illustrated as well. The pin's layout are shown depending on the power supply channel of the vehicle. The design below also includes the connection points that the the user can interact with like the headlights, the AC/fan and the distance sensor. For example, for the main menu using the TFT Touch Display, the schema below shows how the ground pin, the digital pins 8-13, and pin 14 are used in orther to create a connection with Arduino Mega board. Because the TFT Screen already uses the 5V pins, the device will utilize use pin 13 as VCC by setting it to high in the setup part of the code.
+
+<p align="center">
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf" height="500" />
+</p>
+
 Described below is a more intuisive description of what the LDC is supposed to do/display. 
 The display screens that shall be generated via the TFT LCD are as follows:
-
 
 #### <ins>  Main Menu: </ins>
 
@@ -70,24 +87,6 @@ by pressing on the “Turn On Fan” button and turned off by pressing the
 
 <p align="center">
   <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d75f17c-c9ea-4969-92aa-f96c67de9c3b" height="500" />
-</p>
-
-## Constraints/Specifications:
-
-| Description       | Constraints/Specification:                                                                           | Source                         |
-|-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
-| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   | Conceptual Design              |
-| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | User Experience Research       |
-| Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement        |
-| Content           | The display content must be dynamic, supporting multiple languages and symbols for a wide user base. | Internationalization Standards |
-| Power Consumption | The LCD and associated subsystems should optimize for low power usage to extend operational time.    | Power Management Guidelines    |
-
-## Schematic:
-
-Below is the wiring diagram of the LCD, MCU and other aspects of the device are shown in the schematic below. The corresponding connections from the each appratus are illustrated as well. The pin's layout are shown depending on the power supply channel of the vehicle. The design below also includes the connection points that the the user can interact with like the headlights, the AC/fan and the distance sensor. For example, for the main menu using the TFT Touch Display, the schema below shows how the ground pin, the digital pins 8-13, and pin 14 are used in orther to create a connection with Arduino Mega board. Because the TFT Screen already uses the 5V pins, the device will utilize use pin 13 as VCC by setting it to high in the setup part of the code.
-
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf" height="500" />
 </p>
 
 ## Analysis:
