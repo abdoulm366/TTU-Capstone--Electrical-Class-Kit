@@ -1,4 +1,4 @@
-# Direction Sensor Subsystem
+# Closed Loop Control
 
 ## Function of the system
 The purpose of this subsystem is to drive and steer the vehicle. The subsystem will keep the car in the desired location while the car is moving on the designated mat. It will determine if the car has veered off course and adjust accordingly.
