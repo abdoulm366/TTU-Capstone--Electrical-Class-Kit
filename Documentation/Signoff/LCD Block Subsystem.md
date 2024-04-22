@@ -13,6 +13,8 @@ This shall be the display for the main menu. It will contain 3 buttons, the “U
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/aace3b95-d6e0-49a4-8a69-43f5fd51c149)
 
+<img src="https://your-image-url.type](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/aace3b95-d6e0-49a4-8a69-43f5fd51c149" height="100"> 
+
 User Manual:
 
 The presentation format will be just like a slide show. All the user will do is click on the button “Next” for the next slide until the last slide, where they will have to click on the button “Return to Menu” which will send them back to the main menu.
