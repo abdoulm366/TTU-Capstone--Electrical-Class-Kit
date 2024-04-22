@@ -19,7 +19,7 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
 Below is the wiring diagram of the LCD, MCU and other aspects of the device are shown in the schematic below. The corresponding connections from the each appratus are illustrated as well. The pin's layout are shown depending on the power supply channel of the vehicle. The design below also includes the connection points that the the user can interact with like the headlights, the AC/fan and the distance sensor. For example, for the main menu using the TFT Touch Display, the schema below shows how the ground pin, the digital pins 8-13, and pin 14 are used in orther to create a connection with Arduino Mega board. Because the TFT Screen already uses the 5V pins, the device will utilize use pin 13 as VCC by setting it to high in the setup part of the code.
 
 <p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf" height="500" />
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf" height="400" />
 </p>
 
 Described below is a more intuisive description of what the LDC is supposed to do/display. 
@@ -29,24 +29,20 @@ The display screens that shall be generated via the TFT LCD are as follows:
 
 This shall be the display for the main menu. It will contain 3 buttons, the “User manual” which leads to a set of instruction on how to use the device, the “Challenge” section which provide actual task for the user to try, and the “Interact with car” section in which users can play with actual output on the car.
 
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/aace3b95-d6e0-49a4-8a69-43f5fd51c149" height="500" />
+<p align="right">
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/aace3b95-d6e0-49a4-8a69-43f5fd51c149" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f" height="300" />
 </p>
 
 #### <ins>  User Manual: </ins>
 
 The presentation format will be just like a slide show. All the user will do is click on the button “Next” for the next slide until the last slide, where they will have to click on the button “Return to Menu” which will send them back to the main menu.
 
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3" height="400" /> <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f" height="400" />
-</p>
-
 #### <ins>  Challenges: </ins>
 
 This section will be coded to interact with the other Subsystem like the input bread board subsystem, the Logic Gates Subsystem, the Vehicle Lights and others. These challenges will create an aspect of the guided learning experience to the user. It shall introduce a problem or challenge to the user, provide hints, and after the user successfully completes the challenge it shall provide a check mark and explain the concept learned by the user. For example, let's concider a challenge such as “Have you tried driving the car in reverse?”. After the user clicks on this challenge, they would be refered to Logic Gates Subsystem, would be provided 3 hints about different logic gates like AND, OR, and NOT. After the user successfully changes the dirrection of the wheels, they would receive a check mark and be provided with an explaination of the concept learned using logic gates.
 
 <p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/8245bbfa-30cd-4bad-ba81-8be7aa4a7350" height="400" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/716e4cc0-d68b-436b-8648-b1d8196a5772" height="400" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/48ffc31f-f1dd-4918-9817-9d066de188aa" height="400" />
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/8245bbfa-30cd-4bad-ba81-8be7aa4a7350" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/716e4cc0-d68b-436b-8648-b1d8196a5772" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/48ffc31f-f1dd-4918-9817-9d066de188aa" height="300" />
 </p>
 
  #### <ins> Interact with car: </ins>
@@ -54,14 +50,10 @@ This section will be coded to interact with the other Subsystem like the input b
 This submenu “Interact with the car” will have 4 parts, the car’s proximity sensor which will display the closest object to the car, the car’s head light control which will be able to change the car’s head light color, the birduino game which is an incoded game for the TFT LCD Touch Screen, the Fan ON/OFF which will turn on and off the car’s fan.
 
 <p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0fd1e55-b5d7-4bca-be09-41c6a98e0542" height="500" />
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a0fd1e55-b5d7-4bca-be09-41c6a98e0542" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9341daf4-6e7f-4299-8d2d-67c7e083972a" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d54b888-ebdf-4eae-965e-a7d0b8475299" height="300" />
 </p>
 
 The first example is distance measuring with ultrasonic sensors. The sensor's output, or distance, is printed on the screen, and will allow the user to pick the units, centimeters or inches, with the touch screen.
-
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/9341daf4-6e7f-4299-8d2d-67c7e083972a" height="500" />
-</p>
 
 The car’s head light control shall be done controlling an RGB LED with
 three RGB sliders that will change it’s the color. For example, if we
@@ -70,24 +62,16 @@ increase the brightness as we approach the maximum setting. So the
 sliders may range from 0 to 255, and we can use their combination to set
 any color to the RGB LED.
 
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d54b888-ebdf-4eae-965e-a7d0b8475299" height="500" />
-</p>
-
 The Birduino game is a copie of a mobile game called Flappy Bird. It
 shall be played using the push button or directly on the touch screen.
 
 <p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/747f0542-4bd5-4fb9-9e47-66f278e23ccb" height="500" />
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/747f0542-4bd5-4fb9-9e47-66f278e23ccb" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d75f17c-c9ea-4969-92aa-f96c67de9c3b" height="300" />
 </p>
 
 The fan represents the A/C unit of the car. It shall be turned on using
 by pressing on the “Turn On Fan” button and turned off by pressing the
 “turn Off Fan” button.
-
-<p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d75f17c-c9ea-4969-92aa-f96c67de9c3b" height="500" />
-</p>
 
 ## Analysis:
 
