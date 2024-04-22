@@ -20,9 +20,9 @@ This shall be the display for the main menu. It will contain 3 buttons, the “U
 
 The presentation format will be just like a slide show. All the user will do is click on the button “Next” for the next slide until the last slide, where they will have to click on the button “Return to Menu” which will send them back to the main menu.
 
-
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3" height="500" /> <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f" height="500" />
-
+<p align="center">
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/d4384530-70ba-477c-89b3-c14eaab3a6b3" height="400" /> <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/0a1f932c-574e-4c36-93e4-4590253c9e5f" height="400" />
+</p>
 
 #### <ins>  Challenges: </ins>
 
