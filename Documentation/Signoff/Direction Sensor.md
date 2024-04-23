@@ -8,8 +8,8 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 |-------------|---------------------------|--------|
 | Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | [1], [3], [8] |
 | Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | [1], [3], [8] |
-| Cost Boundaries | Equipment/components should not surpass $35, with the total capped at $90 to ensure the projects final total falls within the $400 to $900 budget. | Conceptual Design |
-| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU’s sampling rate must be around 100Hz to achieve the accepted error of 0.033 meters. | [4], [11] |
+| Cost Boundaries | Equipment/components should not surpass $35, with the total capped at $90 to ensure the project's final total falls within the $400 to $900 budget. | Conceptual Design |
+| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. With the IMU’s sampling rate of 100Hz and the motors being 0.1 horsepower, the vehicles speed will be between 1 and 9.28 miles per hour but must achieve the accepted error of 0.033 meters. | [3], [4], [11] |
 
 ## Buildable Schematic
 
@@ -37,7 +37,7 @@ The TT motors are 0.1 hp [3]. Taking the cube root of the horsepower and multipl
 
 $20 \times \sqrt[3]{0.1}$ = 9.28mph (max)
 
-This is the speed for just the motors, not while they are on the vehicle. When on the vehicle, it will not go this speed due to the circumstances of the vehicles weight, wheel friction, terrain, etc. By doing calculations, we can find out if the 100Hz sampling rate will work and how much error is acceptable. By using 5mph as an example, the first step is finding the distance covered per sample:
+This is the speed for just the motors, not while they are on the vehicle. When on the vehicle, it will not go this speed due to the circumstances of the vehicles weight, wheel friction, terrain, etc. By doing calculations, we can find out the range of speed needed based on the 100Hz sampling rate and how much error is acceptable. By using 5mph as an example, the first step is finding the distance covered per sample:
 
 $\frac{5*5280}{3600}$ = 7.33ft/s (1 mile = 5280ft) (1 hour = 3600 seconds)
 
