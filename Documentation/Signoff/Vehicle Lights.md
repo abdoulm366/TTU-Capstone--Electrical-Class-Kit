@@ -49,24 +49,26 @@ The current safety constraint requirement will also be met by using current limi
 
 Below are the current limitation calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
 
-Red 5mm LEDs forward voltage is between 1.8 V and 2.1 V and 20mA max. so 2.0 V and 15mA would be a safe range [3][5].
-Resistance to get 15mA for a red LED.
+The LEDs being used range from 3 volts to 7 volts but the multiplexer can only output 5 volts since that is what it will draw. 
 
-$R  = \frac{5 - 2.0}{0.015}$
+Resistance to get 15mA for LEDs.
 
-$200 Ω  = \frac{5 - 2.0}{0.015}$
+$R  = \frac{5 - 4.0}{0.015}$
 
-$R = 200 Ω$
+$200 Ω  = \frac{5 - 4.0}{0.015}$
 
-Yellow 5mm LEDs are typically 2.0 volts and 20mA max so a safe range would be 2 volts and 15mA [3][5].
+$R = 65 Ω$ 
 
-$R  = \frac{5 - 2.0}{0.015}$
+$R  = \frac{5 - 3.0}{0.015}$
 
-$200 Ω  = \frac{5 - 2.0}{0.015}$
+$200 Ω  = \frac{5 - 3.0}{0.015}$
 
-$R = 200 Ω$
+$R = 133.3 Ω$ 
 
-Resistance of 200 Ω shall keep the current flow to the LEDs safe, preventing damage. 
+
+
+
+Resistance of the calculated 65 Ω shall keep the current flow to the LEDs safe, preventing damage since 5 volts is the max the LEDs will operate at for this subsystem. 
 
 
 The truth table below represents the functionality of the SN74LV4052A multiplexers:
@@ -94,14 +96,14 @@ Table 3. Mux 2 functionality.
 
 Figure 6. Select Line / Enable Switches
 
-The multiplexer select lines will be dip switches. The reason the dip switches have been chosen for the select lines is that they can be coded to provide the user an experience where they can slide the switches and they will be up representing 1 which is on and if the user slides them down then that will represent a 0. This allows the users to select A and B and remain in the same states until they slide the switch again so that it will not frequently change the input being passed through without the user's desire.  These switches also operate on 5 volts so they are compatible for this subsystem as well. 
+The multiplexer select lines will be dip switches. The reason the dip switches have been chosen for the select lines is that they can be coded to provide the user an experience where they can slide the switches up, representing 1 and if the user slides them down, it represents a 0. This allows the users to select A and B and remain in the same states until they slide the switch again so that it will not frequently change the input being passed through without the user's desire.  These switches also operate on 5 volts so they are compatible for this subsystem. 
 
 ### LEDs
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/c5ac830f-2bb1-4990-865d-90e1dc553631)
 
-Figure 7. Car LEDs represents the ShareGoo LED Light Headlights/Taillights
+Figure 7. Car LEDs represent the ShareGoo LED Light Headlights/Taillights
 
-The LEDs that will be used in this subsystem will be ShareGoo 8Leds LED Light Headlights/Taillight, white and red. These LEDs were chosen because they are cost-efficent and they are not space-consuming, taking up less room. These LEDs will be sufficient to physically represent the headlights using white LEDs and tail lights using red LEDs to accurately represent the car lights. As you can see in Figure 3. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. These LEDs will be small LEDs with a housing around them to help direct them into a beam like real car headlights. These LEDs are capable of operating on a voltage range of 3 volts to 7 volts allowing them to go dimmer and not just operate on one voltage. 
+The LEDs that will be used in this subsystem will be ShareGoo LED lights, headlights/taillights, white and red. These LEDs were chosen because they are cost-efficient and they are not space-consuming, taking up less room. These LEDs will be sufficient to physically represent the headlights using white LEDs and tail lights using red LEDs to accurately represent the car lights. As you can see in Figure 3. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. These LEDs will be small LEDs with a housing around them to help direct them into a beam like real car headlights. These LEDs are capable of operating on a voltage range of 3 volts to 7 volts allowing them to change brightness and not just operate on one voltage. 
 
 
 # BOM 
