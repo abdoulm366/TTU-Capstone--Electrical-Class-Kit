@@ -67,20 +67,9 @@ The fan represents the A/C unit of the car. It shall be turned on using by press
 
 This system demonstrates the fundamental concepts of digital electronics but also offers a more interactive digital framework for the user to experiment with. It uses sensors, actuators, and graphical interfaces to provide users with a better understanding of concepts of ECE. The LCD subsystem's overall performance includes assessing the correctness of users input or interractions with the system. In order to make sure that the designed specifications for a better user experience are met, a response time to user inputs will be evaluated. A deeper analysis shall be conducted to align with the task's performance goals. In addition, user interface (UI) effects are shall be analyzed to confirm easy navigation and ease of use. Most the analysis shall be conducted via a test run coding format.
 
-The integrating of the LCD Block Subsystem is done by pairing a 3.2" TFT
-Touch Screen with a TFT LCD Arduino Mega Shield. A shield is
-needed since the TFT Touch screen operates at 3.3V while the Arduino
-Mega outputs at 5V. For the distance sensor, a HC-SR04 ultrasonic sensor
-is needed. While for the headlights, an RGB LED with three resistors are
-required. A push button is needed for the game and 2 Fans is needed for
-the A/C subsystem.
+The integrating of the LCD Block Subsystem is done by pairing a 3.2" TFT Touch Screen with a TFT LCD Arduino Mega Shield. A shield is needed since the TFT Touch screen operates at 3.3V while the Arduino Mega outputs at 5V. For the distance sensor, a HC-SR04 ultrasonic sensor is needed. While for the headlights, an RGB LED with three resistors are required. A push button is needed for the game and 2 Fans is needed for the A/C subsystem.
 
-Most of the testing shall be done within the code section and the
-hardware using LT-spice or other circuit assimilators. This includes
-unit tests for individual components, integration tests with the MCU and
-keypad, and system-level user acceptance tests to validate
-functionality, user interface design, and interactivity as per the
-defined requirements.
+Most of the testing shall be done within the code section and the hardware using LT-spice or other circuit assimilators. This includes unit tests for individual components, integration tests with the MCU and keypad, and system-level user acceptance tests to validate functionality, user interface design, and interactivity as per the defined requirements.
 
 ## B.O.M.
 
