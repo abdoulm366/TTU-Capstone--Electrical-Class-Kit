@@ -8,10 +8,8 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 |-------------|---------------------------|--------|
 | Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | [1], [3], [8] |
 | Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | [1], [3], [8] |
-| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU’s sampling rate must be around 100Hz to achieve the speed. | [4] |
 | Socioeconomic | The system shall be cost effective relating to the project's budget constraints. | Conceptual Design |
-
-
+| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU’s sampling rate must be around 100Hz to achieve the accepted error of 0.033 meters. | [4], [11] |
 
 ## Build a Schematic
 
@@ -21,7 +19,7 @@ Figure 1: Buildable Schematic
 
 The schematic in figure 1 shows an IMU chip, Motor driver shield, four motors, and a switch. The top component is the Arduino motor shield which is the motor driver for the motors. This shield has male pins that plug into the Arduino uno to where it connects and sits on top of it [8]. It has 4 bridges that are used for the four motors which are 0.1hp/74.5 watts a piece [3]. It also has SDA and SCL pins which are necessary for I2C communication. These pins allow it to interface with devices such as the IMU chip that communicate using the I2C protocol [1].
 
-The bottom component is the IMU BNO055 chip [2]. The two communication pins on the IMU are labeled SDA and SCL and those go to the SDA and SCL pins of the shield [2]. The IMU can tell if the vehicle is speeding up, turning, or changing direction because it consists of accelerometer, gyroscope, and magnetometer sensors [4]. It can detect the orientation of the vehicle in space. This means it can determine whether the car is tilted to one side, leaning forward or backward, or facing in a certain direction [4]. To bring everything together, a program will need to be made for it. The vehicle has 4 wheels and to turn left the right wheels will speed up and to turn right the left wheels will speed up, which is called differential steering [9]. The vehicle must be able to drive and turn on any pad or terrain. The IMU knows the orientation so by doing testing, the speed of the wheels can be figured out. Overall, an IMU chip allows the vehicle to drive the desired path anytime anywhere.
+The bottom component is the IMU BNO055 chip [2]. The two communication pins on the IMU are labeled SDA and SCL and those go to the SDA and SCL pins of the shield [2]. The IMU can tell if the vehicle is speeding up, turning, or changing direction because it consists of accelerometer, gyroscope, and magnetometer sensors [4]. It can detect the orientation of the vehicle in space. This means it can determine whether the car is tilted to one side, leaning forward or backward, or facing in a certain direction [4]. To bring everything together, a program will need to be made for it. The vehicle has 4 wheels and to turn left the right wheels will speed up and to turn right the left wheels will speed up, which is called differential steering [9]. To turn 90 degrees, let’s say to the left, the right wheels will go forward and the left wheels will go backward. The vehicle must be able to drive and turn on any floor or terrain. The IMU knows the orientation so by doing testing, the speed of the wheels can be figured out. Overall, an IMU chip allows the vehicle to drive the desired path anytime anywhere.
 
 The system is a closed loop. Based on figure 2 below, the IMU sends signals through the shield to the Arduino uno. They run through the program algorithm and the commands go to the motor driver and motors. This is a closed loop because it then goes back to the IMU. The IMU reads the vehicles orientation which changes due to the motors/wheels. In this there are feedback wires which are the IMU’s wires (SDA and SCL) that connect to the shield/Arduino uno. To explain and show the difference between an open loop and closed loop, the feedback wires have a wire connector that can be unplugged and plugged back in shown in figure 1. To show the open loop, it can be unplugged making the vehicle drive off on an undesired path. The vehicle will still drive, but it will not have information on the vehicle’s orientation.
 
@@ -31,11 +29,43 @@ Figure 2: Closed Loop Block Diagram
 ## Analysis
 Analyzing the voltage and current constraints: The system shall operate with the correct voltage and current. Overvoltage or excessive current can lead to malfunctions and overload. Overload can lead to overheating and other electrical hazards that can cause a safety factor. The IMU chip is rated for 3V-5V and a maximum draw of 12.3 mA [2]. The motor driver shield is rated for 4.5V to 13.5V and provides 1.2A per bridge [1]. The TT DC motors are rated for 3V-12V but are recommended for 6-8V and has a rating of 150 mA [3]. The TT motors rating works for the motor driver shields rating. Knowing and understanding the voltage and current specifications of each component ensures safe operation.
 
-Analyzing the precision constraint: The design of the mat is unknown, but the vehicle should be able to be put on any mat at any time and go the correct path. The IMU has a sampling rate of 100Hz meaning it takes samples or measurements 100 times a second [2]. This speed will allow the vehicle to make quick adjustments to stay on course. On the control algorithm side, the speed of the motors is set in the program. The vehicles speed does not need to be too fast, or it will turn the car too rapidly. Testing with the vehicle will allow the needed speed.
-
 Analyzing the socioeconomic constraint: The budget of the project must be kept in mind for this design. It shall be cost-effective while also being high in quality. This system is a crucial, so it needs to be reliable. 
 
+Analyzing the response constraint: The vehicle should be able to drive anywhere placed at any time and go the correct path. The IMU has a sampling rate of 100Hz meaning it takes samples or measurements 100 times a second [2]. This speed will allow the vehicle to make quick adjustments to stay on course based on the math and information below. On the control algorithm side, the speed of the motors is set in the program. The vehicles speed does not need to be too fast, or it will turn and adjust too rapidly. Testing with the vehicle will allow what’s needed.
 
+The TT motors are 0.1 hp [3]. Taking the cube root of the horsepower and multiplying it by 20 gives the max mile per hour of the motors [10].
+
+$20 \times \sqrt[3]{0.1}$ = 9.28mph (max)
+
+Accounting for the weight of the vehicle, the wheels friction, and different terrains it will be driving on, the vehicle will not go that mile per hour. By doing math, we can find out if the 100Hz sampling rate will work and how much error is acceptable. By using 5mph as an example we can first find the distance covered per sample:
+
+$\frac{5*5280}{3600}$ = 7.33ft/s (1 mile = 5280ft) (1 hour = 3600s)
+
+Then, find the distance covered per sample: 
+
+$7.33 \times \frac{1}{100}$ = 0.0733ft/sample (Velocity * Time Interval)
+
+So every 100Hz sample the vehicle will cover 0.0733 feet. An accepted width of error is 33mm or 0.033 meters [11]. By using this, we can calculate if it will work:
+
+$5 \times  \frac{1609.34}{3600}$  = 2.2352 m/s (1609.34 meters per mile)
+
+$2.2352 \times \frac{1}{100}$ = 0.022352 m/sample
+
+Since the width of error is 0.033 meters and the distance covered per sample is approximately 0.022352 meters, the car will move less than the width between each sample. Since the speed is somewhere between 0 and 9mph, even though the vehicle will be on the bottom end, each mile per hour can be calculated in the table below:
+
+| Vehicle Speed (mph) | Distance Covered Per Sample (ft/sample) | Width of error (m/sample) |
+|--------------------|------------------------------------------|---------------------------|
+| 1 | 0.0146 | 0.0047 |
+| 2 | 0.0293 | 0.00894 |
+| 3 | 0.044 | 0.0134 |
+| 4 | 0.0586 | 0.0179 |
+| 5 | 0.0733 | 0.0235 |
+| 6 | 0.088 | 0.0268 |
+| 7 | 0.1026 | 0.0312 |
+| 8 | 0.1173 | 0.0357 |
+| 9 | 0.132 | 0.0402 |
+
+Based on the table, the vehicle can stay in the accepted width of error of 0.033m up to 7mph. The sampling rate must be 100Hz to achieve this.
 
 ## Bill of Materials (BOM)
 | Item Name | Details | Quantity | Cost | Source |
@@ -69,4 +99,8 @@ Total cost for subsystem: $78.29 (not including tax or shipping)
 [8] Industries, Adafruit. “Adafruit Motor/Stepper/Servo Shield for Arduino v2 Kit.” Adafruit Industries Blog RSS, www.adafruit.com/product/1438. Accessed 21 Apr. 2024. 
 
 [9] Wsurging, and Instructables. “Differential Steering Car with Arduino.” Instructables, Instructables, 29 Feb. 2020, www.instructables.com/Differential-Steering-Car-With-Arduino/. 
+
+[10] “How Does One Calculate the Approximate Maximum Speed of a Vehicle Using Its Stats? Specifically Using Engine HP, Weight, Torque, and RPM.” Quora, www.quora.com/How-does-one-calculate-the-approximate-maximum-speed-of-a-vehicle-using-its-stats-Specifically-using-engine-HP-weight-torque-and-RPM. Accessed 22 Apr. 2024. 
+
+[11] “Line Following.” Line Following - SunFounder PiCar-S Documentation, docs.sunfounder.com/projects/picar-s/en/latest/line_following.html#:~:text=Rules%20for%20making%3A,distance%20of%20two%20nonadjacent%20probes&text=whole%20module%2C%20to%20prevent%20the,lines%20at%20the%20same%20time. Accessed 22 Apr. 2024. 
 
