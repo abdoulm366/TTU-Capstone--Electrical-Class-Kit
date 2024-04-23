@@ -111,11 +111,11 @@ Table 4. BOM
 |ShareGoo 8Leds LED Light Headlights/Taillight                             |	Amazon.com	| 1	      | $8.89	  | $8.89         |
 |Arduino Mega 2560	                                          | Amazon.com	  | 1	      | $48.90	| $48.90        |
 |SN74LV4052A multiplexer |	Ti.com	      | 2	      | $0.948	  | $0.948         |
-|Tactile Button switch (6mm) x 20 pack                        |	Adafruit.com 	| 1	      | $2.50	  | $2.50         |
+|Dip switch  (3 position)                     |	Mouser.com 	| 1	      | $1.47	  | $1.47         |
 |Full-size Perma proto boards	                                | Adafruit.com	| 2	      | $39.90	| $39.90        |
 |20 ft each 18 AWG copper wire with shielded protction(6 different color)                | Amazon.com	| 1	      | $16.49	| $16.49        |
 |Resistors (200 ohms)                                | Mouser.com	| 8	      | $4.56 | $4.56       |
-|		                                                          |               |         | Total:  |	$122.18      |
+|		                                                          |               |         | Total:  |	$121.15      |
 
 ## References 
 
