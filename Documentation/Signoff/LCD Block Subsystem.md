@@ -16,7 +16,7 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
 ## Schematic:
 
 <p align="center">
-  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/583d6fb5-7fea-4e17-8545-a710e0a78faf" height="500" />
+  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a049d429-bcd9-44cf-affb-985888d65749" height="500" />
 </p>
 
 ## Analysis:
