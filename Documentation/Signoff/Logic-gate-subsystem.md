@@ -1,21 +1,21 @@
 # Logic Gates Subsystem
 
 ## Function of the System
-The function of this subsystem is to introduce the concept of logic gates through an approachable way for someone with little to no experience with AND,OR and NOT gate. The subsystem will be user friendly by using switches to demonstrate these concepts and allow the user to interact with the inputs.
+The function of this subsystem is to introduce the concept of logic gates through an approachable way for someone with little to no experience using AND,OR and NOT gate. The subsystem will be user friendly by using switches to demonstrate these concepts and allow the user to interact with the inputs.
 
 
 ## Constraint
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   |  System shall operate at less than 50V, safe voltage level suitable for educational purposes [1].        | Design Constraint |
-| 2   |System shall be run through by a current less than 1mA. | Design Constraint |
+| 1   |  System shall operate at less than 50V, safe voltage level suitable for educational purposes.  | Safety Constraint |
+| 2   |System shall be run through by a current less than 30mA. | Device Constraint |
 | 3   |System shall be able to receive input from the user through the Switch | Design Constraint |
 
 
 ## Buildable schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/092a6536-49a5-4f77-97ab-1a412f9772d5)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/996cc577-d6e0-41cb-8813-b15bd53233d6)
 
 The above image is a schematic of dual 4 to 1 mux connected to 7 switches which translate the concept of logic gates.  The two switches in series represent an AND gate so output will be high only when both inputs are high. The two switches in parallel represent an OR gate so output will be high when at least one input is high. The schematic focuses on the connection ports of the device with respect to the overall  circuit design.
 
@@ -25,12 +25,12 @@ The above image is a schematic of dual 4 to 1 mux connected to 7 switches which 
 
 <sup>1</sup>	The system shall operate at a voltage level that is less than 50 volts. This is a safety  measure to ensure that the system is operating at a low voltage, which reduces the risk of  electric shock or injury, especially in educational environments where users may not have  extensive experience with electrical systems.[1] 
 
-<sup>2</sup> The system shall not allow more than 1 mA of current to flow through it under  normal operating conditions. This is likely specified to ensure safety, as higher currents  can pose risks of electric shock or damage to components. A current regulator resistor is used in the circuit to ensure the following specification is met.
+<sup>2</sup> The system shall not allow more than 30 mA of current to flow through it under  normal operating conditions. This is specified to ensure safety, as higher currents  can pose risks of electric shock or damage to components. A current regulator resistor is used in the circuit to ensure the following specification is met.
 
 <sup>3</sup> 	The switch is a type of electrical component used in electronic devices for input  purposes. The user will interact  with the system by physically setting the state of the switches. This allows users to provide input and configure the system by manipulating the switches directly. 
 
 
-The system can easily operate on a breadboard powered by the main power subsystem. The resistor in the schematic is a current regulator resistor limiting the current flow through the multiplexer since the maximum current rating recommended is 1 mA. 
+The system can easily operate on a perf board powered by the main power subsystem. The resistor in the schematic is a current regulator resistor limiting the current flow through the multiplexer will ensure a maximum current rating less than 30 mA. 
 Logic gates are fundamental building blocks of digital circuits, performing logical  operations on one or more binary inputs and producing a single binary output. The system will not be using actual logic gates, but instead use switches and a 4 to 1 mux to explain the logic gates concept. 
 
 The SN74LS153 is a dual 4-to-1 multiplexer, with two 4 to 1 mux intagrated. It is a combinational circuit that selects one of four input data lines and forwards it to a single output line based on the control inputs. Each multiplexer has four data inputs, two control inputs (A and B) shared together, and one output each. The control inputs determine which data input is routed to the output.
@@ -79,22 +79,22 @@ The SN74LS153 is a dual 4-to-1 multiplexer, with 2 4 to 1 mux in it. It is a com
 
 
 
-### Output
-The output of this subsystem is a DC motor connected to the Arduino through a driver circuit since the motor cannot be driven directly from the Arduino board pins due risks of damage to the board components [3]. The driver circuit consists of a 270-ohm resistor, and npn transistor and a diode. The Transistor acts like a direct switch to the motor. 
 
 ## BOM
 | DEVICE                | Quantity | Price Per Unit | Total Price | Source |
 | --------------------- | -------- | -------------- | ----------- | -------| 
-| Switches              | 7        | $0.65          |4.55         | [3] |
-| 4 to 1 Mux (SN74LS153)| 1        | $1.13          | $1.13       | [2] |
-|  5k Resistor          | 1        | $0.29          | $0.29        |  [4]    |
-
+| Switches              | 7        | $0.65          | $4.55         | Mouser |
+| 4 to 1 Mux (SN74LS153)| 1        | $1.13          | $1.13       | Mouser |
+|  5k Resistor          | 1        | $0.29          | $0.29        |  Jameco    |
+ 
+ 
+ Total Cost: $5.97
 # References
 
-[1]  “High Voltage Safety.” Safety, safety.ep.wisc.edu/hazards/high-voltage-safety. Accessed 3 Apr. 2024.
+[1]  “High Voltage Safety.” Safety, safety.ep.wisc.edu/hazards/high-voltage-safety.
 
-[2] SN74LS153N Texas Instruments | Mouser, www.mouser.com/ProductDetail/Texas-Instruments/SN74LS153N?qs=SL3LIuy2dWxINdb8Y9aA1A%3D%3D. Accessed 23 Apr. 2024. 
+[2] SN74LS153N Texas Instruments | Mouser, www.mouser.com/ProductDetail/Texas-Instruments/SN74LS153N?qs=SL3LIuy2dWxINdb8Y9aA1A%3D%3D.
 
-[3] DS04-254-2-01bk-Smt-Tr Cui Devices | Mouser, www.mouser.com/ProductDetail/CUI-Devices/DS04-254-2-01BK-SMT-TR?qs=wnTfsH77Xs4xXRFXKF0ssg%3D%3D. Accessed 23 Apr. 2024. 
+[3] DS04-254-2-01bk-Smt-Tr Cui Devices | Mouser, www.mouser.com/ProductDetail/CUI-Devices/DS04-254-2-01BK-SMT-TR?qs=wnTfsH77Xs4xXRFXKF0ssg%3D%3D.
 
-[4] Metal Oxide Resistor 5k Ohm 5 Watt | Jameco Valuepro, www.jameco.com/z/RSF-MO5WS5KJBU-Jameco-Valuepro-Resistor-Metal-Oxide-5K-Ohm-5-Watt-5-_2274335.html. Accessed 23 Apr. 2024. 
+[4] Metal Oxide Resistor 5k Ohm 5 Watt | Jameco Valuepro, www.jameco.com/z/RSF-MO5WS5KJBU-Jameco-Valuepro-Resistor-Metal-Oxide-5K-Ohm-5-Watt-5-_2274335.html. 
