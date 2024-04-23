@@ -8,9 +8,9 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
 
 | Description       | Constraints/Specification:                                                                           | Source                         |
 |-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
-| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   |  [3]             |
-| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 |  [4]       |
-| Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement        |
+| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   |  Interaction Design principles [3]             |
+| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | User interface design [4]       |
+| Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement [6]        |
 | environmental and social responsibility      |  The system must work according to the environmental and social responsibility performance criteria for computers of the IEEE | IEEE Standard [5] |
 
 ## Schematic:
@@ -100,3 +100,5 @@ available at:
 [4] Nielsen, J. (2024, February 20). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/ 
 
 [5] IEEE SA - IEEE Standard for Environmental and Social Responsibility Assessment of computers and displays. IEEE Standards Association. (n.d.). https://standards.ieee.org/standard/1680_1-2018.html 
+
+[6] Proculus Technologies Co., Ltd. (2024, January 4). How to improve performance of LCD displays. https://www.proculustech.com/how-to-improve-performance-of-lcd-displays.html 
