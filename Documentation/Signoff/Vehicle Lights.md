@@ -101,7 +101,7 @@ The multiplexer select lines will be dip switches. The reason the dip switches h
 
 Figure 7. Car LEDs represents the ShareGoo LED Light Headlights/Taillights
 
-The LEDs that will be used in this subsystem will be ShareGoo 8Leds LED Light Headlights/Taillight, white and red. These LEDs were chosen because they are cost-efficent and they are not space consuming, taking up less room. These LEDs will be sufficient to physically represent the headlights using white LEDs and tail lights using red LEDs to accurately represent the car lights. As you can see in Figure 3. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. These LEDs are capable of operating on a volatge range of 3 volts to 7 volts allowing them to be dimmmed down. 
+The LEDs that will be used in this subsystem will be ShareGoo 8Leds LED Light Headlights/Taillight, white and red. These LEDs were chosen because they are cost-efficent and they are not space-consuming, taking up less room. These LEDs will be sufficient to physically represent the headlights using white LEDs and tail lights using red LEDs to accurately represent the car lights. As you can see in Figure 3. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. These LEDs will be small LEDs with a housing around them to help direct them into a beam like real car headlights. These LEDs are capable of operating on a voltage range of 3 volts to 7 volts allowing them to go dimmer and not just operate on one voltage. 
 
 
 # BOM 
