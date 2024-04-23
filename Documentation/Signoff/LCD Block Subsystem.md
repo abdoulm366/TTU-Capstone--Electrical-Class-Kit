@@ -2,16 +2,16 @@
 
 ## Subsystem Function:
 
-The purpose of this subsystem is to help ease the user's understanding of the kit's functionalities, provide a digital user manual, provide the users with instructions or guided learnig via challenges and lessons and enable a digital interaction with the car. Hence, this LCD Block Subsystem serves as the primary interaction point between the user and the device as a whole. 
+The purpose of this subsystem is to help ease the user's understanding of the kit's functionalities, provide a digital user manual, provide the users with instructions or guided learning via challenges and lessons and enable a digital interaction with the car. Hence, this LCD Block Subsystem serves as the one of the primary interaction point between the user and the device as a whole. 
 
 ## Constraints/Specifications:
 
 | Description       | Constraints/Specification:                                                                           | Source                         |
 |-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
-| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   | Boost your UX with these successful Interaction Design principles: Toptal® [3]             |
-| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | Usability heuristics for user interface design [4]       |
+| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   |  [3]             |
+| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 |  [4]       |
 | Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement        |
-| environmental and social responsibility      |  The system must work according to the environmental and social responsibility performance criteria for computers of the IEEE | IEEE Standard for Environmental and Social Responsibility Assessment of Computers and Displays [5] |
+| environmental and social responsibility      |  The system must work according to the environmental and social responsibility performance criteria for computers of the IEEE | IEEE Standard [5] |
 
 ## Schematic:
 
@@ -34,7 +34,7 @@ This shall be the display for the main menu. It will contain 3 digital buttons, 
 </p>
 
 <h4 align="center"> Challenges: </h4>
-This section will be coded to interact with the other Subsystem like the input bread board subsystem, the Logic Gates Subsystem, the Vehicle Lights and others. These challenges will create an aspect of the guided learning experience to the user. It shall introduce a problem or challenge to the user, provide hints, and after the user successfully completes the challenge it shall provide a check mark and explain the concept learned by the user. For example, let's concider a challenge such as “Have you tried driving the car in reverse?”. After the user clicks on this challenge, they would be refered to Logic Gates Subsystem, would be provided 3 hints about different logic gates like AND, OR, and NOT. After the user successfully changes the dirrection of the wheels, they would receive a check mark and be provided with an explaination of the concept learned using logic gates.
+This section will be coded to interact with the other Subsystem like the input bread board subsystem, the Logic Gates Subsystem, the Vehicle Lights and others. These challenges will create an aspect of the guided learning experience to the user. It shall introduce a problem or challenge to the user, provide hints, and after the user successfully completes the challenge it shall provide a check mark and explain the concept learned by the user. For example, let's consider a challenge such as “Have you tried driving the car in reverse?”. After the user clicks on this challenge, they would be refered to Logic Gates Subsystem, would be provided 3 hints about different logic gates like AND, OR, and NOT. After the user successfully changes the dirrection of the wheels, they would receive a check mark and be provided with an explaination of the concept learned using logic gates.
 
 <p align="center">
   <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/8245bbfa-30cd-4bad-ba81-8be7aa4a7350" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/716e4cc0-d68b-436b-8648-b1d8196a5772" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/48ffc31f-f1dd-4918-9817-9d066de188aa" height="300" />
@@ -65,9 +65,8 @@ shall be played using the push button or directly on the touch screen.
 
 The fan represents the A/C unit of the car. It shall be turned on using by pressing on the “Turn On Fan” button and turned off by pressing the “turn Off Fan” button.
 
-This system does not only effectively demonstrates the fundamental concepts of digital electronics but also offers a more interactive digital framework for the user to experiment with. It uses sensors, actuators, and graphical interfaces to provide users with a better understanding of concepts of ECE. The LCD subsystem's overall performance includes assessing the correctness of users input or interractions with the system. In order to make sure that the designed specifications for a better user experience are met, a response time to user inputs will be evaluated. A deeper analysis shall be conducted to align with the task's performance goals. In addition, user interface (UI) effects are shall be analyzed to confirm easy navigation and ease of use. Most the analysis shall be conducted via a test run coding format.
+This system demonstrates the fundamental concepts of digital electronics but also offers a more interactive digital framework for the user to experiment with. It uses sensors, actuators, and graphical interfaces to provide users with a better understanding of concepts of ECE. The LCD subsystem's overall performance includes assessing the correctness of users input or interractions with the system. In order to make sure that the designed specifications for a better user experience are met, a response time to user inputs will be evaluated. A deeper analysis shall be conducted to align with the task's performance goals. In addition, user interface (UI) effects are shall be analyzed to confirm easy navigation and ease of use. Most the analysis shall be conducted via a test run coding format.
 
- <h4 align="center"> Subsystem Integration: </h4>
 The integrating of the LCD Block Subsystem is done by pairing a 3.2" TFT
 Touch Screen with a TFT LCD Arduino Mega Shield. A shield is
 needed since the TFT Touch screen operates at 3.3V while the Arduino
@@ -75,8 +74,6 @@ Mega outputs at 5V. For the distance sensor, a HC-SR04 ultrasonic sensor
 is needed. While for the headlights, an RGB LED with three resistors are
 required. A push button is needed for the game and 2 Fans is needed for
 the A/C subsystem.
-
-<h4 align="center"> Testing & Validation: </h4>
 
 Most of the testing shall be done within the code section and the
 hardware using LT-spice or other circuit assimilators. This includes
