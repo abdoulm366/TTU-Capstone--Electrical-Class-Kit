@@ -26,15 +26,15 @@ Figure 1. Car Lights Output Schematic.
 Figure 2. Multiplexer PCB with mounting holes. 
 
 
-![Screenshot (321)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/218034d1-7a84-45b0-af0e-7b1d60637be3)
+![Screenshot (324)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/1aa214e4-13d5-42b5-ac81-800569ba72db)
+
 
 
 Figure 3. PCB of the LEDs with current limiting resistors in series and mounting holes and screw terminals to connect inputs and grounds.
 
-![Screenshot (323)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/7931095b-5143-4461-ba32-e78081eece55)
+![Screenshot (325)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/8ee4c605-6f6b-40a5-a641-cb9cb3a28cad)
 
-Figure 4. 3D model of LEDs
-
+Figure 4. 3D model of LEDs and Multplexer PCBs.
 
 ## Analysis 
 
@@ -61,12 +61,7 @@ $R = 65 Ω$
 
 $R  = \frac{5 - 3.0}{0.015}$
 
-$200 Ω  = \frac{5 - 3.0}{0.015}$
-
 $R = 133.3 Ω$ 
-
-
-
 
 Resistance of the calculated 65 Ω shall keep the current flow to the LEDs safe, preventing damage since 5 volts is the max the LEDs will operate at for this subsystem. 
 
@@ -96,7 +91,7 @@ Table 3. Mux 2 functionality.
 
 Figure 6. Select Line / Enable Switches
 
-The multiplexer select lines will be dip switches. The reason the dip switches have been chosen for the select lines is that they can be coded to provide the user an experience where they can slide the switches up, representing 1 and if the user slides them down, it represents a 0. This allows the users to select A and B and remain in the same states until they slide the switch again so that it will not frequently change the input being passed through without the user's desire.  These switches also operate on 5 volts so they are compatible for this subsystem. 
+The multiplexer select lines will be dip switches. The reason the dip switches have been chosen for the select lines is that they can be coded to provide the user an experience where they can slide the switches up, representing 1 and if the user slides them down, it represents a 0. This allows the users to select A and B and remain in the same states until they slide the switch again so that it will not frequently change the input being passed through without the user's desire.  These switches also operate on 5 volts so they are compatible for this subsystem. The Dip switches will be configured to an Arduino used in the input subsystem to limit the number of MCU's being used. 
 
 ### LEDs
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/c5ac830f-2bb1-4990-865d-90e1dc553631)
