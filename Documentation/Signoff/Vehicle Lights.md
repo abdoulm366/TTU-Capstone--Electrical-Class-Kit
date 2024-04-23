@@ -6,10 +6,9 @@ The function of this subsystem is to demonstrate Electrical and Computer Enginee
 Table. 1 Constraints
 |Description| Constraint | Source |
 |-|-|-|
-|Multiplexer Voltage Safety |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| Datasheet Requirement |
-|Current Safety |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more than that to prevent overcurrent damage and to ensure safe operation.| Datasheet Requirement  |
-| Socioeconomic | This subsystem shall | Conceptual Design| 
-
+|Multiplexer Voltage Safety  |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| Datasheet Requirement |
+|Current Saftey / Standards |The LEDs in this subsystem shall take 15mA with a 5% tolerance, no more than that to prevent overcurrent damage and to ensure safe operation.| Datasheet Requirement  |
+|Cost Considerations | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| Conceptual Design| 
 
 
 
@@ -32,6 +31,11 @@ Figure 2. Multiplexer PCB with mounting holes.
 
 Figure 3. PCB of the LEDs with current limiting resistors in series and mounting holes and screw terminals to connect inputs and grounds.
 
+![Screenshot (323)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/7931095b-5143-4461-ba32-e78081eece55)
+
+Figure 4. 3D model of LEDs
+
+
 ## Analysis 
 
 ### Multiplexer
@@ -40,7 +44,7 @@ Figure 3. PCB of the LEDs with current limiting resistors in series and mounting
 Figure 5. SN74LV4052ADBR Multiplexer
 
 The SN74LV4052ADBR multiplexer was chosen because it allows the user to interact with the subsystem itself, and it is also compatible with the other components within this subsystem since it can operate at 5 volts and outputs more than enough current needed. The multiplexer voltage saftey constraint will be met by following datasheet requirements and limiting the input voltage to the Multiplexer to 5 volts. This will be met since the Arduino mega 2560 is only capable of outputting 5 volts maximum from its 5 volt port according to its datasheet information [1]. Since the Arduino Atmega 2560 can only output 5 volts maximum the constraint has been met and there is no need to consider any extra precautions for the multiplexer's voltage safety. 
-The current safety constraint requirement will also be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The multiplexer datasheet also states that the multiplexer can output 50mA [4], so there needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. 
+The current safety constraint requirement will also be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The multiplexer datasheet also states that the multiplexer can output 50mA [4], so there needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. The inputs seen on the schematic can be seen in the Input bread-board subsystem as that is where the Arduino will be sending inputs from. 
  As Figure 2. shows the Multiplexer will have its own PCB that will be mounted somewhere in the center of the cab of the car near the Arduino so that the output of the multiplexer can still be connected to the front and back lights without taking up more space.  
 
 Below are the current limitation calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
