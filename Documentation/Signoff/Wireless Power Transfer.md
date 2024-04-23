@@ -16,7 +16,9 @@ The purpose of this subsystem is to demonstrate wireless charging, energy, and p
 
 ## Buildable Schematic
 
+<img width="518" alt="Buildable Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/dd56d908-6b70-4ba4-98d0-8b24588693f0">
 
+Figure 1. Buildable Schematic
 
 ## Analysis
 
@@ -162,10 +164,36 @@ Figure 7. Run Time at 10 Seconds Charge Time
 
 ## B.O.M.
 
-|Item                   |Location       |Quantity |Price      |Total Price     |
-|-----------------------|---------------|---------|-----------|----------------|
-
-|                       |               |         |Total:     |                |
+|Item                                 |Location       |Quantity |Price      |Total Price |
+|-------------------------------------|---------------|---------|-----------|------------|
+|22 uF Capacitor                      |Digikey        |2        |$1.82      |$3.64       |
+|150 nF Capacitor                     |Jameco         |1        |$0.19      |$0.19       |
+|100 nF Capacitor                     |Jameco         |1        |$0.19      |$0.19       |
+|33 nF Capacitor                      |Jameco         |1        |$0.39      |$0.39       |
+|10 nF Capacitor                      |Jameco         |2        |$0.19      |$0.38       |
+|22 nF Capacitor                      |Digikey        |1        |$0.27      |$0.27       |
+|4.7 nF Capacitor                     |Mouser         |2        |$0.49      |$0.98       |
+|1.5 nF Capacitor                     |Jameco         |1        |$0.12      |$0.12       |
+|10 uF Capacitor                      |Jameco         |1        |$0.55      |$0.55       |
+|2.2 uF Capacitor                     |Jameco         |2        |$0.19      |$0.38       |
+|0.022 uF Capacitor                   |Jameco         |2        |$0.19      |$0.38       |
+|68 uH Inductor                       |Mouser         |2        |$0.52      |$1.04       |
+|33 uH Inductor                       |Jameco         |2        |$1.11      |$2.22       |
+|1 k Resistor                         |Digikey        |2        |$0.10      |$0.20       |
+|1.01 Meg Resistor                    |Jameco         |2        |$0.05      |$0.10       |
+|1.35 Meg Resistor                    |Jameco         |2        |$0.04      |$0.08       |
+|3.01 k Resistor                      |Jameco         |2        |$0.06      |$0.12       |
+|477 k Resistor                       |Jameco         |2        |$0.06      |$0.12       |
+|BAT54 Zener Diode                    |Mouser         |5        |$0.42      |$2.10       |
+|BZX84C15L Zener Diode                |Mouser         |2        |$0.14      |$0.28       |
+|SI4470DY Transistor                  |Mouser         |2        |$1.58      |$3.16       |
+|YXQ 25W Rheostat                     |Amazon         |1        |$8.99      |$8.99       |
+|1.5 V AA Battery                     |Amazon         |1        |$4.75      |$4.75       |
+|4xAA Battery Holder                  |Amazon         |1        |$7.49      |$7.49       |
+|9 V Lithium-ion Battery              |Amazon         |1        |$23.49     |$23.49      |
+|9 V Lithium-ion Battery Holder       |Amazon         |1        |$5.99      |$5.99       |
+|22 AWG Copper Wire (75 Feet)         |Amazon         |1        |$4.88      |$4.88       |
+|                                     |               |         |Total:     |$72.48      |
 
 ## References
 
