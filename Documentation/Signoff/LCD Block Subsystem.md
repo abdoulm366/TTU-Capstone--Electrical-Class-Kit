@@ -8,10 +8,10 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
 
 | Description       | Constraints/Specification:                                                                           | Source                         |
 |-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
-| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   | Conceptual Design              |
-| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | User Experience Research       |
+| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   | Boost your UX with these successful Interaction Design principles: Toptal® [3]             |
+| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | Usability heuristics for user interface design [4]       |
 | Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement        |
-| Content           | The display content must be dynamic, supporting multiple languages and symbols for a wide user base. | Internationalization Standards |
+| environmental and social responsibility      |  The system must work according to the environmental and social responsibility performance criteria for computers of the IEEE | IEEE Standard for Environmental and Social Responsibility Assessment of Computers and Displays [5] |
 
 ## Schematic:
 
@@ -109,3 +109,8 @@ Guidelines,
 available at:
 \[https://howtomechatronics.com/tutorials/arduino/arduino-tft-lcd-touch-screen-tutorial/#google_vignette\](https://howtomechatronics.com/tutorials/arduino/arduino-tft-lcd-touch-screen-tutorial/#google_vignette).
 
+[3] Philips, M. (2017, June 1). Boost your UX with these successful Interaction Design principles: Toptal®. Toptal Design Blog. https://www.toptal.com/designers/interactive/interaction-design-principles#:~:text=Constraints%20in%20design%20make%20sure,and%20consequently%20influence%20the%20user. 
+
+[4] Nielsen, J. (2024, February 20). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/ 
+
+[5] IEEE SA - IEEE Standard for Environmental and Social Responsibility Assessment of computers and displays. IEEE Standards Association. (n.d.). https://standards.ieee.org/standard/1680_1-2018.html 
