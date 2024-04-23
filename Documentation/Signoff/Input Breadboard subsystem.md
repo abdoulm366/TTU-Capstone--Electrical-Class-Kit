@@ -18,7 +18,7 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 
 Figure 1: Blocks
 
-![Sensor](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/7d827dbc-f07f-4d91-a223-57d7c0215520)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/c387ffb3-85bc-4172-b013-5f6cf8a9616c)
 
 
 Figure 2: Sensor Circuit
@@ -76,9 +76,9 @@ Figure 8: 2.2 μF circuit
 
 As can be seen above in the table and the pictures, the time never exceeds 1.2 seconds, so the constraint of working within 2 seconds is easily met.  The times are also different enough that there’s no chance of mistaking one value for another. Another point of reference is that the time in milliseconds is equal to 1.16 times the capacitance given in μF. As a result, a simple C program will be sufficient to determine the capacitance based on the time alone, given the same resistane and input voltage.
 
-Considering the weight constraint (which was no more than 3 pounds), the design is sufficient enough to fulfill that constraint. The heaviest component is easily the Arduino Nano [4]. The Nano weighs in at 0.176 ounces. Considering that no other component even approaches that weight, the entire subsysystem is easily under the weight limit, and passes this constraint.
+Considering the weight constraint (which was no more than 3 pounds), the design is sufficient enough to fulfill that constraint. The heaviest component is easily the Arduino Mega [4]. The Mega weighs in at 1.31 ounces. Considering that no other component even approaches that weight, the entire subsysystem is easily under the weight limit, and passes this constraint.
 
-Lastly, the diode block is the easiest to both understand and calculate. Since the diode is a binary-acting device, its output voltage is either high or zero. Most diodes have a 0.7 voltage drop, and since the Peak Inverse Voltage is far less than even 5 volts, all it will have to do is block current going the other way. The analog in port will then find that the voltage is zero, and appropriate adjustments can be made to affect the rest of the project. 
+Lastly, the effect of the diode is the easiest to both understand and calculate. Since the diode is a binary-acting device, its output voltage is either high or zero. Most diodes have a 0.7 voltage drop, and since the Peak Inverse Voltage is far less than even 5 volts, all it will have to do is block current going the other way. The analog in port will then find that the voltage is zero, and appropriate adjustments can be made to affect the rest of the project. 
 
 ## B.O.M.
 | Component Type: | Quantity: | Link                      | Price:   |
@@ -87,7 +87,7 @@ Lastly, the diode block is the easiest to both understand and calculate. Since t
 | Capacitors      | 1         | https://shorturl.at/ouxBV | $ 14.99  |
 | Diodes          | 1         | https://shorturl.at/fswBG | $ 9.99   |
 | Breadboard      | 3         | https://shorturl.at/xzG47 | $ 16.50  |
-| Arduino Nano     | 3         | https://shorturl.at/gow16 | $ 82.80  |
+| Arduino Mega    | 3         | https://shorturl.at/htuxV | $ 82.80  |
 | Max 4167    | 1         | https://shorturl.at/EQUY7    | $ 6.18 |
 | Resistors (1% tolerance)    | 1         | https://shorturl.at/ajrDO      | $ 9.99  |
 |                 |           | Total:                    | $ |
@@ -99,7 +99,7 @@ Lastly, the diode block is the easiest to both understand and calculate. Since t
 
 [3] Max4617/MAX4618/ max4619 | data sheets, https://www.analog.com/media/en/technical-documentation/data-sheets/MAX4617-MAX4619.pdf (accessed Apr. 9, 2024). 
 
-[4] “Arduino Nano,” Arduino Online Shop, https://store-usa.arduino.cc/products/arduino-nano?selectedStore=us (accessed Apr.22, 2024). 
+[4] “Arduino Mega,” Arduino Online Shop, https://store-usa.arduino.cc/products/arduino-mega?selectedStore=us (accessed Apr.22, 2024). 
 
 
 
