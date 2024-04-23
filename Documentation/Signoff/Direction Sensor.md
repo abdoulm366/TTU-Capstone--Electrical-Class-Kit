@@ -8,7 +8,7 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 |-------------|---------------------------|--------|
 | Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | [1], [3], [8] |
 | Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | [1], [3], [8] |
-| Socioeconomic | The system shall be cost effective relating to the project's budget constraints. | Conceptual Design |
+| Cost Boundaries | Equipment/components should not surpass $35, with the total capped at $90 to ensure the projects final total falls within the $400 to $900 budget. | Conceptual Design |
 | Response | The system must detect if the car is veering off then immediately correct it and put it back on track. The IMU’s sampling rate must be around 100Hz to achieve the accepted error of 0.033 meters. | [4], [11] |
 
 ## Buildable Schematic
@@ -29,7 +29,7 @@ Figure 2: Closed Loop Block Diagram
 ## Analysis
 Analyzing the voltage and current constraints: The system shall operate with the correct voltage and current. Overvoltage or excessive current can lead to malfunctions and overload. Overload can lead to overheating and other electrical hazards that can cause a safety factor. The IMU chip is rated for 3V-5V and a maximum draw of 12.3 mA [2]. The motor driver shield is rated for 4.5V to 13.5V and provides 1.2A per bridge [1]. The TT DC motors are rated for 3V-12V but are recommended for 6-8V and has a rating of 150 mA [3]. The TT motors rating works for the motor driver shields rating. Knowing and understanding the voltage and current specifications of each component ensures safe operation.
 
-Analyzing the socioeconomic constraint: The budget of the project must be kept in mind for this design. It shall be cost-effective while also being high in quality. This system is crucial, so it needs to be reliable. 
+Analyzing the budget cost boundaries: To ensure budget constraints are followed, individual components shall not exceed $35, and the total shall not exceed $90. The $400-$900 budget must be kept in mind for this design. In addition, keeping costs low has good effects on the economy. It shall be cost-effective while also being high in quality. This system is crucial, so it needs to be reliable. 
 
 Analyzing the response constraint: The vehicle should be able to drive many different conditions and go the correct path. The IMU has a sampling rate of 100Hz meaning it takes samples or measurements 100 times a second [2]. This speed will allow the vehicle to make quick adjustments to stay on course based on the calculations and information below. On the control algorithm side, the speed of the motors is set in the program. The vehicles speed does not need to be too fast, or it will turn and adjust too rapidly. 
 
@@ -37,7 +37,7 @@ The TT motors are 0.1 hp [3]. Taking the cube root of the horsepower and multipl
 
 $20 \times \sqrt[3]{0.1}$ = 9.28mph (max)
 
-The vehicle will not go this speed due to the circumstances of the vehicles weight, wheel friction, terrain, etc. By doing calculations, we can find out if the 100Hz sampling rate will work and how much error is acceptable. By using 5mph as an example we can first find the distance covered per sample:
+This is the speed for just the motors, not while they are on the vehicle. When on the vehicle, it will not go this speed due to the circumstances of the vehicles weight, wheel friction, terrain, etc. By doing calculations, we can find out if the 100Hz sampling rate will work and how much error is acceptable. By using 5mph as an example, the first step is finding the distance covered per sample:
 
 $\frac{5*5280}{3600}$ = 7.33ft/s (1 mile = 5280ft) (1 hour = 3600 seconds)
 
@@ -62,12 +62,12 @@ Since the error is a width of 0.033 meters and the distance covered per sample i
 | 5 | 0.0733 | 0.0235 |
 | 6 | 0.088 | 0.0268 |
 | 7 | 0.1026 | 0.0312 |
-| 7.45 | 0.1092 | 0.33 |
+| 7.45 | 0.1092 | 0.033 |
 | 8 | 0.1173 | 0.0357 |
 | 9 | 0.132 | 0.0402 |
 | 9.28 | 0.136 | 0.0415 |
 
-Based on the table, 8 to 9.28 miles per hours does not fit the constraint so it is optimal for the vehicle to run in the range of 1 to 7.45 miles per hour. The sampling rate must be 100Hz to achieve this.
+Based on the table, 8 to 9.28 miles per hours does not fit the constraint. It is optimal for the vehicle to run in the precise range of 1 to 7.45 miles per hour because 7.45 miles per hour is the same as the width of error. Exceeding that speed means the vehicle is causing more error and going under means it will stay in the desired error. With the IMU's 100Hz sampling rate, the table shows this precise range is appropriate and sufficient based on the 0.033 meters of error. This width of error allows the vehicle a small amount to work with but is enough for the vehicle to stay on the desired path [11].
 
 ## Bill of Materials (BOM)
 | Item Name | Details | Quantity | Cost | Source |
