@@ -15,7 +15,9 @@ The function of this subsystem is to introduce the concept of logic gates throug
 
 ## Buildable schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/996cc577-d6e0-41cb-8813-b15bd53233d6)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/13fec6ad-48a2-4fb0-b28d-aa71cc8737f5)
+
+
 
 The above image is a schematic of dual 4 to 1 mux connected to 7 switches which translate the concept of logic gates.  The two switches in series represent an AND gate so output will be high only when both inputs are high. The two switches in parallel represent an OR gate so output will be high when at least one input is high. The schematic focuses on the connection ports of the device with respect to the overall  circuit design.
 
