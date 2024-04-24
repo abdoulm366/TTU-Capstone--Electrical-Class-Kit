@@ -1,8 +1,5 @@
+# Electrical and Computer Engineering EV Kit
 
-
-# Electrical Class Kit
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
 ## Executive Summary
 
@@ -16,21 +13,30 @@ Here explain in more detail (though not as much as will be given in the datashee
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
+Coming Fall 2024!
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
-
-Below the video link show some well-taken, appropriately sized images of the project.
-
+Coming Fall 2024!
 
 ## About Us
 
 ### Team
 
-Carson Ray is an electrical engineering major at Tennessee Technological University. He is interested in power systems, Digital systems and electronics. Carson is Responsible for the vehicle lights system with background in digital logic and coding that will be implmented into the system.
+__Abdoul Moudi__
+
+__Carson Ray__ is an electrical engineering major at Tennessee Technological University. He is interested in power systems, Digital systems and electronics. Carson is Responsible for the vehicle lights system with background in digital logic and coding that will be implmented into the system.
+
+__Dave Placide__
+
+__Jesse Griffey__
+
+__Keston Robbins__
+
+__Slayde Simmons__
+
+__Troy Dunn__
+
 
 ### Faculty Supervisor
 
@@ -40,7 +46,9 @@ Mr. Jesse Roberts - ECE Department
 
 The Primary stakeholder for this project is Dr. Kumar Yelamarthi. Dr. Yelamarthi is an Associate Dean of Academic Affairs, Professor of Electrical and Computer Engineering. 
 
-Another major stakeholder this project will have an affect on is highschool and incoming college freshman students, as it will be a kit that is designed to teach these level of students the concepts of Electrical and Computer engineering to help them better understand what the major is about. 
+One major stakeholder that will be affected is upcoming engineering prospects. Persons interested in the ECE degree will have the opportunity to utilize this kit as an introduction to the ECE curriculum. 
+
+Another stakeholder that will be affected by the project will be universities. Universities will have the opportunity to purchase the kit to use in their introductory ECE courses, potentially gaining the interest of future students. 
 
 ### Recognitions
 
@@ -61,4 +69,4 @@ In the documentaion section information regarding the documentation that is requ
 
 ### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+Coming Fall 2024!
