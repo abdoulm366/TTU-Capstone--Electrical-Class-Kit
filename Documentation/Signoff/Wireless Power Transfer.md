@@ -6,13 +6,17 @@ The purpose of this subsystem is to demonstrate wireless charging, energy, and p
 
 ## Constraints
 
-|Description    |Constraint                                                                                                            |Source              |
-|---------------|----------------------------------------------------------------------------------------------------------------------|--------------------|
-|Voltage        |The system shall operate at less than 50 V to ensure safety in an educational setting.                                |Conceptual Design   |
-|Voltage        |The output shall not exceed 4.2 V to ensure safe battery charging levels.                                             |LTC4120 Datasheet   |    
-|Frequency      |The system shall operate between 110 kHz and 205 kHz to maximize efficiency between the transmitter and receiver.     | LTC2140 Datasheet  |
-|Ethical        |The system shall provide more than 75% efficiency to decrease energy waste in the system.                             |Conceptual Design   |
+|Description    |Constraint                                                                                                            |Source                      |
+|---------------|----------------------------------------------------------------------------------------------------------------------|----------------------------|
+|Standard       |The system shall operate at less than 50 V to ensure safety in an educational setting.                                |OSHA 1926.403(i)(2)(i)      |
+|Voltage        |The output shall not exceed 4.2 V to ensure there is no overcharge of the battery.                                    |Datasheet/Digikey           | 
+|Frequency      |The system shall operate between 110 kHz and 205 kHz to optimize charging capability.                                 |Datasheet/Wireless Charging |
 
+<sup>1</sup> Accoriding to OSHA 1926.403(i)(2)(i), any voltage 50 V or higher must be enclosed in some manner so that any person cannot physically touch a component with this voltage level[4]. The subsystem shall be kept below the 50 V level to ensure that no accidental shocks occurs.
+
+<sup>2</sup> According to the LTC4120 datasheet and Digikey, 4.2 V is the optimal charging voltage to prevent overcharging of the battery[2][3]. Overcharging the battery can cause safety concerns within the subsystem and cause damage to the battery. 
+
+<sup>3</sup> For wireless charging applications, a frequency range of 110kHz to 205kHz is recommended to ensure optimal charging of low voltage batteries across short distances(1mm to 10mm)[3][5].
 
 ## Buildable Schematic
 
@@ -38,7 +42,7 @@ $$F_{T} = \frac{1}{2*\pi*\sqrt{C_{T}*L_{T}}}$$
 
 $$F_{T} = 133.86\ kHz$$
 
-Furthermore, this simulation proves that the voltage stays around 15 V, well below the 50 V maximum requirement located in the constraints. The circuit component values in the transmitter were used from the datasheet’s recommended values for the LTC4120 [2]. As for the coupling coefficient, the datasheet has a recommended range of 1mm to 10mm; at 1mm, the coupling coefficient is 0.35 and at 10mm, the coupling coefficient is 0.19. For this application, we use the worst-case scenario of 0.19 for all simulations since there will be an expected air gap. The air gap will be kept between the mentioned range. 
+Furthermore, this simulation proves that the voltage stays around 15 V, well below the 50 V maximum requirement located in the constraints. The circuit component values in the transmitter were used from the datasheet’s recommended values for the LTC4120 [3]. As for the coupling coefficient, the datasheet has a recommended range of 1mm to 10mm; at 1mm, the coupling coefficient is 0.35 and at 10mm, the coupling coefficient is 0.19. For this application, we use the worst-case scenario of 0.19 for all simulations since there will be an expected air gap. The air gap will be kept between the mentioned range. 
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/ea3ddb5f-6593-4f51-bc2e-d2c13811aa17)
 
@@ -199,4 +203,11 @@ Figure 12. Run Time at 10 Seconds Charge Time
 
 [1] DigiKey’s North American Editors. (2016, August 2). Inductive versus resonant wireless charging: A truce may be a designer’s best choice. DigiKey. https://www.digikey.com/en/articles/inductive-versus-resonant-wireless-charging#:~:text=The%20Qi%20specification%20calls%20for%20an%20AC%20frequency,to%20120%20W%29%20for%20the%20%E2%80%9Cmedium%20power%E2%80%9D%20chargers. 
 
-[2] LTC4120-4120-4.2.PDF. (n.d.). https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4120-4120-4.2.pdf 
+[2] DigiKey’s North American Editors. (2016b, September 1). A designer’s guide to lithium (li-ion) battery charging. DigiKey. https://www.digikey.com/en/articles/a-designer-guide-fast-lithium-ion-battery-charging?utm_adgroup=General&utm_source=bing&utm_medium=cpc&utm_campaign=Dynamic+Search_EN_RLSA&utm_term=digikey&utm_content=General&utm_id=bi_cmp-384476624_adg-1302921504343623_ad-81432643449113_dat-2333232393680005%3Aaud-807631101%3Aloc-190_dev-c_ext-_prd-&msclkid=a47310e72a021b0d165d76ce42b58086 
+
+[3] LTC4120-4120-4.2.PDF. (n.d.). https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4120-4120-4.2.pdf 
+
+[4] 1926.403 - general requirements. Occupational Safety and Health Administration. (n.d.). https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 
+
+[5] Wireless charging in consumer applications. (n.d.-b). https://www.st.com/content/dam/AME/2019/developers-conference-2019/presentations/STDevCon19_6.1_Wireless_Charging.pdf 
+
