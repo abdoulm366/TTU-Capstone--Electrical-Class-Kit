@@ -6,10 +6,10 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 ## Constraints
 | Description | Constraints/Specification | Source |
 |-------------|---------------------------|--------|
-| Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | [1], [3], [8] |
-| Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | [1], [3], [8] |
+| Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are recommended for 6-8V. | Datasheet Requirement |
+| Current | The motor driver shield must be capable of supplying 150mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA.  | Datasheet Requirement |
 | Cost Boundaries | Equipment/components should not surpass $35, with the total capped at $90 to ensure the project's final total falls within the $400 to $900 budget. | Conceptual Design |
-| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. With the IMU’s sampling rate of 100Hz and the motors being 0.1 horsepower, the vehicles speed will be between 1 and 9.28 miles per hour but must achieve the accepted error of 0.033 meters. | [3], [4], [11] |
+| Response | The system must detect if the car is veering off then immediately correct it and put it back on track. With the IMU’s sampling rate of 100Hz and the motors being 0.1 horsepower, the vehicles speed will be between 1 and 9.28 miles per hour but must achieve the accepted error of 0.033 meters. | Function Requirement |
 
 ## Buildable Schematic
 
