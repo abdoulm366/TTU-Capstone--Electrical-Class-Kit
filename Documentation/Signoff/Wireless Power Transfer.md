@@ -6,17 +6,17 @@ The purpose of this subsystem is to demonstrate wireless charging, energy, and p
 
 ## Constraints
 
-|Description    |Constraint                                                                         |Source              |
-|---------------|-----------------------------------------------------------------------------------|--------------------|
-|Voltage        |The system shall operate at less than 50 V                                         |Conceptual Design   |
-|Voltage        |The output shall not exceed 4.2 V                                                  |[1]                 |
-|Frequency      |The system shall operate between 110 kHz and 205 kHz                               |LTC2140 Datasheet   |
-|Ethical        |The system shall have the capability of providing more than 75% effieciency        |Conceptual Design   |
+|Description    |Constraint                                                                                                            |Source              |
+|---------------|----------------------------------------------------------------------------------------------------------------------|--------------------|
+|Voltage        |The system shall operate at less than 50 V to ensure safety in an educational setting.                                |Conceptual Design   |
+|Voltage        |The output shall not exceed 4.2 V to ensure safe battery charging levels.                                             |LTC4120 Datasheet   |    
+|Frequency      |The system shall operate between 110 kHz and 205 kHz to maximize efficiency between the transmitter and receiver.     | LTC2140 Datasheet  |
+|Ethical        |The system shall provide more than 75% efficiency to decrease energy waste in the system.                             |Conceptual Design   |
 
 
 ## Buildable Schematic
 
-<img width="518" alt="Buildable Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/dd56d908-6b70-4ba4-98d0-8b24588693f0">
+<img alt="Buildable Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/dd56d908-6b70-4ba4-98d0-8b24588693f0">
 
 Figure 1. Buildable Schematic
 
@@ -80,7 +80,7 @@ Figure 7. Run Time at 60 Seconds Charge Time
 |0.76            |60            |2.736           |
 |0.38            |60            |1.368           |
 
-Figure 7. Run Time at 50 Seconds Charge Time
+Figure 8. Run Time at 50 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -96,7 +96,7 @@ Figure 7. Run Time at 50 Seconds Charge Time
 |0.76            |50            |2.28            |
 |0.38            |50            |1.14            |
 
-Figure 7. Run Time at 40 Seconds Charge Time
+Figure 9. Run Time at 40 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -112,7 +112,7 @@ Figure 7. Run Time at 40 Seconds Charge Time
 |0.76            |40            |1.82            |
 |0.38            |40            |0.91            |
 
-Figure 7. Run Time at 30 Seconds Charge Time
+Figure 10. Run Time at 30 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -128,7 +128,7 @@ Figure 7. Run Time at 30 Seconds Charge Time
 |0.76            |30            |1.36            |
 |0.38            |30            |0.68            |
 
-Figure 7. Run Time at 20 Seconds Charge Time
+Figure 11. Run Time at 20 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -144,7 +144,7 @@ Figure 7. Run Time at 20 Seconds Charge Time
 |0.76            |20            |0.91            |
 |0.38            |20            |0.45            |
 
-Figure 7. Run Time at 10 Seconds Charge Time
+Figure 12. Run Time at 10 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
