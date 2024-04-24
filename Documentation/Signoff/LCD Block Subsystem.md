@@ -8,10 +8,10 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
 
 | Description       | Constraints/Specification:                                                                           | Source                         |
 |-------------------|------------------------------------------------------------------------------------------------------|--------------------------------|
-| Visibility        | The LCD must provide clear visibility in varying light conditions.                                   |  Interaction Design principles [3]             |
-| User Interface    | The menu should be intuitive, allowing easy navigation for all ages.                                 | User interface design [4]       |
+| Visibility        | The LCD must provide clear visibility indoor and outdoor with a brightness level of at least 350 nits.                   |  Interaction Design principles [3]             |
+| User Interface    | The menu should allow easy navigation at any point with buttons such as "Return to Menu" or "Next" or "Back".    | User interface design [4]       |
 | Interactivity     | The system must register input from the keypad within 300ms to ensure responsive interaction.        | Performance Requirement [6]        |
-| environmental and social responsibility      |  The system must work according to the environmental and social responsibility performance criteria for computers of the IEEE | IEEE Standard [5] |
+| environmental and social responsibility      |  The system must contain, on average, a minimum of 2% of any combination of postconsumer recycled plastic, ITE-derived post-consumer recycled plastic, or bio based plastic, measured as a percentage of total amount of plastic (by weight) in the product. | IEEE Standard [5] |
 
 ## Schematic:
 
