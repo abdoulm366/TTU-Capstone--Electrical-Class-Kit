@@ -25,11 +25,11 @@ Coming Fall 2024!
 
 __Abdoul Moudi__
 
-__Carson Ray__ is an electrical engineering major at Tennessee Technological University. He is interested in power systems, Digital systems and electronics. Carson is Responsible for the vehicle lights system with background in digital logic and coding that will be implmented into the system.
+__Carson Ray__ is an electrical engineering major at Tennessee Technological University. He is interested in power systems, digital systems and electronics. Carson is responsible for the vehicle lights system with background in digital logic and coding that will be implemented into the system.
 
 __Dave Placide__
 
-__Jesse Griffey__
+__Jesse Griffey__ is an electrical engineering major at Tennessee Technological University, interested in the power and mechatronics aspects of his field. He is responsible for the Closed Loop Control system, using his background in controls and coding for the system.
 
 __Keston Robbins__
 
