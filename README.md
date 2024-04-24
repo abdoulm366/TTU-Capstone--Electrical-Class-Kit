@@ -33,7 +33,7 @@ __Jesse Griffey__ is an electrical engineering major at Tennessee Technological 
 
 __Keston Robbins__
 
-__Slayde Simmons__
+__Slayde Simmons__ is majoring in Electrical Engineering at Tennessee Technological Unversity. He is interested in power systems and renewable engery as a focus for a career. In this project he is responsible for the noise cancelation system with a background in signal processing and coding. 
 
 __Troy Dunn__
 
