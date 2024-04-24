@@ -45,7 +45,7 @@ Figure 5. SN74LV4052ADBR Multiplexer
 
 The SN74LV4052ADBR multiplexer was chosen because it allows the user to interact with the subsystem itself, and it is also compatible with the other components within this subsystem since it can operate at 5 volts and outputs more than enough current needed. The multiplexer voltage saftey constraint will be met by following datasheet requirements and limiting the input voltage to the Multiplexer to 5 volts. This will be met since the Arduino mega 2560 is only capable of outputting 5 volts maximum from its 5 volt port according to its datasheet information [1]. Since the Arduino Atmega 2560 can only output 5 volts maximum the constraint has been met and there is no need to consider any extra precautions for the multiplexer's voltage safety. 
 The current safety constraint requirement will also be met by using current limiting resistors to make sure that no more than 15mA with a 5 % tolerance will flow through to the LEDs. The multiplexer datasheet also states that the multiplexer can output 50mA [4], so there needs to be current limiting resistors calculated and implemented for extra safety measures and to ensure that the LEDs can still operate smoothly. The inputs seen on the schematic can be seen in the Input bread-board subsystem as that is where the Arduino will be sending inputs from. 
- As Figure 2. shows the Multiplexer will have its own PCB that will be mounted somewhere in the center of the cab of the car near the Arduino so that the output of the multiplexer can still be connected to the front and back lights without taking up more space.  
+As Figure 2. shows the Multiplexer will have its own PCB that will be mounted somewhere in the center of the cab of the car near the Arduino so that the output of the multiplexer can still be connected to the front and back lights without taking up more space.  
 
 Below are the current limitation calculations that will make sure that the constraint of 15mA with 5% tolerance is met. 
 
@@ -106,13 +106,12 @@ Table 4. BOM
 |Item                                                         |	Location	    |Quantity |	Price 	| Total price   |
 |-------------------------------------------------------------|---------------|---------|---------|---------------|
 |ShareGoo 8Leds LED Light Headlights/Taillight                             |	Amazon.com	| 1	      | $8.89	  | $8.89         |
-|Arduino Mega 2560	                                          | Amazon.com	  | 1	      | $48.90	| $48.90        |
 |SN74LV4052A multiplexer |	Ti.com	      | 2	      | $0.948	  | $0.948         |
 |Dip switch  (3 position)                     |	Mouser.com 	| 1	      | $1.47	  | $1.47         |
 |Full-size Perma proto boards	                                | Adafruit.com	| 2	      | $39.90	| $39.90        |
 |20 ft each 18 AWG copper wire with shielded protction(6 different color)                | Amazon.com	| 1	      | $16.49	| $16.49        |
 |Resistors (200 ohms)                                | Mouser.com	| 8	      | $4.56 | $4.56       |
-|		                                                          |               |         | Total:  |	$121.15      |
+|		                                                          |               |         | Total:  |	$72.25      |
 
 ## References 
 
