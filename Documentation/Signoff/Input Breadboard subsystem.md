@@ -13,7 +13,8 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 
 ## Schematic:
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/fcab1af4-4198-42e9-8f31-a57458bd2784)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/80d0d0dc-b2cf-4afa-a49b-ef039e02abb1)
+
 
 
 Figure 1: Blocks
@@ -23,12 +24,23 @@ Figure 1: Blocks
 
 Figure 2: Sensor Circuit
 
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/e725e33d-8532-47f1-acb4-f8ca990d243a)
+
+Figure 3: Connector Piece
+
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/fdd22b49-5326-4f9a-997b-52b90ed50e6d)
+
+Figure 4: Component Block
+
 The schematic is divided up into two separate pieces. The first piece (Figure 1) is comprised of all the blocks the user will be able to insert into the sensor circuit (Figure 2) along with the connector values. These values were chosen so that the user would have a wide range of resistances and capacitances to choose from. The titles of each block describe what is contained inside.
-The Sensor circuit is made up of a 4x4 grid with a voltage in and a voltage out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given 2x1 "tiles", of which they can insert into the circuit and use jumper wires to connect them up as they please. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
+
+The sensor circuit is made up of a 6 in. x 6 in. grid with a voltage in and a voltage out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given 2x1 "tiles", of which they can insert into the circuit and use jumper wires to connect them up as they please. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
+
+The 3d models shown are representations of the component block and the connector piece. The dimensions of both are shown in Figure 3 and 4 (in inches). The component block will house a small perfboard on which all the components will be soldered along with female sockets to allow connections. The connector block will be a jumper wire (1 inch long to ensure no unwanted connections can be made). These jumper wires will allow the user to interconnect all the blocks in the provided sensor circuit grid. The user will need a total of 2 blocks minimum to make a connection between the input and the output. To ensure that the user will not create a short circuit, they will only be provided one "blank" connector block. This will force them to use at least one component block in their circuit.
 
 ## Analysis:
 
-The analysis for this subsystem is straightforward. Simple voltage division equations can be used to determine the reading of the output voltage. This equation, in its general form reads, $V\_{\\text{out}} = V\_{s}(\\frac{R\_{\\text{block}}}{{R\_{\\text{reference}} + R}\_{\\text{block}}})$. The calculated output voltage will not be necessary for the sake of the Uno, as it will read and convert this voltage to a corresponding resistance value. As shown in the article and video [2], the circuit can detect any resistance up to 10 Mega Ohms, which is more than the max value allowed by the blocks. As a result, the analysis is already complete, as the ciruit is already proven to be able to achieve the desired result(s). Since the input voltage is so low, there is little to no risk of any overcurrent in any part of the resistor circuit. One additional calculation that was necessary was to ensure that no resistor fell below 200 Ohms. The reason for this design choice is so that if the capacitance mode is selected by accident, then no resistor configuration would burn up because of the power limit (0.5 W). This equation can be simply read as  $P = V^{2}/R$. Using this equation with the values P = 0.125 Watts and V = 5 volts, the resulting minimum resistance is 200 Ω. With this value and the resistors selected, the minimum resistor value can be no less than 220 Ω.
+The analysis for this subsystem is straightforward. Simple voltage division equations can be used to determine the reading of the output voltage. This equation, in its general form reads, $V\_{\\text{out}} = V\_{s}(\\frac{R\_{\\text{block}}}{{R\_{\\text{reference}} + R}\_{\\text{block}}})$. The calculated output voltage will not be necessary for the sake of the Uno, as it will read and convert this voltage to a corresponding resistance value. As shown in the article and video [2], the circuit can detect any resistance up to 10 Mega Ohms, which is more than the max value allowed by the blocks. As a result, the analysis is already complete, as the ciruit is already proven to be able to achieve the desired result(s). Since the input voltage is so low, there is little to no risk of any overcurrent in any part of the resistor circuit. One additional calculation that was necessary was to ensure that no resistor fell below 200 Ohms. The reason for this design choice is so that if the capacitance mode is selected by accident, then no resistor configuration would burn up because of the power limit (0.5 W). This equation can be simply read as  $P = V^{2}/R$. Using this equation with the values P = 0.125 Watts and V = 5 volts, the resulting minimum resistance is 200 Ω. With this value and the resistors selected, the minimum resistor value can be no less than 220 Ω. Concerning the possibility of max resistance, (which would be approximately 1.17 MΩ), the mux would most likely select the 5 MΩ resistor for its voltage comparison. As long as the input resistance is lower than the highest resistance, the Ohmmeter will make an accurate assesment of the resistance of the circuit.
 
 The block resistors have a lower tolerance than the reference resistors (as can be seen above). This is because the reference resistors need to be as close as possible to their listed resistance value as posible, so that the voltage divider equation can work. The circuit for resistance sensing uses a mux [3] and some C code to automatically select which value to place in series with the block resistor, so that the user can make any arrangement of resistors they want.
 
@@ -38,32 +50,32 @@ The next bit of analysis necessary is for the capacitor sensing. The capacitor (
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/5dc354bf-c9c1-49ff-8b07-c48eca29c22b)
 
 
-Figure 3: 0.1 μF circuit
+Figure 5: 0.1 μF circuit
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/c6d303ce-f706-4971-bd66-3132f5d75c3f)
 
 
-Figure 4: 0.15 μF circuit
+Figure 6: 0.15 μF circuit
 
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/63ab379e-22c2-47a2-a040-43550a67634c)
 
 
-Figure 5: 0.22 μF circuit
+Figure 7: 0.22 μF circuit
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/5037d911-ac15-420a-aafa-fb8a65481dc7)
 
 
-Figure 6: 0.68 μF circuit
+Figure 8: 0.68 μF circuit
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/a1f8ea64-e7f4-468f-92d8-5314a4fc9a1e)
 
 
-Figure 7: 1 μF circuit
+Figure 9: 1 μF circuit
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/fb33e4d8-661a-40e9-b27c-fdc1a37ff8c4)
 
-Figure 8: 2.2 μF circuit
+Figure 10: 2.2 μF circuit
 
 | *V*<sub>*S*</sub> (V) | *R*<sub>reference</sub> (Ω) | Capacitance (μF) | Time (ms)  |
 |-----------------------|-----------------------------|------------------|------------|
@@ -86,11 +98,14 @@ Lastly, the effect of the diode is the easiest to both understand and calculate.
 | Resistors       | 1         | https://shorturl.at/svDE8 | $ 13.99  |
 | Capacitors      | 1         | https://shorturl.at/ouxBV | $ 14.99  |
 | Diodes          | 1         | https://shorturl.at/fswBG | $ 9.99   |
-| Breadboard      | 3         | https://shorturl.at/xzG47 | $ 16.50  |
-| Arduino Mega    | 3         | https://shorturl.at/htuxV | $ 82.80  |
+| Large Perfboard      | 1         | https://shorturl.at/xzG47 | $ 5.50  |
+| Small Perfboard    | 20 | https://shorturl.at/fkrK6 | $21.80 |
+| Female Socket  | 120 | https://shorturl.at/cEHP4 | $13.20|
+| Jumper Wire (100 Pcs) | 1 | https://shorturl.at/noQ38 | $29.84|
+| Arduino Mega    | 1         | https://shorturl.at/htuxV | $ 48.40  |
 | Max 4167    | 1         | https://shorturl.at/EQUY7    | $ 6.18 |
 | Resistors (1% tolerance)    | 1         | https://shorturl.at/ajrDO      | $ 9.99  |
-|                 |           | Total:                    | $ |
+|                 |           | Total:                    | $173.88 |
 
 ## Citation:
 [1] “1926.403 - general requirements.,” Occupational Safety and Health Administration, https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 (accessed Mar. 31, 2024). 
