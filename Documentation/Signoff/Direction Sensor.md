@@ -47,17 +47,17 @@ $3.402 \times \frac{1}{100}$ = 0.03402ft/sample (Velocity * Time Interval)
 
 So every 100Hz sample the vehicle will cover 0.03402 feet. A margin of 30mm or 0.030 meters can be an accepted error [11]. By using this, we can calculate if 2.32 miles per hour works for the accepted error margin:
 
-$2.23 \times  \frac{1609.34}{3600}$  = 0.9968 m/s (1609.34 meters per mile)
+$2.32 \times  \frac{1609.34}{3600}$  = 1.104 m/s (1609.34 meters per mile)
 
-$0.9968 \times \frac{1}{100}$ = 0.00997 m/sample
+$1.104 \times \frac{1}{100}$ = 0.0104 m/sample
 
-Since the accepted error is 0.030 meters and the distance covered per sample is approximately 0.00997 meters, the vehicle will move within the accepted error margin each sample. The max mile per hour can be shown in the table below:
+Since the accepted error is 0.030 meters and the distance covered per sample is approximately 0.0104 meters, the vehicle will move within the accepted error margin each sample. The max mile per hour can be shown in the table below:
 
 | Vehicle Speed (mph) | Distance Covered Per Sample (ft/sample) | Width of error (m/sample) |
 |--------------------|------------------------------------------|---------------------------|
 | 1 | 0.0146 | 0.0047 |
 | 2 | 0.0293 | 0.0089 |
-| 2.32 | 0.0340 | 0.0100 |
+| 2.32 | 0.0340 | 0.0104 |
 | 3 | 0.0440 | 0.0134 |
 | 4 | 0.0586 | 0.0179 |
 | 5 | 0.0733 | 0.0235 |
