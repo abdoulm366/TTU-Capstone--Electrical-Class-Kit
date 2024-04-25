@@ -7,7 +7,7 @@ Table. 1 Constraints
 |Description| Constraint | Source |
 |-|-|-|
 |Current Saftey / Standards |The LEDs in this subsystem shall take no more than 30 mA with 5% tolerance to prevent overcurrent damage and to ensure safe operation.| Datasheet Requirement  |
-|Cost Considerations | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| Conceptual Design| 
+|Cost Considerations | Any components and equipment within this subsystem should not exceed $40 dollars and the subsystems total cost should not exceed $120 to help keep the project budget in the 400-900 range| Conceptual Design| 
 
 
 
