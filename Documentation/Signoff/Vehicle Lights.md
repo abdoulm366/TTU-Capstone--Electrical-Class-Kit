@@ -73,7 +73,7 @@ Below is a simulation proving that current limiting resistors of 145 ohms will m
 
 
 # BOM 
-Table 4. BOM
+Table 3. BOM
 |Item                                                         |	Location	    |Quantity |	Price 	| Total price   |
 |-------------------------------------------------------------|---------------|---------|---------|---------------|
 |ShareGoo 8Leds LED Light Headlights/Taillight                             |	Amazon.com	| 1	      | $8.89	  | $8.89         |
