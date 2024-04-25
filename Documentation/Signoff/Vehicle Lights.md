@@ -6,7 +6,6 @@ The function of this subsystem is to demonstrate Electrical and Computer Enginee
 Table. 1 Constraints
 |Description| Constraint | Source |
 |-|-|-|
-|Multiplexer Voltage Safety  |The Multiplexer shall take 5 volts with a 10% tolerance, no more or less than that for this subsystem to prevent any damage to the multiplexer and ensure safe and sufficient operation.| Datasheet Requirement |
 |Current Saftey / Standards |The LEDs in this subsystem shall take no more than 30 mA with 5% tolerance to prevent overcurrent damage and to ensure safe operation.| Datasheet Requirement  |
 |Cost Considerations | Any components and equipment within this subsystem should not exceed $55 dollars and the subsystems total cost should not exceed $175 to help keep the project budget in the 400-900 range| Conceptual Design| 
 
