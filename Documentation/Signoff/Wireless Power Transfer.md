@@ -20,21 +20,45 @@ The purpose of this subsystem is to demonstrate wireless charging, energy, and p
 
 ## Buildable Schematic
 
-<img alt="Buildable Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/dd56d908-6b70-4ba4-98d0-8b24588693f0">
+<img alt="Wireless Charging Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/864d9eb8-e617-4b66-a66e-dd16db202596">
 
 Figure 1. Buildable Schematic
+
+<img width="500" alt="Transmitter_and_Inverter" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/da679bda-02e9-4601-9e82-d974665dd656">
+
+Figure 2. Transmitter/Inverter
+
+The input voltage for the transmitter will be 5 V DC. This DC value will be converted to an AC value using an inverter circuit while also increasing the frequency. Once the DC value is converted to AC, the power will be transmitted through a 5 uH inductive coil which is recommended in the datasheet[3]. 
+
+<img width="500" alt="Receiver_and_FullBridgeRectifier" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/00695137-0e3d-4b3d-bb28-fedce8365d11">
+
+Figure 3. Receiver/Full Bridge Rectifier
+
+The receiver will receive the power from the transmitter through a 48.6 uH inductive coil which is recommended in the datasheet[3]. Once the power is received, a full bridge rectifier will covert the AC value back to DC which is required for the LTC4120. 
+
+<img width="750" alt="LTC4120" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/6bc022d1-9c37-4a4a-ac7a-7007a48b4966">
+
+Figure 4. LTC4120 Charger
+
+The LTC4120 is a battery charger that works with wireless charging. It ensures safe battery charging levels with a consistent output of 4.2 V and 1 A. The LTC4120 was also selected because of its availability and available schematics. 
+
+<img width="500" alt="Rheostat" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/ea697fa3-6f98-409d-8702-4fecdfe3cc06">
+
+Figure 5. Rheostat
+
+The rheostat will be one of the main points of interaction between this subsystem and the user. It will allow the user to control the voltage, allowing them to analyze the different charge times and run times of the car. 
 
 ## Analysis
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/df4e5f93-ae17-48fb-9132-d69406a39b37)
 
-Figure 2. Wireless Charging Subsystem
+Figure 6. Wireless Charging Subsystem
 
-The above figure shows the subsystem in its entirety in LTSpice. The circuit is made up of a DC voltage source, regulator circuit to convert DC to AC while increasing the frequency, a transmitter, a receiver, a full bridge rectifier to convert AC to DC, two LTC4120 ic chips, and a battery. The DC voltage source will be a common replaceable battery that can be easily changed with minimal safety risk. The regulator circuit is used to convert the DC power supply to AC while boosting the frequency to a value between 110kHz and 205kHz. The full bridge rectifier is used to convert the AC value from the receiver back to a DC value which is the input for the LTC4120. The LTC4120 is used for the transmitter and allows for consistent and safe battery charging capabilities. The LTC4120 will consistently output 4.2 volts for battery charging. A rheostat will be implemented at the output to allow the user to adjust the voltage and see the affects of different voltages and charging times. 
+The above figure shows the subsystem in its entirety in LTSpice. The circuit is made up of a DC voltage source, inverter circuit to convert DC to AC while increasing the frequency, a transmitter, a receiver, a full bridge rectifier to convert AC to DC, two LTC4120 ic chips, and a battery. The DC voltage source will be a common replaceable battery that can be easily changed with minimal safety risk. The regulator circuit is used to convert the DC power supply to AC while boosting the frequency to a value between 110kHz and 205kHz. The full bridge rectifier is used to convert the AC value from the receiver back to a DC value which is the input for the LTC4120. The LTC4120 is used for the transmitter and allows for consistent and safe battery charging capabilities. The LTC4120 will consistently output 4.2 volts for battery charging. A rheostat will be implemented at the output to allow the user to adjust the voltage and see the affects of different voltages and charging times. 
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/19ad7fb9-8ee3-4233-a013-f09f02d4f2e3)
 
-Figure 3. Transmitter Voltage
+Figure 7. Transmitter Voltage
 
 The above figure shows the voltage at the transmitter. The 5 V DC input is converted to AC by using a configuration of zener diodes and transistors. This configuration also allows for the frequency to reach an optimal value of 133.86 kHz which is calculated below.
 
@@ -46,7 +70,7 @@ Furthermore, this simulation proves that the voltage stays around 15 V, well bel
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/ea3ddb5f-6593-4f51-bc2e-d2c13811aa17)
 
-Figure 4. Receiver Voltage
+Figure 8. Receiver Voltage
 
 The figure above shows the voltage at the receiver after the full bridge rectifier. The AC from the transmitter has been transformed back to DC for an input of roughly 15 V. The 15 V meets the requirement from the datasheet for the LTC2140’s input which requires between 12.5 V and 40 V as an input. The capacitors C2S1, C2S2, C2P1, and C2P2 were chosen based off the datasheet while maintaining an efficient frequency which is calculated below.
 
@@ -56,19 +80,19 @@ $$F_{CS,CP} = 125.9\ kHz$$
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/9504bfb0-be64-4f70-bd80-4d6e6701b1da)
 
-Figure 5. Output Voltage and Current
+Figure 9. Output Voltage and Current
 
 The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9 V lithium-ion battery which is capable of being charged at a maximum of 4.2 V and 1 A. From the simulation, the maximum voltage is right at 4.2 V and 1 A. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/13f02cae-23ed-4f2c-8878-42156d3b4c80)
 
-Figure 6. Rheostat
+Figure 10. Rheostat
 
 The above figure is a representation of how a rheostat works, which is similar to a potentiometer but can operate at very low resistances. The purpose of the rheostat is to allow the user to adjust the voltage for charging the battery. It will essentially allow the user to increment the resistance by 1Ω which will lower the voltage. The voltages analyzed in LTSpice are below in the graphs which calculate the estimated run time corresponding to the energy stored in the battery. The formula is also below.
 
 $$T = \frac{{(Voltage \times Time) \times 1000}}{{1000000 \times 60}}$$
 
-Figure 7. Run Time at 60 Seconds Charge Time
+Figure 11. Run Time at 60 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -84,7 +108,7 @@ Figure 7. Run Time at 60 Seconds Charge Time
 |0.76            |60            |2.736           |
 |0.38            |60            |1.368           |
 
-Figure 8. Run Time at 50 Seconds Charge Time
+Figure 12. Run Time at 50 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -100,7 +124,7 @@ Figure 8. Run Time at 50 Seconds Charge Time
 |0.76            |50            |2.28            |
 |0.38            |50            |1.14            |
 
-Figure 9. Run Time at 40 Seconds Charge Time
+Figure 13. Run Time at 40 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -116,7 +140,7 @@ Figure 9. Run Time at 40 Seconds Charge Time
 |0.76            |40            |1.82            |
 |0.38            |40            |0.91            |
 
-Figure 10. Run Time at 30 Seconds Charge Time
+Figure 14. Run Time at 30 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -132,7 +156,7 @@ Figure 10. Run Time at 30 Seconds Charge Time
 |0.76            |30            |1.36            |
 |0.38            |30            |0.68            |
 
-Figure 11. Run Time at 20 Seconds Charge Time
+Figure 15. Run Time at 20 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
@@ -148,7 +172,7 @@ Figure 11. Run Time at 20 Seconds Charge Time
 |0.76            |20            |0.91            |
 |0.38            |20            |0.45            |
 
-Figure 12. Run Time at 10 Seconds Charge Time
+Figure 16. Run Time at 10 Seconds Charge Time
 
 |Voltage(V)      |Time(sec)     |Runtime(sec)    |
 |----------------|--------------|----------------| 
