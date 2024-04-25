@@ -15,28 +15,25 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/80d0d0dc-b2cf-4afa-a49b-ef039e02abb1)
 
-
-
 Figure 1: Blocks
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/c387ffb3-85bc-4172-b013-5f6cf8a9616c)
-
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/50814561-6b77-460d-bdf3-99da785a3786)
 
 Figure 2: Sensor Circuit
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/e725e33d-8532-47f1-acb4-f8ca990d243a)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/1c493619-e411-4f60-878f-7f1be124eaba)
 
-Figure 3: Connector Piece
+Figure 3: PCB Schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/fdd22b49-5326-4f9a-997b-52b90ed50e6d)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/4d2e6df5-77fa-4086-aec4-3450dbacf9bf)
 
-Figure 4: Component Block
+Figure 4: PCB 3D view
 
 The schematic is divided up into two separate pieces. The first piece (Figure 1) is comprised of all the blocks the user will be able to insert into the sensor circuit (Figure 2) along with the connector values. These values were chosen so that the user would have a wide range of resistances and capacitances to choose from. The titles of each block describe what is contained inside.
 
 The sensor circuit is made up of a 6 in. x 6 in. grid with a voltage in and a voltage out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given 2x1 "tiles", of which they can insert into the circuit and use jumper wires to connect them up as they please. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
 
-The 3d models shown are representations of the component block and the connector piece. The dimensions of both are shown in Figure 3 and 4 (in inches). The component block will house a small perfboard on which all the components will be soldered along with female sockets to allow connections. The connector block will be a jumper wire (1 inch long to ensure no unwanted connections can be made). These jumper wires will allow the user to interconnect all the blocks in the provided sensor circuit grid. The user will need a total of 2 blocks minimum to make a connection between the input and the output. To ensure that the user will not create a short circuit, they will only be provided one "blank" connector block. This will force them to use at least one component block in their circuit.
+The PCB's shown are designed to house either the component block or the blank connector block. The use of the PCBs will be a much faster and easier method to build the blocks for the input breadboard. The connecting through-holes are a diameter of 0.0472 inches, and the mounting blocks have a diameter of 0.12598 inches. This will allow them to easily have the mounting posts to be inserted into the mounts and allow all the necessary component connections to be made.
 
 ## Analysis:
 
@@ -99,13 +96,13 @@ Lastly, the effect of the diode is the easiest to both understand and calculate.
 | Capacitors      | 1         | https://shorturl.at/ouxBV | $ 14.99  |
 | Diodes          | 1         | https://shorturl.at/fswBG | $ 9.99   |
 | Large Perfboard      | 1         | https://shorturl.at/xzG47 | $ 5.50  |
-| Small Perfboard    | 20 | https://shorturl.at/fkrK6 | $21.80 |
+| PCBs for blocks    | 20 | N/A | $30.00 |
 | Female Socket  | 120 | https://shorturl.at/cEHP4 | $13.20|
 | Jumper Wire (100 Pcs) | 1 | https://shorturl.at/noQ38 | $29.84|
 | Arduino Mega    | 1         | https://shorturl.at/htuxV | $ 48.40  |
 | Max 4167    | 1         | https://shorturl.at/EQUY7    | $ 6.18 |
 | Resistors (1% tolerance)    | 1         | https://shorturl.at/ajrDO      | $ 9.99  |
-|                 |           | Total:                    | $173.88 |
+|                 |           | Total:                    | $182.08 |
 
 ## Citation:
 [1] “1926.403 - general requirements.,” Occupational Safety and Health Administration, https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 (accessed Mar. 31, 2024). 
