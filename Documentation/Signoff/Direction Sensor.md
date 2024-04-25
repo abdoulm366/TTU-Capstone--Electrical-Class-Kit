@@ -3,7 +3,7 @@
 ## Function of the system
 The purpose of this subsystem is to drive and steer the vehicle. The subsystem will keep the car in the desired location while the car is moving. It will determine if the car has veered off course and adjust accordingly.
 
-## Constraint
+## Constraints
 | Description | Constraints/Specification | Origin |
 |-------------|---------------------------|--------|
 | Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are rated for 3-12V. | Datasheet Requirement |
