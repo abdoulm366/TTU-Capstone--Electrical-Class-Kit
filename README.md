@@ -7,8 +7,7 @@ The purpose of this project is to provide an instructional tool that effectively
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
+At the end of Capstone 2, the team is expected to have a fully functioning kit. The kit will have multiple capabilities relating to the functionality of an EV car. Firstly, it will be capable of allowing user input from the input subsystem which will provide a certain output depending on user selection. The possible outputs include but are not limited to, driving forwards and backwards, steering left and right, adjustable sound system, and adjustable lighting system. The car will also have the capability of charging wirelessly and storing the charged energy, but will have a seperate power system. Also, the kit will be capable of providing instructions through computing. 
 
 ## Salient Outcomes
 
