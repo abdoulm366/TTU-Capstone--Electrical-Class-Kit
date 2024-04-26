@@ -3,8 +3,7 @@
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
-
+The purpose of this project is to provide an instructional tool that effectively introduces users to the basics and principles of ECE in an interesting and thorough way. These basics and principles will be shown through EV operation to demonstrate these electrical concepts in a physical or mechanical manner. The EV build will allow for fluid interaction with the user, allowing them to manipulate different operations of the car depending on their input. The main topics to be taught through this kit will include but not be limited to, circuits and electronics, signals and systems, control systems, and computing. All members of the team have a viable backrground in each of these courses, and will use their current knowledge while acquiring new knowledge to ensure the success of the project. 
 
 ## Capabilities
 
@@ -35,7 +34,7 @@ __Keston Robbins__
 
 __Slayde Simmons__ is majoring in Electrical Engineering at Tennessee Technological Unversity. He is interested in power systems and renewable engery as a focus for a career. In this project he is responsible for the noise cancelation system with a background in signal processing and coding. 
 
-__Troy Dunn__
+__Troy Dunn__ is majoring in Electrical Engineering and minoring in Mathematics at Tennessee Technological University. He is interested in power systems, electronics, and PLC design. He will be working with Mahle Engine Components, Morristown, TN in the summer of 2024 as an electrical engineering intern. Troy is responsible for the wireless charging subsystem with a background in electronics, power, and electromagnetic fields. 
 
 
 ### Faculty Supervisor
