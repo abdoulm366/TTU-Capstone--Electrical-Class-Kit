@@ -60,14 +60,25 @@ For the layout of the projects organization, there are three main folders includ
 
 The reports folder includes the team contract, project proposal, and conceptual design.
 
-The Team Contract https://github.com/abdoulm366/TTUCapstoneElectricalClassKit/Reports/Capstone%201%20team%20contract.pdf
+The [Team Contract](./Reports/Team%20Contract) contains agreements between team members.
 
-The Project Proposal 
+The [Project Proposal](./Reports/Project%20Proposal) states the problem and the proposed solution to the project.
 
+The [Conceptual Design](./Reports/Conceptual%20Design) states what the project will do more in depth. 
 
 ### Documentation
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+The documents folder includes meeting minutes, signoffs, 3D models, electrical, and images. 
+
+The [Meeting Minutes](./Documentation/Meeting%20Minutes) document the meetings each week for the team.
+
+The [Signoffs](./Documentation/Signoff) are the finalized designs of each subsystem. 
+
+The [3D Models](./Documentation/3D%20models) will contain any 3D models from the final designs.
+
+The [Electrical](./Documentation/Electrical) will contain any PCBs/schematics from the final design. 
+
+The [Images](./Documentation/Images) will contain any images from the final design. 
 
 ### Software
 
