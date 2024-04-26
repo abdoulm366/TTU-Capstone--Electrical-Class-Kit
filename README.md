@@ -54,12 +54,16 @@ The team would like to thank Mr. Jesse Roberts, Dr. Stephen Canfield, and Dr. Ch
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
+For the layout of the projects organization, there are three main folders including, reports, documentation, and software.
 
 ### Reports
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+The reports folder includes the team contract, project proposal, and conceptual design.
+
+The Team Contract https://github.com/abdoulm366/TTUCapstoneElectricalClassKit/Reports/Capstone%201%20team%20contract.pdf
+
+The Project Proposal 
+
 
 ### Documentation
 
