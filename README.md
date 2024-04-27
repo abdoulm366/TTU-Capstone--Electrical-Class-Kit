@@ -29,7 +29,7 @@ __Dave Placide__
 
 __Jesse Griffey__ is an electrical engineering major at Tennessee Technological University, interested in the power and mechatronics aspects of his field. He is responsible for the Closed Loop Control system, using his background in controls and coding for the system.
 
-__Keston Robbins__
+__Keston Robbins__ is majoring in Electrical Engineering at Tennessee Technological University. He is interested in power systems for his career. He is responsible for the Input Breadboard subsystem and the Power Delivery subsystem.
 
 __Slayde Simmons__ is majoring in Electrical Engineering at Tennessee Technological Unversity. He is interested in power systems and renewable engery as a focus for a career. In this project he is responsible for the noise cancelation system with a background in signal processing and coding. 
 
