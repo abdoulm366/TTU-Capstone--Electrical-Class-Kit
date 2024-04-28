@@ -21,7 +21,7 @@ Coming Fall 2024!
 
 ### Team
 
-__Abdoul Moudi__
+__Abdoul Majid Modi__ is a detail-oriented, creative and dedicated computer engineering major at Tennessee Technological University. He is interested in embedded systems design, PlC's and Web Development. He is responsible for the LCD Block Subsystem, which serves as the one of the primary interaction points between the user and the device as a whole and provides the users with an instructional or guided learning experience.
 
 __Carson Ray__ is an electrical engineering major at Tennessee Technological University. He is interested in power systems, digital systems and electronics. Carson is responsible for the vehicle lights system with background in digital logic and coding that will be implemented into the system.
 
