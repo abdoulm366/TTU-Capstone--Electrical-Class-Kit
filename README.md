@@ -25,7 +25,7 @@ __Abdoul Majid Modi__ is a detail-oriented, creative and dedicated computer engi
 
 __Carson Ray__ is an electrical engineering major at Tennessee Technological University. He is interested in power systems, digital systems and electronics. Carson is responsible for the vehicle lights system with background in digital logic and coding that will be implemented into the system.
 
-__Dave Placide__
+__Woogenscky Dave Placide__ is an electrical engineering major at Tennessee Tech University. He is interested in automation and control system. Woogenscky is responsible for the Logic gate subsystem, using is backgroung in circuit design,digital system and control system. 
 
 __Jesse Griffey__ is an electrical engineering major at Tennessee Technological University, interested in the power and mechatronics aspects of his field. He is responsible for the Closed Loop Control system, using his background in controls and coding for the system.
 
