@@ -8,14 +8,14 @@ The function of this subsystem is to introduce the concept of logic gates throug
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   |  System shall operate at less than 50V, safe voltage level suitable for educational purposes.  | Safety Constraint |
-| 2   |System shall be run through by a current less than 30mA. | Device Constraint |
-| 3   |System shall be able to receive input from the user through the Switch | Design Constraint |
+| 1   | System shall allow only one multiplexer to work at a time  | Design Constraint |
+| 2   | System shall receive between 4.75V to 5V from Close Loop Control System to operate. | Device Constraint |
+| 3   |System shall have an input current  | Design Constraint |
 
 
 ## Buildable schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/13fec6ad-48a2-4fb0-b28d-aa71cc8737f5)
+![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/2ee23c70-8949-42b5-b8e0-5945c949f82a)
 
 
 
@@ -23,11 +23,11 @@ The above image is a schematic of dual 4 to 1 mux connected to 7 switches which 
 
 
 # Analysis
+The SN74LS153 is a dual 4-to-1 multiplexer, with two 4 to 1 mux integrated. It is a combinational circuit that selects one of four input data lines and forwards it to a single output line based on the control inputs. Each multiplexer has four data inputs, two control inputs (A and B) shared together, one enable input each and one output each. The control inputs determine which data input is routed to the output and the enable inputs determine which multiplexer is on.
 
+<sup>1</sup>	The system shall allow only one multiplexer to work at a time. The System is designed so that the switch representing the NOT gate is connected to the first multiplexer and the switches representing the AND and OR gates are connected to the second multiplexer. The enable inputs are active low inputs meaning that they will allow the multiplexer to work when they are off. Since the NOT gate input is connected to the second multiplexer's enable input, whenever it is high the second multiplexer will be off allowing only the first multiplexer to be on. Additionally, when the NOT gate  input is off or low, the second multiplexer will be on leaving the first multiplexer off with its enable output being high connected to the AND gate and the OR gate switch. With this circuit design the system will allow only one multiplexer to work at a time.
 
-<sup>1</sup>	The system shall operate at a voltage level that is less than 50 volts. This is a safety  measure to ensure that the system is operating at a low voltage, which reduces the risk of  electric shock or injury, especially in educational environments where users may not have  extensive experience with electrical systems.[1] 
-
-<sup>2</sup> The system shall not allow more than 30 mA of current to flow through it under  normal operating conditions. This is specified to ensure safety, as higher currents  can pose risks of electric shock or damage to components. A current regulator resistor is used in the circuit to ensure the following specification is met.
+<sup>2</sup> System shall receive between 4.75V to 5V from Close Loop Control System to operate. The output of the system will be 2 arduino pins directly form the Close Loop Control system. Since the arduino is supplying 5V, the system will directly receives  power from the Close Loop Control Sytem. The Datasheet of the SN74LS153 specifies that the chip operates at a voltage between 4.75V to 5.5V. The 5V from the Arduino is within that range so this following specification will be met.
 
 <sup>3</sup> 	The switch is a type of electrical component used in electronic devices for input  purposes. The user will interact  with the system by physically setting the state of the switches. This allows users to provide input and configure the system by manipulating the switches directly. 
 
@@ -35,7 +35,6 @@ The above image is a schematic of dual 4 to 1 mux connected to 7 switches which 
 The system can easily operate on a perf board powered by the main power subsystem. The resistor in the schematic is a current regulator resistor limiting the current flow through the multiplexer will ensure a maximum current rating less than 30 mA. 
 Logic gates are fundamental building blocks of digital circuits, performing logical  operations on one or more binary inputs and producing a single binary output. The system will not be using actual logic gates, but instead use switches and a 4 to 1 mux to explain the logic gates concept. 
 
-The SN74LS153 is a dual 4-to-1 multiplexer, with two 4 to 1 mux intagrated. It is a combinational circuit that selects one of four input data lines and forwards it to a single output line based on the control inputs. Each multiplexer has four data inputs, two control inputs (A and B) shared together, and one output each. The control inputs determine which data input is routed to the output.
 
 The two switches in series represent an AND gate, output will be high only when both inputs are high. It is connected to the second input of the second multiplexer.
 
