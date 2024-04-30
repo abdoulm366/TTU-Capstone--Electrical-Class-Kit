@@ -53,7 +53,7 @@ $1.104 \times \frac{1}{100}$ = 0.0104 m/sample
 
 Since the accepted error is 0.030 meters and the distance covered per sample is approximately 0.0104 meters, the vehicle will move within the accepted error margin each sample. The max mile per hour can be shown in the table below:
 
-| Vehicle Speed (mph) | Distance Covered Per Sample (ft/sample) | Width of error (m/sample) |
+| Vehicle Speed (mph) | Distance Covered Per Sample (ft/sample) | error margin (m/sample) |
 |--------------------|------------------------------------------|---------------------------|
 | 1 | 0.0146 | 0.0047 |
 | 2 | 0.0293 | 0.0089 |
