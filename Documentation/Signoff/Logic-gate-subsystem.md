@@ -1,13 +1,13 @@
 # Logic Gates Subsystem
 
-## Function of the System
+##  Function of the System
 The function of this subsystem is to introduce the concept of logic gates through an approachable way for someone with little to no experience using AND,OR and NOT gate. The subsystem will be user friendly by using switches to demonstrate these concepts and allow the user to interact with the inputs.
 
 
 ## Constraint
 
 | No. | Constraints                                                           | Origin            |
-| --- | --------------------------------------------------------------------- | ----------------- |
+| --- | --------------------------------------------------------------------- | -----------------|
 | 1   | System shall allow only one multiplexer to work at a time  | Design Constraint |
 | 2   | System shall receive between 4.75V to 5.25V from Close Loop Control System to operate. [1] | Device Constraint |
 | 3   |System shall have an output current no more than 16mA  | Design Constraint [1]|
@@ -60,7 +60,7 @@ The two switches in parallel represent an OR gate, output will be high when at l
 
  The single switch represent the NOT gate.  It is connected to the first input of the first multiplexer and the enable input of the second multiplexer.
 | Input      |  output  | 
-| ---------- | ---------|  
+| ---------- | -------- |  
 | A          | Y        |            
 | 0          | 1        |            
 | 1          | 0        |
