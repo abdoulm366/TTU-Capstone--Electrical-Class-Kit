@@ -6,7 +6,7 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 ## Constraints
 | Description | Constraints/Specification | Origin |
 |-------------|---------------------------|--------|
-| Voltage | The system shall operate with the correct voltage. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are rated for 3-12V. | Datasheet Requirement |
+| Voltage | The system shall operate with the correct voltage. The arduino uno is rated for 7V-12V. The motor driver shield is rated for 4.5V-13.5V, the IMU chip is rated for 3V-5V, and the TT DC motors are rated for 3-12V. | Datasheet Requirement |
 | Current | The motor driver shield must be capable of supplying 210mA of current per bridge for the four motors, while also supporting the IMU chip's maximum draw of 12.3mA. | Datasheet Requirement |
 | Cost Boundaries | Equipment/components should not surpass $35, with the total capped at $90 to ensure the project's final total falls within the $400 to $900 budget. | Conceptual Design |
 | Response | The system must detect if the car is veering off then immediately correct it and put it back on track. For this, the system must operate within the accepted error margin of 0.030 meters for effective correction. | Function Requirement |
@@ -27,7 +27,7 @@ The system is a closed loop. Based on figure 2 below, the IMU sends signals thro
 Figure 2: Closed Loop Block Diagram
 
 ## Analysis
-Analyzing the voltage and current constraints: The system shall operate with the correct voltage and current. Overvoltage or excessive current can lead to malfunctions and overload. Overload can lead to overheating and other electrical hazards that can cause a safety factor. The IMU chip is rated for 3V to 5V and a maximum draw of 12.3 mA [2]. The motor driver shield is rated for 4.5V to 13.5V and provides 1.2A per bridge [1]. The TT DC motors are rated for 3V to 12V and have a rating of 210 mA [3]. The TT motors rating works for the motor driver shields rating. Knowing and understanding the voltage and current specifications of each component ensures safe operation.
+Analyzing the voltage and current constraints: The system shall operate with the correct voltage and current. Overvoltage or excessive current can lead to malfunctions and overload. Overload can lead to overheating and other electrical hazards that can cause a safety factor. The IMU chip is rated for 3V to 5V and a maximum draw of 12.3 mA [2]. The arduino uno is rated for 7V to 12V [12].The motor driver shield is rated for 4.5V to 13.5V, which works for the arduino uno, and provides 1.2A per bridge [1]. The TT DC motors are rated for 3V to 12V and have a rating of 210 mA [3]. The TT motors rating works for the motor driver shields rating. Knowing and understanding the voltage and current specifications of each component ensures safe operation.
 
 Analyzing the budget cost boundaries: To ensure budget constraints are followed, individual components shall not exceed $35, and the total shall not exceed $90. The $400-$900 budget must be kept in mind for this design. In addition, keeping costs low has good effects on the economy. It shall be cost-effective while also being high in quality. This system is crucial, so it needs to be reliable. 
 
@@ -101,4 +101,6 @@ Total cost for subsystem: $77.29 (not including tax or shipping)
 [10]Moubarak, Salam. “RPM Calculator - Rpm to Mph.” Omni Calculator, Omni Calculator, 18 Jan. 2024, www.omnicalculator.com/everyday-life/rpm. 
 
 [11] “Line Following.” Line Following - SunFounder PiCar-S Documentation, docs.sunfounder.com/projects/picar-s/en/latest/line_following.html#:~:text=Rules%20for%20making%3A,distance%20of%20two%20nonadjacent%20probes&text=whole%20module%2C%20to%20prevent%20the,lines%20at%20the%20same%20time. Accessed 22 Apr. 2024. 
+
+[12] “Arduino Uno REV3.” Arduino Online Shop, store-usa.arduino.cc/products/arduino-uno-rev3?gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu4hsJT3p0tzEam3W_WHjW9Dal0CS2KojE_k9SLhoPBFiI5uEDC_3GxoCv1wQAvD_BwE. Accessed 28 Aug. 2024. 
 
