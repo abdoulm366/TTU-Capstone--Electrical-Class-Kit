@@ -13,7 +13,7 @@ The purpose of this subsystem is to drive and steer the vehicle. The subsystem w
 
 ## Buildable Schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158520642/b6a7f29a-2ba2-4778-9a9a-2af734ffb7a2)
+![image](https://github.com/user-attachments/assets/eaab8e0b-e845-4ae7-81f7-08fe98baca1a)
 
 Figure 1: Buildable Schematic
 
