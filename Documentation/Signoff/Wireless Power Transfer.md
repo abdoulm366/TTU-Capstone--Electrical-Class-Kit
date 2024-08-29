@@ -2,7 +2,7 @@
 
 ## Function 
 
-The purpose of this subsystem is to demonstrate wireless charging, energy, and power concepts through user interaction. The voltage will be adjustable by the user to control different charge rates, allowing them to analyze different drive times of the car depending on the power supply and time of charge. This will allow the user to learn how power and energy behave through the use of wireless charging. 
+The purpose of this subsystem is to power the vehicle through wireless power transfer and demonstrate basic concepts of power and energy through user interaction. The time of charge will be adjustable by the user, allowing them to analyze the different drive times of the car. This will allow the user to learn the basics of how power and energy behave through the use of wireless power transfer.
 
 ## Constraints
 
@@ -19,77 +19,65 @@ The purpose of this subsystem is to demonstrate wireless charging, energy, and p
 <sup>3</sup> For wireless charging applications, a frequency range of 110kHz to 205kHz is recommended to ensure optimal charging of low voltage batteries across short distances(1mm to 10mm)[3][5].
 
 ## Buildable Schematic
-
-<img alt="Wireless Charging Schematic" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/864d9eb8-e617-4b66-a66e-dd16db202596">
+<img alt="Buildable Schematic (kicad)" src="https://github.com/user-attachments/assets/18b81dab-d601-441b-89df-d1cd5ac9d027">
 
 Figure 1. Buildable Schematic
 
-<img width="500" alt="Transmitter_and_Inverter" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/da679bda-02e9-4601-9e82-d974665dd656">
+<img alt="Transmitter Inverter (kicad)" src="https://github.com/user-attachments/assets/29c4c7dc-35dc-4e57-9c9f-080858fabe5b">
 
 Figure 2. Transmitter/Inverter
 
-The input voltage for the transmitter will be 5 V DC. This DC value will be converted to an AC value using an inverter circuit while also increasing the frequency. Once the DC value is converted to AC, the power will be transmitted through a 5 uH inductive coil which is recommended in the datasheet[3]. 
+The input voltage for the transmitter will be 6 V DC. This DC value will be converted to an AC value using an inverting circuit while also increasing the frequency. Once the DC value is converted to AC, the power will be transmitted through a 4.95 uH inductive coil which is recommended in the datasheet[3]. 
 
-<img width="500" alt="Receiver_and_FullBridgeRectifier" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/00695137-0e3d-4b3d-bb28-fedce8365d11">
+<img alt="Receiver Rectifier Charger (kicad)" src="https://github.com/user-attachments/assets/a2154664-7ce4-4c35-875c-13ed771d8742">
 
-Figure 3. Receiver/Full Bridge Rectifier
+Figure 3. Receiver/Full Bridge Rectifier/Charger
 
-The receiver will receive the power from the transmitter through a 48.6 uH inductive coil which is recommended in the datasheet[3]. Once the power is received, a full bridge rectifier will covert the AC value back to DC which is required for the LTC4120. 
+The receiver will receive the power from the transmitter through a 46 uH inductive coil which is recommended in the datasheet[3]. Once the power is received, a full bridge rectifier will covert the AC value back to DC which is required for the LTC4120. The LTC4120 will then output a suitable voltage and current to charge a lithium-ion battery explained below.
 
-<img width="750" alt="LTC4120" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/6bc022d1-9c37-4a4a-ac7a-7007a48b4966">
+<img alt="Transmitter PCB" src="https://github.com/user-attachments/assets/50a11cb7-271c-4d25-9b9b-ac0c6c3c309d">
 
-Figure 4. LTC4120 Charger
+Figure 4. Transmitter Circuit PCB
 
-The LTC4120 is a battery charger that works with wireless charging. It ensures safe battery charging levels with a consistent output of 4.2 V and 1 A. The LTC4120 was also selected because of its availability and available schematics. 
+<img alt="Receiver PCB" src="https://github.com/user-attachments/assets/b20597b1-cc5a-4b72-80e0-01baaa87279c">
 
-<img width="500" alt="Rheostat" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/ea697fa3-6f98-409d-8702-4fecdfe3cc06">
+Figure 5. Recever Circuit PCB 
 
-Figure 5. Rheostat
-
-The rheostat will be one of the main points of interaction between this subsystem and the user. It will allow the user to control the voltage, allowing them to analyze the different charge times and run times of the car. 
-
-<img width="476" alt="Transmitter PCB" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/6bee035a-0d96-4574-9572-16f01ef70fb6">
-
-Figure 6. Transmitter Circuit PCB
-
-<img width="431" alt="Receiver PCB" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/5977a451-b7ce-41a4-8ca1-a81e41b42045">
-
-Figure 7. Recever Circuit PCB 
 ## Analysis
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/df4e5f93-ae17-48fb-9132-d69406a39b37)
+<img alt="LTSpice Schematic" src="https://github.com/user-attachments/assets/d0fd5b86-2a61-4ab7-9d91-f145a504229f">
 
-Figure 8. Wireless Charging Subsystem
+Figure 6. Wireless Charging Subsystem
 
-The above figure shows the subsystem in its entirety in LTSpice. The circuit is made up of a DC voltage source, inverter circuit to convert DC to AC while increasing the frequency, a transmitter, a receiver, a full bridge rectifier to convert AC to DC, two LTC4120 ic chips, and a battery. The DC voltage source will be a common replaceable battery that can be easily changed with minimal safety risk. The regulator circuit is used to convert the DC power supply to AC while boosting the frequency to a value between 110kHz and 205kHz. The full bridge rectifier is used to convert the AC value from the receiver back to a DC value which is the input for the LTC4120. The LTC4120 is used for the transmitter and allows for consistent and safe battery charging capabilities. The LTC4120 will consistently output 4.2 volts for battery charging. A rheostat will be implemented at the output to allow the user to adjust the voltage and see the affects of different voltages and charging times. 
+The above figure shows the subsystem in its entirety in LTSpice. The circuit is made up of a DC voltage source, an inverting circuit to convert DC to AC while increasing the frequency, a transmitter, a receiver, a full bridge rectifier to convert AC to DC, and an LTC4120 ic chip. The DC voltage source will be a common replaceable battery that can be easily changed with minimal safety risk. The inverting circuit is used to convert the DC power supply to AC while boosting the frequency to a value between 110kHz and 205kHz. The full bridge rectifier is used to convert the AC value from the receiver back to a DC value which is the input for the LTC4120 chip. The LTC4120 chip is used for consistent and safe battery charging capabilities. 
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/19ad7fb9-8ee3-4233-a013-f09f02d4f2e3)
+<img alt="Transmitter Voltage" src="https://github.com/user-attachments/assets/5b848bde-5b67-4d1e-b686-af320e112580">
 
-Figure 9. Transmitter Voltage
+Figure 7. Transmitter Voltage
 
-The above figure shows the voltage at the transmitter. The 5 V DC input is converted to AC by using a configuration of zener diodes and transistors. This configuration also allows for the frequency to reach an optimal value of 133.86 kHz which is calculated below.
+The above figure shows the voltage at the transmitter which is between 18V and 19V. The 6V DC input is converted to AC by using an inverting circuit. This configuration also allows for the frequency to reach an optimal value of 133.86 kHz which is calculated below.
 
 $$F_{T} = \frac{1}{2*\pi*\sqrt{C_{T}*L_{T}}}$$
 
-$$F_{T} = 133.86\ kHz$$
+$$F_{T} = 134.54\ kHz$$
 
-Furthermore, this simulation proves that the voltage stays around 15 V, well below the 50 V maximum requirement located in the constraints. The circuit component values in the transmitter were used from the datasheet’s recommended values for the LTC4120 [3]. As for the coupling coefficient, the datasheet has a recommended range of 1mm to 10mm; at 1mm, the coupling coefficient is 0.35 and at 10mm, the coupling coefficient is 0.19. For this application, we use the worst-case scenario of 0.19 for all simulations since there will be an expected air gap. The air gap will be kept between the mentioned range. 
+Furthermore, this simulation proves that the voltage stays around 18V-19V, well below the 50 V maximum requirement located in the constraints. The circuit component values in the transmitter were used from the datasheet’s recommended values for the LTC4120 [3]. As for the coupling coefficient, the datasheet has a recommended range of 1mm to 10mm; at 1mm, the coupling coefficient is 0.35 and at 10mm, the coupling coefficient is 0.19. For this application, we use the worst-case scenario of 0.19 for all simulations since there will be an expected air gap. The air gap will be kept between the mentioned range. 
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/ea3ddb5f-6593-4f51-bc2e-d2c13811aa17)
+<img alt="Receiver Voltage" src="https://github.com/user-attachments/assets/a8a23e1b-bb81-455d-9108-0e50a9b30c71">
 
-Figure 10. Receiver Voltage
+Figure 8. Receiver Voltage
 
-The figure above shows the voltage at the receiver after the full bridge rectifier. The AC from the transmitter has been transformed back to DC for an input of roughly 15 V. The 15 V meets the requirement from the datasheet for the LTC2140’s input which requires between 12.5 V and 40 V as an input. The capacitors C2S1, C2S2, C2P1, and C2P2 were chosen based off the datasheet while maintaining an efficient frequency which is calculated below.
+The figure above shows the voltage at the receiver after the full bridge rectifier. The AC from the transmitter has been transformed back to DC for an input of roughly 20V. The 20V meets the requirement from the datasheet for the LTC2140’s input which requires between 12.5 V and 40 V as an input. The capacitors C2S1, C2S2, C2P1, and C2P2 were chosen based off the datasheet while maintaining an efficient frequency which is calculated below.
 
 $$F_{CS,CP} = \frac{1}{2*\pi*\sqrt{\left( C_{2P} + C_{2S} \right)*L_{R}}}$$
 
-$$F_{CS,CP} = 125.9\ kHz$$
+$$F_{CS,CP} = 129.44\ kHz$$
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/9504bfb0-be64-4f70-bd80-4d6e6701b1da)
+<img width="959" alt="LTC4120 Output Voltage and Current" src="https://github.com/user-attachments/assets/bbf0b336-671c-49f4-bec8-f265616cffb9">
 
-Figure 11. Output Voltage and Current
+Figure 9. Output Voltage and Current
 
-The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9 V lithium-ion battery which is capable of being charged at a maximum of 4.2 V and 1 A. From the simulation, the maximum voltage is right at 4.2 V and 1 A. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
+The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9-12V lithium-ion battery which is capable of being charged at 4.2 V. From the simulation, the maximum voltage is 4.2V and the maximum current is 500mA. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
 
 ![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/13f02cae-23ed-4f2c-8878-42156d3b4c80)
 
