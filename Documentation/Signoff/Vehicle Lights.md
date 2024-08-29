@@ -38,7 +38,7 @@ Figure 3. 3D model of LEDs.
 
 Figure 4. Select input / Enable Switches
 
-Dip switches will be used to control the input sent to the LEDs. The reason behind using dip switches is to give the user a better learning experience by allowing them to slide the switch up representing a 1 and slide down representing 0, they will also be able to visualize it. Based on the user input through the switches the output will be affected accordingly. The switches will be configured to the Arduino within the input system and coded so the state will be read by the Arduino. Below is a truth table that will represent the dip switches functionality. The dip switches will represent select lines to the coded functionality of a multiplexer. 
+Dip switches will be used to control the input sent to the LEDs. The reason behind using dip switches is to give the user a better learning experience by allowing them to slide the switch up representing a 1 and slide down representing 0, they will also be able to visualize it. Based on the user input through the switches the output of this subsystem will be affected accordingly. The switches will be configured to the Arduino 2560 within the input system and coded so the state will be read by the Arduino 2560 which is the master CPU. The CPU will process that data and send it out of a digital pin to the headlights. Below is a truth table that will represent the dip switches functionality. The dip switches will represent select lines to the coded functionality of a multiplexer.
 
 Table 2. Dip switches functionality. 
 |Enable pin 1| A pin 2 | B pin 3| Output Enable pin 6 | Output A pin 5 | Output B pin 4|                                              
