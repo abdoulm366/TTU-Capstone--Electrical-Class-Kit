@@ -73,115 +73,32 @@ $$F_{CS,CP} = \frac{1}{2*\pi*\sqrt{\left( C_{2P} + C_{2S} \right)*L_{R}}}$$
 
 $$F_{CS,CP} = 129.44\ kHz$$
 
-<img width="959" alt="LTC4120 Output Voltage and Current" src="https://github.com/user-attachments/assets/bbf0b336-671c-49f4-bec8-f265616cffb9">
+<img alt="LTC4120 Output Voltage and Current" src="https://github.com/user-attachments/assets/bbf0b336-671c-49f4-bec8-f265616cffb9">
 
 Figure 9. Output Voltage and Current
 
-The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9-12V lithium-ion battery which is capable of being charged at 4.2 V. From the simulation, the maximum voltage is 4.2V and the maximum current is 500mA. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
+The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9V lithium-ion battery which is capable of being charged at 4.2 V. From the simulation, the maximum voltage is 4.2V and the maximum current is 500mA. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627603/13f02cae-23ed-4f2c-8878-42156d3b4c80)
+The table below represents various charge times with the associated run times. This will allow the user to see how energy is stored and exerted with a constant voltage of 4.2V and 500mA and allow them to reach the desired run time by calculating the charge time. Power will be constant in this case with it being 2.1 Watts supplied and 1.35 Watts discharged. The output will simply rely on the users charge times. The formula to find these values is as follows:
 
-Figure 12. Rheostat
+$$Power = V * I = 2.1 Watts$$
 
-The above figure is a representation of how a rheostat works, which is similar to a potentiometer but can operate at very low resistances. The purpose of the rheostat is to allow the user to adjust the voltage for charging the battery. It will essentially allow the user to increment the resistance by 1Ω which will lower the voltage. The voltages analyzed in LTSpice are below in the graphs which calculate the estimated run time corresponding to the energy stored in the battery. The formula is also below.
+$$Energy = Power * Time Charged = 2.1* Time Charged$$
 
-$$T = \frac{{(Voltage \times Time) \times 1000}}{{1000000 \times 60}}$$
+$$Power Discharged = Voltage * Current Drawn = 9 * 0.15 = 1.35W$$
+
+$$T = \frac{Energy} {Power Discharged}$$
 
 Table 1. Run Time at 60 Seconds Charge Time
 
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |60            |15.12           |
-|3.81            |60            |13.716          |
-|3.43            |60            |12.348          |
-|3.05            |60            |10.98           |
-|2.67            |60            |9.612           |
-|2.29            |60            |8.244           |
-|1.9             |60            |6.84            |
-|1.52            |60            |5.472           | 
-|1.14            |60            |4.104           |
-|0.76            |60            |2.736           |
-|0.38            |60            |1.368           |
-
-Table 2. Run Time at 50 Seconds Charge Time
-
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |50            |12.60           |
-|3.81            |50            |11.43           |
-|3.43            |50            |10.29           |
-|3.05            |50            |9.15            |
-|2.67            |50            |8.01            |
-|2.29            |50            |6.87            |
-|1.9             |50            |5.70            |
-|1.52            |50            |4.56            | 
-|1.14            |50            |3.42            |
-|0.76            |50            |2.28            |
-|0.38            |50            |1.14            |
-
-Table 3. Run Time at 40 Seconds Charge Time
-
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |40            |10.08           |
-|3.81            |40            |9.14            |
-|3.43            |40            |8.23            |
-|3.05            |40            |7.32            |
-|2.67            |40            |6.40            |
-|2.29            |40            |5.49            |
-|1.9             |40            |4.56            |
-|1.52            |40            |3.48            | 
-|1.14            |40            |2.73            |
-|0.76            |40            |1.82            |
-|0.38            |40            |0.91            |
-
-Table 4. Run Time at 30 Seconds Charge Time
-
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |30            |7.56            |
-|3.81            |30            |6.85            |
-|3.43            |30            |6.17            |
-|3.05            |30            |5.49            |
-|2.67            |30            |4.80            |
-|2.29            |30            |4.12            |
-|1.9             |30            |3.42            |
-|1.52            |30            |2.73            | 
-|1.14            |30            |2.05            |
-|0.76            |30            |1.36            |
-|0.38            |30            |0.68            |
-
-Table 5. Run Time at 20 Seconds Charge Time
-
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |20            |5.04            |
-|3.81            |20            |4.57            |
-|3.43            |20            |4.11            |
-|3.05            |20            |3.66            |
-|2.67            |20            |3.20            |
-|2.29            |20            |2.74            |
-|1.9             |20            |2.28            |
-|1.52            |20            |1.82            | 
-|1.14            |20            |1.36            |
-|0.76            |20            |0.91            |
-|0.38            |20            |0.45            |
-
-Table 6. Run Time at 10 Seconds Charge Time
-
-|Voltage(V)      |Time(sec)     |Runtime(sec)    |
-|----------------|--------------|----------------| 
-|4.2             |10            |2.52            |
-|3.81            |10            |2.28            |
-|3.43            |10            |2.05            |
-|3.05            |10            |1.83            |
-|2.67            |10            |1.60            |
-|2.29            |10            |1.37            |
-|1.9             |10            |1.14            |
-|1.52            |10            |0.91            | 
-|1.14            |10            |0.68            |
-|0.76            |10            |0.45            |
-|0.38            |10            |0.22            |
+|Voltage(V)      |Current Supplied(A)    |Current Drawn(A)  |Power Supplied(W)  |Power Discharged(W)  |Time(sec)   |Runtime(sec)    |
+|----------------|-----------------------|------------------|-------------------|---------------------|------------|----------------|
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |60          |93.33           |
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |50          |77.78           |
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |40          |62.22           |
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |30          |46.67           |
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |20          |31.11           |
+|4.2             |0.5                    |0.15              |2.1                |1.35                 |10          |15.55           |
 
 
 
@@ -189,34 +106,34 @@ Table 6. Run Time at 10 Seconds Charge Time
 
 |Item                                 |Location       |Quantity |Price      |Total Price |
 |-------------------------------------|---------------|---------|-----------|------------|
-|22 uF Capacitor                      |Digikey        |2        |$1.82      |$3.64       |
-|150 nF Capacitor                     |Jameco         |1        |$0.19      |$0.19       |
-|100 nF Capacitor                     |Jameco         |1        |$0.19      |$0.19       |
-|33 nF Capacitor                      |Jameco         |1        |$0.39      |$0.39       |
-|10 nF Capacitor                      |Jameco         |2        |$0.19      |$0.38       |
-|22 nF Capacitor                      |Digikey        |1        |$0.27      |$0.27       |
-|4.7 nF Capacitor                     |Mouser         |2        |$0.49      |$0.98       |
-|1.5 nF Capacitor                     |Jameco         |1        |$0.12      |$0.12       |
-|10 uF Capacitor                      |Jameco         |1        |$0.55      |$0.55       |
-|2.2 uF Capacitor                     |Jameco         |2        |$0.19      |$0.38       |
-|0.022 uF Capacitor                   |Jameco         |2        |$0.19      |$0.38       |
-|68 uH Inductor                       |Mouser         |2        |$0.52      |$1.04       |
-|33 uH Inductor                       |Jameco         |2        |$1.11      |$2.22       |
-|1 k Resistor                         |Digikey        |2        |$0.10      |$0.20       |
-|1.01 Meg Resistor                    |Jameco         |2        |$0.05      |$0.10       |
-|1.35 Meg Resistor                    |Jameco         |2        |$0.04      |$0.08       |
-|3.01 k Resistor                      |Jameco         |2        |$0.06      |$0.12       |
-|477 k Resistor                       |Jameco         |2        |$0.06      |$0.12       |
-|BAT54 Zener Diode                    |Mouser         |5        |$0.42      |$2.10       |
-|BZX84C15L Zener Diode                |Mouser         |2        |$0.14      |$0.28       |
-|SI4470DY Transistor                  |Mouser         |2        |$1.58      |$3.16       |
-|YXQ 25W Rheostat                     |Amazon         |1        |$8.99      |$8.99       |
-|1.5 V AA Battery                     |Amazon         |1        |$4.75      |$4.75       |
-|4xAA Battery Holder                  |Amazon         |1        |$7.49      |$7.49       |
-|9 V Lithium-ion Battery              |Amazon         |1        |$23.49     |$23.49      |
-|9 V Lithium-ion Battery Holder       |Amazon         |1        |$5.99      |$5.99       |
-|22 AWG Copper Wire (75 Feet)         |Amazon         |1        |$4.88      |$4.88       |
-|                                     |               |         |Total:     |$72.48      |
+|AA Batteries                         |Amazon         |4+       |$16.43     |$16.43      |
+|4xAA Battery Pack                    |Adafruit       |1        |$2.95      |$2.95       |
+|68uH Inductor                        |Digikey        |2        |$1.17      |$2.34       |
+|150nF Capacitor                      |Digikey        |1        |$0.44      |$0.44       |
+|100nF Capacitor                      |Digikey        |1        |$0.40      |$0.40       |
+|33nF Capacitor                       |Digikey        |1        |$0.31      |$0.31       |
+|Transmitter 4.95uH Coil              |Digikey        |1        |$7.44      |$7.44       |
+|100ohm Resistor                      |Digikey        |2        |$0.10      |$0.20       |
+|10nF Capacitor                       |Digikey        |2        |$0.10      |$0.20       |
+|Transmitter Mosfet                   |Digikey        |2        |$1.70      |$3.40       |
+|SK34SMA-3G   Diode                   |Digikey        |5        |$0.40      |$2.00       |
+|BZX84C16-7-F Diode                   |Digikey        |2        |$0.15      |$0.30       |
+|Receiver 46uH Coil                   |Digikey        |1        |$4.03      |$4.03       |
+|4.7nF Capacitor                      |Digikey        |2        |$0.43      |$0.86       |
+|22nF Capacitor                       |Digikey        |2        |$0.88      |$1.76       |
+|1.5nF Capacitor                      |Digikey        |1        |$1.08      |$1.08       |
+|10uF Capacitor                       |Digikey        |1        |$0.30      |$0.30       |
+|470kohm Resistor                     |Digikey        |2        |$0.10      |$0.20       |
+|2.2uF Capacitor                      |Digikey        |1        |$0.17      |$0.17       |
+|15uH Inductor                        |Digikey        |1        |$1.19      |$1.19       |
+|3.01kohm Resistor                    |Digikey        |1        |$0.10      |$0.10       |
+|1Mohm Resistor                       |Digikey        |1        |$0.10      |$0.10       |
+|10kohm Resistor                      |Digikey        |1        |$0.10      |$0.10       |
+|1.35Mohm Resistor                    |Digikey        |1        |$0.66      |$0.66       |
+|22uF Capacitor                       |Digikey        |1        |$0.33      |$0.33       |
+|9V Lithium-ion Battery               |Amazon         |1        |$18.99     |$18.99      |
+|9V Lithium-ion Battery Connector     |Amazon         |1        |$4.99   v  |$4.99       |
+|                                     |               |         |Total:     |$71.27      |
 
 ## References
 
