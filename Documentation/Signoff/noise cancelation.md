@@ -5,67 +5,47 @@ The function of the subsystem is to familiarize users with the application of no
 ## Constraints
 | No. | Constraints | Origin |
 |-----|-------------|---------|
-|1.   | The gain shall not exceed 91 dB to prohibit distortion  | System constraint|
+|1.   | The gain shall not exceed 102 dB to prohibit distortion  | System constraint|
 |2. | Speakers shall output between 20 Hz and 20 kHz | Listening range for humans |
 
 
 # Buildable schematic
+![InterpretedSS](https://github.com/user-attachments/assets/00b7eb15-efe6-4784-a8f2-fca2f529d168)
+Kicad schematic: Interpted Hardware
 
-![buildable](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/6dd87019-54e7-4dee-9bad-8c25f63d6c66)
+The subsystem will be used to show users how circuitry in basic op amps ( inv. And non inv.) will affect the output. Students will be familiarized with these two op amps by manipulating the feedback resistor to change the circuits output gain. Students will then be able hear the different outputs by the speaker depending on input from the feedback resistor and which circuit is being used.  The hardware for this subsystem will consist of a spdt switch, a speaker, and a push button to toggle the speaker on/off. The switch will control if the user wants to experiment with the inverting op amp or the non-inverting op amp. Using the input breadboard subsystem students will be able to plug in various resistor types for the feedback resistor. Instead of using two op amps for this subsystem, code will simulate the gain from the feedback resistor chosen by the user and output a percentage of the volume level to match the output gain.
 
-Kicad schematic:  Figure 1 
-
-This schematic shows how the user will interpret the subsystem. The subsystem will not consist of any hardware components expect the speakers, push buttons, and the switch. Users will use resistors to influence the output gain of the second speaker by varying the feedback resistor. Once the user inputs a resistance value (via the input system) it will be sent to the Arduino where code simulates the desired circuit’s gain equation. Using this found value, it will then be sent to the second speaker where the user will hear the change in sound. 
-
+![ActualSS](https://github.com/user-attachments/assets/bfd17467-42c3-4b9c-8970-9f809c49141d)
+Kicad schematic: Actual Hardware
 
 # Analysis
 
-There are two main parts to this subsystem: a non-inverting circuit to represent amplification and an inverting circuit to represent noise cancelation. In this subsystem there will be two speakers with push buttons to toggle on and off. The first speaker will output a 1 kHz sound while the second speaker will output the sound the user is testing. There will be a SPDT switch to control which circuit the user is testing. To make this subsystem interactive users will input a resistor as a feedback resistor for the circuit. Using a code to equate the gain equation, will allow minimum hardware for this subsystem.  
+There are two main parts to this subsystem: a non-inverting circuit to represent amplification and an inverting circuit to represent noise cancelation. The reference resistor is 470 ohms and the user will be able to experiement with 470, 1k, and 2k ohms. These values will give a realistic gain that is rated for the speaker and will be coded with volume level intensity to simulate noise amplification or noise cancelation. In doing this, users will be able to calculate the gain for each experiement and have an accurate approximation of the volume level via the op amp circuit. If the user decides to use different resistors outside of the reccomended values, an error will show saying it is not a safe circuit for the speaker. 
 
-The spdt on-off-on switch was chosen to toggle between the inverting and non-inverting circuit, so students will be able to easily control which circuit to use. The on-off-on function is what determined this switch over others. This is due to its ability to send a signal easily to the desired output and has an off function when the subsystem is not in use [2]. The speakers were chosen based on the size compadibility and the frequency range. The speaker is rated at an impedance of 8 ohms, so there will be an 8 Ω resistor soldered in series with each speaker. 
+The spdt on-off-on switch was chosen to toggle between the inverting and non-inverting circuit, so students will be able to easily control which circuit to use. The speaker chosen was based on the size compadibility and the frequency range. 
 
-
+## Coding portion
+For this subsytem to work, code will be implemented to simulate the gain of the circuit in use. WIth the arduino there is a function named "volume.setvolume()". For example to get half the volume control the line of code is volume.setvolume(0.5). For max volume it would write volume.setvolume(1.0). With this it is simple to simulate volume control for each feedback resistor and circuit. To accurately relay a volume control for each experiment I have set a reference resistor as 470 ohms which will be used in all calculations for the gain. KNowing an increase of 3 dB is a doubling of sound intensity, I have set the tone of the 470 omh resistance for the amplifier to be 50%. The gain for this particular part equates to 2, and that is 3 dB less than the gain of the 2 kΩ which relates to 100% tone. Using this proportion I was able to find out the sound intensity for a 1 kΩ feedback resistor accurately. 
 ## Noise Amplification Portion
 
-The non-inverting circuit will be demonstrated with R1 = 2.2 kΩ and the feedback resistor R with remcommended values of 220 Ω, 470 Ω, 1kΩ, 1.5kΩ, and 2.2kΩ. These resistors are recommend for two reasons: to keep the speakers from playing a distorted sound and clipping. There will be code that will act as if its clipping the circuit if users decide to use higher rated resistors. To find the gain for a non-inverting circuit users will use the equation 1 + Rf/R1 [5]. 
+ To find the gain for a non-inverting circuit users will use the equation 1 + Rf/R1 [5]. 
+
+| Resistance | Gain | Volume Control |
+|-----------|-------|----------------|
+| 470 ohms | 1 + 470/470 = 2| 50% |
+| 1k ohms | 1 + 1000/470 = 3.13| 71% |
+| 2k ohms | 1 + 2000/470 = 5.25 | 100% |
 
 
-*In all LT spice simulations the blue wave is Vin and the green wave is Vout*
-
-<img width="800" alt="![nonivertingMINRf]" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/1160a88c-6cab-49ee-a6a1-81b6e126ea80">
-
-  LT spice simulation with minimum recommended feedback resistance: Figure 2
-
-
-
-<img width="800" alt="![noninvertingMAXRf]" src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/5cc7ebd4-cf14-4c3b-a94c-2369389df630">
-
- LT spice simulation with maximun recommended feedback resistance: Figure 3
-
-   *Below is proof that the recommended resistors will keep the gain within constraint 1*
-<img width="500" alt = "![matlabNON]" src ="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/5f41b0d5-cb4e-43b7-8938-8435b00311c2">
-
-Figure 4: Matlab Graph of Non-Inverting Op-Amp Gain vs. Recommended Resistor Values
 
 ### Noise Cancelation Portion
-The inverting circuit shown below is a representation of the circuit used to cancel the original output signal. To cancel a sine wave there needs to be an inverted signal (180-degree phase shift) at the same frequency. R1 of this circuit will be 2.2 kΩ and the feedback resistor is what the user choses. The recommened values for Rf will be 470 Ω, 1 kΩ, 1.5 kΩ, 2.2kΩ, and 4.7 kΩ. Users will use the equation -Rf/R1 [5].
+The inverting circuit shown below is a representation of the circuit used to cancel the original output signal. To cancel a sine wave there needs to be an inverted signal (180-degree phase shift) at the same frequency. R1 of this circuit will be 470 Ω and the feedback resistor is what the user choses. The recommened values for Rf will be 470 Ω, 1 kΩ, and 2 kΩ. Users will use the equation -Rf/R1 [5].
 
-<img width="800" alt="![invertingMINRf]" src = "https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/411b91f3-999a-424d-9009-39970d048f4c">
-
-
- LT spice simulation with minimun recommened feedback resistor: Figure 5
-
-<img width="800" alt="![invertingMAXRf]" src ="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/342344e4-f8c3-4e27-bec6-dc07ff941fdc">
-
-
- LT spice simulation with maxium recommended feedback resistor: Figure 6
-
-
-*Below is proof that the recommended resistors will keep the gain within constraint 1*
-
-<img width="500" alt="![matlabINV]" src ="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158213085/1c39f84a-e514-4a62-a6cb-c3094f8018de">
-
-Figure 7: Matlab Graph of Inverting Op-Amp Gain vs. Recommended Resistor Values
+| Resistance | Gain | Volume Control |
+|------------|------|----------------|
+| 470 ohms | - 470/470 = -1| 40% |
+| 1k ohms | - 1000/470 = -2.12| 30% |
+| 2k ohms | - 2000/470 = -4.25 | 10% |
 
 
 
