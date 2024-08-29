@@ -1,40 +1,45 @@
 # Noise Cancelation and Amplification Subsystem
 
 ## Function of the system
-The function of the subsystem is to familiarize users with the application of noise cancellation and amplification. Using code to manipulate the original sound, users will be able to select whether the output sound is canceled or amplified. This subsystem will introduce the user to how circuitry can influence the output gain of a signal. 
+The function of the subsystem is to familiarize users with the application of noise cancellation and amplification. Using code to manipulate the original sound, users will be able to adjust whether the output sound is canceled or amplified. This will show the user how circuitry can influence the output gain of a signal to either amplify or cancel the signal through simple op amps. 
 ## Constraints
 | No. | Constraints | Origin |
 |-----|-------------|---------|
-|1.   | The gain shall not exceed 102 dB to prohibit distortion  | System constraint|
+|1.   | The gain shall not exceed 92 dB to prohibit distortion  | System constraint|
 |2. | Speakers shall output between 20 Hz and 20 kHz | Listening range for humans |
 
 
 # Buildable schematic
-![InterpretedSS](https://github.com/user-attachments/assets/00b7eb15-efe6-4784-a8f2-fca2f529d168)
+![InterpretedSS](https://github.com/user-attachments/assets/8c6bd14c-94e5-442c-97e4-c89278b7b0eb)
+
 Kicad schematic: Interpted Hardware
 
-The subsystem will be used to show users how circuitry in basic op amps ( inv. And non inv.) will affect the output. Students will be familiarized with these two op amps by manipulating the feedback resistor to change the circuits output gain. Students will then be able hear the different outputs by the speaker depending on input from the feedback resistor and which circuit is being used.  The hardware for this subsystem will consist of a spdt switch, a speaker, and a push button to toggle the speaker on/off. The switch will control if the user wants to experiment with the inverting op amp or the non-inverting op amp. Using the input breadboard subsystem students will be able to plug in various resistor types for the feedback resistor. Instead of using two op amps for this subsystem, code will simulate the gain from the feedback resistor chosen by the user and output a percentage of the volume level to match the output gain.
+The spdt switch was chosen to toggle between the inverting and non-inverting circuit, so students will be able to easily control which circuit to use. The speaker chosen was based on the size compadibility and the frequency range. 
 
-![ActualSS](https://github.com/user-attachments/assets/bfd17467-42c3-4b9c-8970-9f809c49141d)
+The subsystem will be used to show users how circuitry in basic op amps ( inverting And non inverting ) will affect the output. Students will be familiarized with these two op amps by manipulating the feedback resistor to change the circuits output gain. Students will then be able hear the different outputs by the speaker depending on input from the feedback resistor and which circuit is being used.  The hardware for this subsystem will consist of a spdt switch, a speaker, and a push button to toggle the speaker on/off. Using the input breadboard subsystem students will be able to plug in various resistor types for the feedback resistor. Instead of using two op amps for this subsystem, code will simulate the gain via the feedback resistor chosen by the user and output a percentage of the volume level to match the output gain.
+
+![ActualSS](https://github.com/user-attachments/assets/5a23d714-1475-4d38-b9b6-7ae7e6cea743)
+
 Kicad schematic: Actual Hardware
 
+ Above demonstrates how the subsystem will work. Users first decide which circuit they will experiment with, then users will be able to plug in the various reccommended resistors to the input breadboard system to hear changes in the circuits output volume. During the experiment users will be able to mathmatically find the circuits gain and will be able to determine the sound level before hearing the output. 
+ 
 # Analysis
 
-There are two main parts to this subsystem: a non-inverting circuit to represent amplification and an inverting circuit to represent noise cancelation. The reference resistor is 470 ohms and the user will be able to experiement with 470, 1k, and 2k ohms. These values will give a realistic gain that is rated for the speaker and will be coded with volume level intensity to simulate noise amplification or noise cancelation. In doing this, users will be able to calculate the gain for each experiement and have an accurate approximation of the volume level via the op amp circuit. If the user decides to use different resistors outside of the reccomended values, an error will show saying it is not a safe circuit for the speaker. 
+There are two main parts the user will interpret in this subsystem: a non-inverting circuit to represent amplification and an inverting circuit to represent noise cancelation. Limited to the resistors being used in the breadboard subsystem, I determined the reference resistor is 470 Ω and the user will be able to experiement with 470 Ω, 1 kΩ, and 470 and 1000 Ω in parallel (320 Ω). These values will give a realistic gain that is rated for the speaker, do not cause distortion, and will be coded with volume level intensity to simulate noise amplification or noise cancelation. In doing this, users will be able to calculate the gain for each experiement and have an accurate approximation of the volume level. If the user decides to use different resistors outside of the reccomended values, an error will show saying the circuit built distorts the speaker's output. 
 
-The spdt on-off-on switch was chosen to toggle between the inverting and non-inverting circuit, so students will be able to easily control which circuit to use. The speaker chosen was based on the size compadibility and the frequency range. 
+To accurately relay volume control for each experiment the reference resistor is set to 470 Ω which will be used in all calculations for the gain. The max volume is set with the feedback resistor of 1 kΩ because that will give the largest increase in gain. Using the equation to find the decibal level from the gain, 20log(Av), I am able to accurately simulate the volume level for each circumstance. Knowing an increase of 3 dB gives the impression of "doubling the sound level" I was able to back track from the max volume down to find the volume level that closely fits the remaining resistors. 
 
-## Coding portion
-For this subsytem to work, code will be implemented to simulate the gain of the circuit in use. WIth the arduino there is a function named "volume.setvolume()". For example to get half the volume control the line of code is volume.setvolume(0.5). For max volume it would write volume.setvolume(1.0). With this it is simple to simulate volume control for each feedback resistor and circuit. To accurately relay a volume control for each experiment I have set a reference resistor as 470 ohms which will be used in all calculations for the gain. KNowing an increase of 3 dB is a doubling of sound intensity, I have set the tone of the 470 omh resistance for the amplifier to be 50%. The gain for this particular part equates to 2, and that is 3 dB less than the gain of the 2 kΩ which relates to 100% tone. Using this proportion I was able to find out the sound intensity for a 1 kΩ feedback resistor accurately. 
+
 ## Noise Amplification Portion
 
  To find the gain for a non-inverting circuit users will use the equation 1 + Rf/R1 [5]. 
 
 | Resistance | Gain | Volume Control |
 |-----------|-------|----------------|
-| 470 ohms | 1 + 470/470 = 2| 50% |
-| 1k ohms | 1 + 1000/470 = 3.13| 71% |
-| 2k ohms | 1 + 2000/470 = 5.25 | 100% |
+| 320 ohms | 1 + 320/470 = 1.68| 50% |
+| 470 ohms | 1 + 470/470 = 2| 60% |
+| 1k ohms | 1 + 1000/470 = 3.13| 100% |
 
 
 
@@ -43,12 +48,14 @@ The inverting circuit shown below is a representation of the circuit used to can
 
 | Resistance | Gain | Volume Control |
 |------------|------|----------------|
-| 470 ohms | - 470/470 = -1| 40% |
-| 1k ohms | - 1000/470 = -2.12| 30% |
-| 2k ohms | - 2000/470 = -4.25 | 10% |
+| 320 ohms | - 320/470 = -1| 40% |
+| 470 ohms | - 470/470 = -2.12| 30% |
+| 1k ohms | - 1000/470 = -4.25 | 10% |
 
+## Housing
 
-
+## Coding portion
+For this subsytem to work, code will be implemented to simulate the gain of the circuit in use. WIth the arduino there is a function named "volume.setvolume()". For example to get half the volume control the line of code is volume.setvolume(0.5). For max volume it would write volume.setvolume(1.0). With this it is simple to simulate volume control for each feedback resistor and circuit. 
 
 # BOM
 | Device | Price | Quanity | Total Cost | Source |
