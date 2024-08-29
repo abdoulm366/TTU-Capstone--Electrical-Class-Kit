@@ -67,10 +67,13 @@ Figure 5. Car LEDs represent the ShareGoo LED Light Headlights/Taillights
 The LEDs that will be used in this subsystem will be ShareGoo LED lights, headlights/taillights, white and red. These LEDs were chosen because they are cost-efficient and they do not consume much space. These LEDs will be sufficient to physically represent the headlights using white LEDs and tail lights using red LEDs to accurately represent the car lights. As you can see in Figure 2. each of the 4 LEDs will need its own small PCB with mounting holes so that they can be mounted at each corner of the car, to have a real representation of lights on a car. These LEDs will be small LEDs with a housing around them to help direct them into a beam like real car headlights. These LEDs are capable of operating on a voltage range of 3 volts to 7 volts allowing them to change brightness. These LEDs will be configured to an Arduino that is within the input system. 
 
 
-This simulation represents the pulse width modulation concept which controls the LEDs. 
 
-![Screenshot (333)](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/157627496/ffbf80a8-b81d-4981-9ab2-78da86bb2b70)
-Figure 6. PWM and Current limitation simulation
+This simulation represents the pulse width modulation concept which controls the LEDs. This also proves that the overcurrent protection works as intended. 
+
+![image](https://github.com/user-attachments/assets/86fb9523-2334-4013-a515-9cbc753ebdab)
+
+Figure 6. PWM and overcurrent protection simulation. 
+
 
 
 
@@ -82,7 +85,7 @@ Table 3. BOM
 |ShareGoo 8Leds LED Light Headlights/Taillight                             |	Amazon.com	| 1	      | $8.89	  | $8.89         |
 |Dip switch  (3 position)                     |	Mouser.com 	| 1	      | $1.47	  | $1.47         |
 |20 ft each 18 AWG copper wire with shielded protction(6 different color)                | Amazon.com	| 1	      | $16.49	| $16.49        |
-|Resistors (145 ohms)                                | Mouser.com	| 8	      | $4.56 | $4.56       |
+|Resistors (250 ohms)                                | Mouser.com	| 8	      | $4.56 | $4.56       |
 |		                                                          |               |         | Total:  |	$31.41     |
 
 ## References 
