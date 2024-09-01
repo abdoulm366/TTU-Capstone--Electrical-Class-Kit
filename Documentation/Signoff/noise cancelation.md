@@ -51,30 +51,30 @@ For this subsytem to work, code will be implemented to simulate the gain of the 
 
 | Resistance | Gain | Volume Control |
 |------------|------|----------------|
-| 320 ohms | - 320/470 = -1| 40% |
-| 470 ohms | - 470/470 = -2.12| 30% |
-| 1k ohms | - 1000/470 = -4.25 | 10% |
+| 320 ohms | - 320/470 = -0.68| 40% |
+| 470 ohms | - 470/470 = -1| 30% |
+| 1k ohms | - 1000/470 = -2.12 | 10% |
 
 ## Housing
 
 
 # BOM
-| Device | location | Price | Quanity | Total Cost | Source |
-|--------|----------|---------|------------|-------|--------|
-| Push Button |DigiKey| $1.85 | 1 | $1.85 | [5] |
-| Mini Speaker |DigiKey| $3.15 | 1 | $6.30 | [4]
-| SPDT switch | DigiKey| $2.82 | 1 | $5.15 | [3] |
-| 8 Ω resistor| Jameco | $1.75 | 1 | $0.80 | [2] |
+| Device | Location | Manufacture | Price | Quanity  | Part number |
+|--------|----------|-------------|-------|----------|--------------|
+| Push Button | DigiKey |CW industries | $1.85 | 1 | CW181-ND|
+| Mini Speaker |DigiKey|CUI devices| $3.70 | 1 |  102-3841-ND|
+| SPDT switch | DigiKey| E-switch |$2.82 | 1 | EG2355-ND|
+| 8 Ω resistor| Jameco | Vishay |$1.70 | 1 | 71-CPF38R0000FEE14| 
 
-Total cost for subsystem: $9.57 ( not including tax or shipping)
+Total cost for subsystem: $10.07 ( not including tax or shipping)
 
 # References 
 
 [1] Alecia. “Gain vs. Volume - We Explain the Difference in Detail [UPD. 2024].” Prime Sound, 21 June 2024, primesound.org/gain-vs-volume/. 
 
-[2] “CPF38R0000FEE14 Vishay / Dale - Resistors.” Mouser.Com, www.mouser.com/ProductDetail/Vishay-Dale/CPF38R0000FEE14?qs=Qe1jOhZwee10I3XG2t2gsQ%3D%3D. Accessed 29 Aug. 2024. 
+[2] “CPF38R0000FEE14 Vishay / Dale - Resistors.” Mouser.Com, www.mouser.com/ProductDetail/Vishay-Dale/CPF38R0000FEE14?qs=Qe1jOhZwee10I3XG2t2gsQ%3D%3D.
 
-[3] “100SP1T1B4M2QE E-Switch | Switches | DigiKey.” Digikey.Com, www.digikey.com/en/products/detail/e-switch/100SP1T1B4M2QE/378824. Accessed 29 Aug. 2024. . 
+[3] “100SP1T1B4M2QE E-Switch | Switches | DigiKey.” Digikey.Com, www.digikey.com/en/products/detail/e-switch/100SP1T1B4M2QE/378824. 
 
 [4] “CMS-28528N-L152 CUI Devices | Audio Products | DigiKey.” Digikey.Com, www.digikey.com/en/products/detail/cui-devices/CMS-28528N-L152/6137734. 
 
