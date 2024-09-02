@@ -65,7 +65,7 @@ Table 2. BOM
 |ShareGoo 8Leds LED Light Headlights/Taillight                             |	Amazon.com	| 1	| ‎AS136   | ‎Treehobby | $8.89	  | $8.89         |
 |20 ft each 18 AWG copper wire with shielded protction(6 different color)                | Amazon.com	| 1	  |B085QD9DWP  | TUOFENG  | $16.49	| $16.49        |
 |Resistors (250 ohms)                                |Digikey	| 8	 | 	CMF60250R00BHEB | 	Vishay Dale    | $0.94 | $7.52       |
-|2 Position Wire to Board Terminal Block 		     |      Digikey   |  4 |	282834-3   |  TE Connectivity AMP Connectors | $1.70 | $6.80 |
+|2 Position Wire to Board Terminal Block 		     |      Digikey   |  4 |		282834-2   |  TE Connectivity AMP Connectors | $1.70 | $6.80 |
 |		                                                          |         |   |   |         | Total:  |	$39.70    |
 
 ## References 
