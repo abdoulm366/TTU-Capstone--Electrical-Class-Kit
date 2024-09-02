@@ -104,36 +104,36 @@ Table 1. Run Time at 60 Seconds Charge Time
 
 ## B.O.M.
 
-|Item                                 |Location       |Quantity |Price      |Total Price |
-|-------------------------------------|---------------|---------|-----------|------------|
-|AA Batteries                         |Amazon         |4+       |$16.43     |$16.43      |
-|4xAA Battery Pack                    |Adafruit       |1        |$2.95      |$2.95       |
-|68uH Inductor                        |Digikey        |2        |$1.17      |$2.34       |
-|150nF Capacitor                      |Digikey        |1        |$0.44      |$0.44       |
-|100nF Capacitor                      |Digikey        |1        |$0.40      |$0.40       |
-|33nF Capacitor                       |Digikey        |1        |$0.31      |$0.31       |
-|Transmitter 4.95uH Coil              |Digikey        |1        |$7.44      |$7.44       |
-|100ohm Resistor                      |Digikey        |2        |$0.10      |$0.20       |
-|10nF Capacitor                       |Digikey        |2        |$0.10      |$0.20       |
-|Transmitter Mosfet                   |Digikey        |2        |$1.70      |$3.40       |
-|SK34SMA-3G   Diode                   |Digikey        |5        |$0.40      |$2.00       |
-|BZX84C16-7-F Diode                   |Digikey        |2        |$0.15      |$0.30       |
-|Receiver 46uH Coil                   |Digikey        |1        |$4.03      |$4.03       |
-|4.7nF Capacitor                      |Digikey        |2        |$0.43      |$0.86       |
-|22nF Capacitor                       |Digikey        |2        |$0.88      |$1.76       |
-|1.5nF Capacitor                      |Digikey        |1        |$1.08      |$1.08       |
-|10uF Capacitor                       |Digikey        |1        |$0.30      |$0.30       |
-|470kohm Resistor                     |Digikey        |2        |$0.10      |$0.20       |
-|2.2uF Capacitor                      |Digikey        |1        |$0.17      |$0.17       |
-|15uH Inductor                        |Digikey        |1        |$1.19      |$1.19       |
-|3.01kohm Resistor                    |Digikey        |1        |$0.10      |$0.10       |
-|1Mohm Resistor                       |Digikey        |1        |$0.10      |$0.10       |
-|10kohm Resistor                      |Digikey        |1        |$0.10      |$0.10       |
-|1.35Mohm Resistor                    |Digikey        |1        |$0.66      |$0.66       |
-|22uF Capacitor                       |Digikey        |1        |$0.33      |$0.33       |
-|9V Lithium-ion Battery               |Amazon         |1        |$18.99     |$18.99      |
-|9V Lithium-ion Battery Connector     |Amazon         |1        |$4.99   v  |$4.99       |
-|                                     |               |         |Total:     |$71.27      |
+|Item                              |Distributor |Quantity |Part Number             |Manufacturer                      |Price   |Total Price |
+|----------------------------------|------------|---------|------------------------|----------------------------------|--------|------------|
+|AA Batteries                      |Amazon      |1        |B003SI0TD4              |Duracell                          |$8.70   |$8.70       |
+|4xAA Battery Pack                 |Adafruit    |1        |830                     |Adafruit                          |$2.95   |$2.95       |
+|68uH Inductor                     |Digikey     |2        |445-6568-2-ND           |TDK Corporation                   |$1.15   |$2.30       |
+|150nF Capacitor                   |Digikey     |1        |P10969-ND               |Panasonic Electronic Components   |$0.44   |$0.44       |
+|100nF Capacitor                   |Digikey     |1        |EF2104-ND               |Panasonic Electronic Components   |$0.40   |$0.40       |
+|33nF Capacitor                    |Digikey     |1        |P14577-ND               |Panasonic Electronic Components   |$0.31   |$0.31       |
+|Transmitter 4.95uH Coil           |Digikey     |1        |445-172646-ND           |TDK Corporation                   |$7.44   |$7.44       |
+|100ohm Resistor                   |Digikey     |2        |541-4010-2-ND           |Vishay Dale                       |$0.10   |$0.20       |
+|10nF Capacitor                    |Digikey     |2        |490-4516-2-ND           |Murata Electronics                |$0.10   |$0.20       |
+|Transmitter Mosfet                |Digikey     |2        |SI4850EY-T1-GE3TR-ND    |Vishay Siliconix                  |$1.70   |$3.40       |
+|SK34SMA-3G   Diode                |Digikey     |5        |4878-SK34SMA-3GTR-ND    |Diotec Semiconductor              |$0.40   |$2.00       |
+|BZX84C16-7-F Diode                |Digikey     |2        |BZX84C16-FDITR-ND       |Diodes Incorporated               |$0.15   |$0.30       |
+|Receiver 46uH Coil                |Digikey     |1        |445-172409-ND           |TDK Corporation                   |$4.03   |$4.03       |
+|4.7nF Capacitor                   |Digikey     |2        |P15431-ND               |Panasonic Electronic Components   |$0.43   |$0.86       |
+|22nF Capacitor                    |Digikey     |2        |P14259-ND               |Panasonic Electronic Components   |$0.88   |$1.76       |
+|1.5nF Capacitor                   |Digikey     |1        |P10472-ND               |Panasonic Electronic Components   |$1.08   |$1.08       |
+|10uF Capacitor                    |Digikey     |1        |445-4042-2-ND           |TDK Corporation                   |$0.30   |$0.30       |
+|470kohm Resistor                  |Digikey     |2        |541-4081-2-ND           |Vishay Dale                       |$0.10   |$0.20       |
+|2.2uF Capacitor                   |Digikey     |1        |445-5157-2-ND           |TDK Corporation                   |$0.17   |$0.17       |
+|15uH Inductor                     |Digikey     |1        |2457-LPS4018-153MRC-ND  |Coilcraft                         |$1.19   |$1.19       |
+|3.01kohm Resistor                 |Digikey     |1        |541-5387-2-ND           |Vishay Dale                       |$0.10   |$0.10       |
+|1Mohm Resistor                    |Digikey     |1        |541-3965-2-ND           |Vishay Dale                       |$0.10   |$0.10       |
+|10kohm Resistor                   |Digikey     |1        |541-3959-2-ND           |Vishay Dale                       |$0.10   |$0.10       |
+|1.35Mohm Resistor                 |Digikey     |1        |TNPW12061M35BETA-ND     |Vishay Dale                       |$0.66   |$0.66       |
+|22uF Capacitor                    |Digikey     |1        |445-1436-2-ND           |TDK Corporation                   |$0.33   |$0.33       |
+|3.7V Lithium-ion Battery          |Amazon      |2        |B0D9R1SJ8Y              |IEVEDIVB                          |$21.88  |$43.76      |
+|3.7V Battery Holder               |Amazon      |1        |B07CWKGZXW              |Ltvystore                         |$4.99   |$4.99       |
+|                                  |            |         |                        |                                  |Total:  |$88.27      |
 
 ## References
 
