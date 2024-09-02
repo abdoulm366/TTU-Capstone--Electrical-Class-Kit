@@ -19,7 +19,7 @@ The purpose of this subsystem is to power the vehicle through wireless power tra
 <sup>3</sup> For wireless charging applications, a frequency range of 110kHz to 205kHz is recommended to ensure optimal charging of low voltage batteries across short distances(1mm to 10mm)[3][5].
 
 ## Buildable Schematic
-<img alt="Buildable Schematic (kicad)" src="https://github.com/user-attachments/assets/18b81dab-d601-441b-89df-d1cd5ac9d027">
+<img alt="image" src="https://github.com/user-attachments/assets/bd008e93-1c81-4821-b23c-f956f625ff8f">
 
 Figure 1. Buildable Schematic
 
@@ -29,7 +29,7 @@ Figure 2. Transmitter/Inverter
 
 The input voltage for the transmitter will be 6 V DC. This DC value will be converted to an AC value using an inverting circuit while also increasing the frequency. Once the DC value is converted to AC, the power will be transmitted through a 4.95 uH inductive coil which is recommended in the datasheet[3]. 
 
-<img alt="Receiver Rectifier Charger (kicad)" src="https://github.com/user-attachments/assets/a2154664-7ce4-4c35-875c-13ed771d8742">
+<img alt="Receiver (kicad)" src="https://github.com/user-attachments/assets/addd2cfc-2452-46f2-a687-640ca4d04bbe">
 
 Figure 3. Receiver/Full Bridge Rectifier/Charger
 
@@ -39,7 +39,7 @@ The receiver will receive the power from the transmitter through a 46 uH inducti
 
 Figure 4. Transmitter Circuit PCB
 
-<img alt="Receiver PCB" src="https://github.com/user-attachments/assets/b20597b1-cc5a-4b72-80e0-01baaa87279c">
+<img alt="image" src="https://github.com/user-attachments/assets/aceb5a19-869c-48d9-af87-7efbb0381365">
 
 Figure 5. Recever Circuit PCB 
 
@@ -77,28 +77,30 @@ $$F_{CS,CP} = 129.44\ kHz$$
 
 Figure 9. Output Voltage and Current
 
-The figure above shows the current and voltage outputs for the battery charger. The battery being charged will be a 9V lithium-ion battery which is capable of being charged at 4.2 V. From the simulation, the maximum voltage is 4.2V and the maximum current is 500mA. The LTC4120 is the optimal chip for charging batteries as it ensures a certain voltage and current output providing extra safety features. 
+The figure above shows the current and voltage outputs for the battery charger. The batteries being charged will be four 3.7V lithium-ion batteries connected in parallel so that each battery will be charged at 4.2V. From the simulation, it is observed that the maximum voltage is 4.2V and the maximum current is 500mA; when the battery reaches full charge at 4.2V, it will stop charging. Furtheremore, two of the 3.7V batteries will power an arduino uno (7.4V) and the other two will charge an arduino atmega 2560 (7.4V) which require between 7V and 12V. The LTC4120 is the optimal chip for charging single cell batteries as it ensures a certain voltage and current output providing safety features. 
 
-The table below represents various charge times with the associated run times. This will allow the user to see how energy is stored and exerted with a constant voltage of 4.2V and 500mA and allow them to reach the desired run time by calculating the charge time. Power will be constant in this case with it being 2.1 Watts supplied and 1.35 Watts discharged. The output will simply rely on the users charge times. The formula to find these values is as follows:
+The table below represents various charge times with the associated run times. This will allow the user to see how energy is stored and exerted with a constant charging voltage of 4.2V and charging current of 500mA while allowing them to reach the desired run time by calculating the charge time. Since the charger will be charging four batteries in parallel with 500mA, each battery will receiver 125mA. The voltage of the battery will be 3.7V and the capacity will be 1000mAh. The consumption in this case will be 7.4V and 0.75mA. The formulas to find these values is as follows:
 
-$$Power = V * I = 2.1 Watts$$
+$$ChargeAddedto2Batteries = ChargeCurrent * \frac{ChargeTime(seconds)} {3600(seconds)} * 2$$
 
-$$Energy = Power * Time Charged = 2.1* Time Charged$$
+$$RunTime = \frac{ChargeAdded} {Consumption}$$
 
-$$Power Discharged = Voltage * Current Drawn = 9 * 0.15 = 1.35W$$
+Calculation @ 60 Second Charge Time:
 
-$$T = \frac{Energy} {Power Discharged}$$
+$$ChargeAddedto2Batteries = 125mA * \frac{60(seconds)} {3600(seconds)} * 2 = 4.17mAh$$
 
-Table 1. Run Time at 60 Seconds Charge Time
+$$RunTime = \frac{4.17mAh} {75mA} = 3.33min = 200.40sec$$
 
-|Voltage(V)      |Current Supplied(A)    |Current Drawn(A)  |Power Supplied(W)  |Power Discharged(W)  |Time(sec)   |Runtime(sec)    |
-|----------------|-----------------------|------------------|-------------------|---------------------|------------|----------------|
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |60          |93.33           |
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |50          |77.78           |
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |40          |62.22           |
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |30          |46.67           |
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |20          |31.11           |
-|4.2             |0.5                    |0.15              |2.1                |1.35                 |10          |15.55           |
+Table 1. Run Times and Charge Time
+
+|Charge Current Supplied(mA)    |Current Drawn(mA)  |Charge Time(sec)   |Runtime(sec)    |
+|-------------------------------|-------------------|-------------------|----------------|
+|125                            |75                 |60                 |200.40          |
+|125                            |75                 |50                 |166.67          |
+|125                            |75                 |40                 |133.33          |
+|125                            |75                 |30                 |100.00          |
+|125                            |75                 |20                 |66.67           |
+|125                            |75                 |10                 |33.33           |
 
 
 
