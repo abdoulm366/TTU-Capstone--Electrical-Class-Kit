@@ -68,15 +68,15 @@ Since the accepted error is 0.030 meters and the distance covered per sample is 
 Since the motors speed of 2.32 mph fit the constraint, any mile per hour less than 2.32 will also work. Using the same calculations for the table above, 6.71 is the max mph the car can go for the accepted error margin. With the IMU's 100Hz sampling rate, 0 to 6.71mph is the precise range that is appropriate and sufficient based on the 0.030 meters of error. This accepted error margin allows the vehicle a small amount of room to work with but is enough for the vehicle to stay on the desired path with the IMU’s 100Hz sampling rate [11].
 
 ## Bill of Materials (BOM)
-| Item Name | Details | Quantity | Cost | Source |
-|-----------|---------|----------|------|--------|
-| Arduino Uno | Rev 3 | 1 | $27.60 | https://shorturl.at/Oy4Ch |
-| IMU Chip| BNO055| 1 | $29.95 | https://shorturl.at/tnMpC |
-| Arduino Motor Driver Shield | Adafruit| 1 | $19.95 | https://shorturl.at/0jVxw |
-| DC motors/Wheels | TT Gearbox motors | 4 | $8.99 | https://shorturl.at/hUIP2 |
-| Switch | Criotech | 1 | $1.68 | https://tinyurl.com/4v464t8m |
-| Connector | Unpluggable wire connector | 1 | $0.59 | https://tinyurl.com/39tmh9n4 |
-| Jumper Wires | Female/male wires 20 x 3" | 1 | $1.95 | https://tinyurl.com/2zdpf96w |
+| Item Name | Details | Manufacture | Part Number | Quantity | Cost | Source |
+|-----------|---------|-------------|-------------|----------|------|--------|
+| Arduino Uno | Rev 3 | Arduino | A000066 | 1 | $27.60 | https://shorturl.at/Oy4Ch |
+| IMU Chip | BNO055 | Adafruit Industries | 4646 | 1 | $29.95 | https://shorturl.at/tnMpC |
+| Motor Driver Shield | Arduino V2 Kit | Adafruit Industries | 1438 | 1 | $19.95 | https://shorturl.at/0jVxw |
+| DC motors/Wheels | TT Motors | Mixse | 4MW | 4 | $8.99 | https://shorturl.at/hUIP2 |
+| Switch | On/Off | Criotech | 086-005 | 1 | $1.68 | https://tinyurl.com/4v464t8m |
+| Connector | Unpluggable | PPCS | PPCS-MICROJST | 1 | $0.59 | https://tinyurl.com/39tmh9n4 |
+| Jumper Wires | Female/Male | Adafruit Industries | 1953 | 1 | $1.95 | https://tinyurl.com/2zdpf96w |
 
 Total cost for subsystem: $90.71 (not including tax or shipping)
 
