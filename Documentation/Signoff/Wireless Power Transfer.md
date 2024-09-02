@@ -8,11 +8,11 @@ The purpose of this subsystem is to power the vehicle through wireless power tra
 
 |Description    |Constraint                                                                                                            |Source                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------|----------------------------|
-|Standard       |The system shall operate at less than 50 V to ensure safety in an educational setting.                                |OSHA 1926.403(i)(2)(i)      |
+|Standard       |The system shall guard against live electrical components to eleminate accidental contact.                            |OSHA 1926.403(i)(2)(i)      |
 |Voltage        |The output shall not exceed 4.2 V to ensure there is no overcharge of the battery.                                    |Datasheet/Digikey           | 
 |Frequency      |The system shall operate between 110 kHz and 205 kHz to optimize charging capability.                                 |Datasheet/Wireless Charging |
 
-<sup>1</sup> Accoriding to OSHA 1926.403(i)(2)(i), any voltage 50 V or higher must be enclosed in some manner so that any person cannot physically touch a component with this voltage level[4]. The subsystem shall be kept below the 50 V level to ensure that no accidental shocks occurs.
+<sup>1</sup> Accoriding to OSHA 1926.403(i)(2)(i), any voltage 50 V or higher must be enclosed in some manner so that any person cannot physically touch a component with this voltage level[4]. The subsystem shall guard against all live components to eleminate accidental contact since it will be used in an educational setting.
 
 <sup>2</sup> According to the LTC4120 datasheet and Digikey, 4.2 V is the optimal charging voltage to prevent overcharging of the battery[2][3]. Overcharging the battery can cause safety concerns within the subsystem and cause damage to the battery. 
 
