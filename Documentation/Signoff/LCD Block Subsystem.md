@@ -19,6 +19,12 @@ The purpose of this subsystem is to help ease the user's understanding of the ki
   <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/a049d429-bcd9-44cf-affb-985888d65749" height="500" />
 </p>
 
+## PCB
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4b75d724-e7eb-4ba1-96e5-97d4bab65dd8" height="300" /> <img src="https://github.com/user-attachments/assets/5c0e6445-8fc5-47dd-be11-3d47459fd45b" height="300" />  
+</p>
+
 ## Analysis:
 
 Above is the wiring the schematic diagram of the LCD, MCU and other aspects of the device. The corresponding connections from the each appratus are illustrated as well. The pin's layout are shown depending on the power supply channel of the vehicle provide by the Power Subsystem. The schematic diagram includes the connection points that the user can interact with like the headlights, the AC/fan and the distance sensor. For example, for the main menu using the TFT Touch Display, the schema below shows how the ground pin, the digital pins 8-13, and pin 14 are used in orther to create a connection with Arduino Mega board. Because the TFT Screen already uses the 5V pins, the device will use pin 13 as VCC by setting it to high in the setup part of the code.
