@@ -56,6 +56,10 @@ For this subsytem to work, code will be implemented to simulate the gain of the 
 | 1k ohms | - 1000/470 = -2.12 | 10% |
 
 ## Housing
+![PCBschematic](https://github.com/user-attachments/assets/589462d0-d02a-484c-89a9-c2642df967ad)
+Kicad PCB example
+
+Above demonstrates how the subsystem will be configured. All the hardware for this subsystem will be implemented on the main input breadboard PCB. 
 
 
 # BOM
