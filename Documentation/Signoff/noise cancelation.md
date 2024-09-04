@@ -57,9 +57,9 @@ For this subsytem to work, code will be implemented to simulate the gain of the 
 
 ## Housing
 ![PCBschematic](https://github.com/user-attachments/assets/589462d0-d02a-484c-89a9-c2642df967ad)
-Kicad PCB example
 
-Above demonstrates how the subsystem will be configured. All the hardware for this subsystem will be implemented on the main input breadboard PCB. 
+
+Above demonstrates how the subsystem will be configured on a pcb. All the hardware for this subsystem will be implemented on the main input breadboard PCB. 
 
 
 # BOM
