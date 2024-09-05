@@ -1,6 +1,6 @@
 # Input Breadboard Subsystem
 ## Subsystem Function:
-The breadboard subsystem serves as a method for the user to interact with the project. The user will be given several circuit components, including resistors, capacitors, and other circuit components. This subsystem will be integrated into the body of the car, so no separate housing is required. The blocks will contain real circuit components and will be designed so that they are easily interconnected. These components will be connected to a mutli-function sensor circuit. This circuit will analyze the circuit the user builds and will measure either the resistance or the capacitance. The circuit will then send that data to a microcontroller to be analyzed and utilized in the rest of the project. Using these sensor circuit is also safer, as there is no risk of accidentally putting too much current through a component and comprising the subsystem. Also on this breadboard will be some switches, buttons, and other general input components. These will be hardwired in, and will control the outputs assigned to other subsystems.
+The breadboard subsystem serves as a method for the user to interact with the project. The user will be given several circuit components, including resistors, capacitors, and other circuit components. This subsystem will be integrated into the body of the car, so no separate housing is required. The blocks will contain real circuit components and will be designed so that they are easily interconnected. These components will be connected to a mutli-function sensor circuit. This circuit will analyze the circuit the user builds and will measure either the resistance or the capacitance. The circuit will then send that data to a microcontroller to be analyzed and utilized in the rest of the project. Using these sensor circuit is also safer, as there is no risk of accidentally putting too much current through a component and comprimising the subsystem.
 
 ## Constraints/Specification: 
 | Description   | Constraints/Specification:   | Source |
@@ -13,27 +13,25 @@ The breadboard subsystem serves as a method for the user to interact with the pr
 
 ## Schematic:
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/80d0d0dc-b2cf-4afa-a49b-ef039e02abb1)
+![image](https://github.com/user-attachments/assets/0a17e418-f76e-490b-8765-7d6f1f1254d8)
 
 Figure 1: Blocks
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/50814561-6b77-460d-bdf3-99da785a3786)
+![image](https://github.com/user-attachments/assets/d7c95d66-61b5-4f2a-b868-5d4e9cfcfb96)
 
 Figure 2: Sensor Circuit
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/1c493619-e411-4f60-878f-7f1be124eaba)
 
 Figure 3: PCB Schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158489186/4d2e6df5-77fa-4086-aec4-3450dbacf9bf)
 
 Figure 4: PCB 3D view
 
 The schematic is divided up into two separate pieces. The first piece (Figure 1) is comprised of all the blocks the user will be able to insert into the sensor circuit (Figure 2) along with the connector values. These values were chosen so that the user would have a wide range of resistances and capacitances to choose from. The titles of each block describe what is contained inside.
 
-The sensor circuit is made up of a 6 in. x 6 in. grid with a voltage in and a voltage out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given 2x1 "tiles", of which they can insert into the circuit and use jumper wires to connect them up as they please. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
+The blocks are simple plastic shells that contain the circuit components. The user will connect the legs of the components into the spring loaded terminal blocks in order to make the circuits. They will have resistor blocks, capacitor blocks, a diode block, and three blank connector blocks.
 
-The PCB's shown are designed to house either the component block or the blank connector block. The use of the PCBs will be a much faster and easier method to build the blocks for the input breadboard. The connecting through-holes are a diameter of 0.0472 inches, and the mounting blocks have a diameter of 0.12598 inches. This will allow them to easily have the mounting posts to be inserted into the mounts and allow all the necessary component connections to be made.
+The sensor circuit is made up of a 3x3 grid with a circuit in and a circuit out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given blocks containing various circuit components, of which they can insert into the circuit and build up circuits utilzing the traces connecting the terminal blocks together. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
 
 ## Analysis:
 
