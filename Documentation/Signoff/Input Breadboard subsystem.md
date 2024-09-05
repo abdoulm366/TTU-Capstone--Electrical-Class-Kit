@@ -21,8 +21,12 @@ Figure 1: Blocks
 
 Figure 2: Sensor Circuit
 
+![image](https://github.com/user-attachments/assets/6fecc7a7-fa65-459f-a8aa-245366106651)
+
 
 Figure 3: PCB Schematic
+
+![image](https://github.com/user-attachments/assets/280ceb92-4e71-4c0f-8e00-799e44e9eb2f)
 
 
 Figure 4: PCB 3D view
@@ -32,6 +36,8 @@ The schematic is divided up into two separate pieces. The first piece (Figure 1)
 The blocks are simple plastic shells that contain the circuit components. The user will connect the legs of the components into the spring loaded terminal blocks in order to make the circuits. They will have resistor blocks, capacitor blocks, a diode block, and three blank connector blocks.
 
 The sensor circuit is made up of a 3x3 grid with a circuit in and a circuit out pin. The selector switch has 3 modes: resistance, off, and capacitance. The user is expected to build their circuit while the switch is set to "off". They will be given blocks containing various circuit components, of which they can insert into the circuit and build up circuits utilzing the traces connecting the terminal blocks together. Then, once the final connection back to the voltage out pin has been made, then they may flip the switch to the correct position depending on what components they used. The circuit is designed to only read resistance or capacitace separately, so no RC circuits may be made in this grid. However, there is a diode block that can be utilized in both circuits, to varying effects depending on the configuration of the circuit.
+
+The PCB above shows the required circuitry. The Arduino Mega 2560 will be mounted to the car body itself, with the shield attatched to the top. Then, all of the schematic connections from the arduino will be made by soldering to the shield. The grid will operate as follows: Male to Female Jumper Wires will be soldered to the pads in the PCB on the right, where the female ends will be mounted to a plastic housing on top of the car. This will serve as the pseudo-breadboard for the user to interact with.
 
 ## Analysis:
 
@@ -88,19 +94,19 @@ Considering the weight constraint (which was no more than 3 pounds), the design 
 Lastly, the effect of the diode is the easiest to both understand and calculate. Since the diode is a binary-acting device, its output voltage is either high or zero. Most diodes have a 0.7 voltage drop, and since the Peak Inverse Voltage is far less than even 5 volts, all it will have to do is block current going the other way. The analog in port will then find that the voltage is zero, and appropriate adjustments can be made to affect the rest of the project. 
 
 ## B.O.M.
-| Component Type: | Quantity: | Link                      | Price:   |
-|-----------------|-----------|---------------------------|----------|
-| Resistors       | 1         | https://shorturl.at/svDE8 | $ 13.99  |
-| Capacitors      | 1         | https://shorturl.at/ouxBV | $ 14.99  |
-| Diodes          | 1         | https://shorturl.at/fswBG | $ 9.99   |
-| Large Perfboard      | 1         | https://shorturl.at/xzG47 | $ 5.50  |
-| PCBs for blocks    | 20 | N/A | $30.00 |
-| Female Socket  | 120 | https://shorturl.at/cEHP4 | $13.20|
-| Jumper Wire (100 Pcs) | 1 | https://shorturl.at/noQ38 | $29.84|
-| Arduino Mega    | 1         | https://shorturl.at/htuxV | $ 48.40  |
-| Max 4167    | 1         | https://shorturl.at/EQUY7    | $ 6.18 |
-| Resistors (1% tolerance)    | 1         | https://shorturl.at/ajrDO      | $ 9.99  |
-|                 |           | Total:                    | $182.08 |
+|Item                              |Distributor |Quantity |Part Number             |Manufacturer                      |Price   |Total Price |
+|----------------------------------|------------|---------|------------------------|----------------------------------|--------|------------|
+|Arduino Mega R3                   |Amazon      |1        |B01H4ZLZLQ              |Arduino                           |$29.99  |$29.99      |
+|Arduino Mega R3 Shield                  |Amazon      |1        |B081DW6JXB             |Dingyu                         |$15.24  |$15.24      |
+|Male to Female Jumper Wire               |Amazon      |1        |B01EV70C78              |Elegoo                           |$6.98  |$6.98      |
+|Resistor Pack                   |Amazon      |1        |B08FHPKF9V              |Bojack                           |$13.99  |$13.99      |
+|Capacitor Pack                   |Amazon      |1        |B07PBQXQNQ              |Bojack                           |$16.99  |$16.99      |
+|DPDT Switch                   |Digikey      |1        |100DP1T1B1M2QEH              |E-Switch                           |$3.68  |$3.68      |
+|Max 4617|Digikey      |1        |MAX4617CPE              |Analog Devices Inc.                           |$7.38  |$7.48      |
+|Diodes                  |Amazon      |1        |B07YG8K1R9              |Bojack                           |$9.99  |$9.99      |
+|1% tolerance resistors                  |Amazon      |1        |B0CDWVLTM1              |Allecin                           |$9.99  |$9.99      |
+|                                  |            |         |                        |                                  |Total:  |$114.33      |
+
 
 ## Citation:
 [1] “1926.403 - general requirements.,” Occupational Safety and Health Administration, https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.403 (accessed Mar. 31, 2024). 
