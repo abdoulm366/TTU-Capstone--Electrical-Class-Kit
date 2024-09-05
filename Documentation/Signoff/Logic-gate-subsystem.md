@@ -8,26 +8,24 @@ The function of this subsystem is to introduce the concept of logic gates throug
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | -----------------|
-| 1   | System shall allow only one multiplexer to work at a time  | Design Constraint |
-| 2   | System shall receive between 4.75V to 5.25V from Close Loop Control System to operate. [1] | Device Constraint |
+| 1   | Current in the system can't be no less than 12mA  | Design Constraint |
+| 2   | System shall receive between 7V to 12V from Close Loop Control System arduino to operate. [1] | Device Constraint |
 | 3   |System shall have an output current no more than 16mA  | Design Constraint [1]|
 
 
 ## Buildable schematic
 
-![image](https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/158105152/2ee23c70-8949-42b5-b8e0-5945c949f82a)
+
+![image](https://github.com/user-attachments/assets/5044f9e4-5f47-4128-ade4-59e8ed7475dc)
 
 
 
-The above image is a schematic of dual 4 to 1 mux connected to 7 switches which translate the concept of logic gates.  The two switches in series represent an AND gate so output will be high only when both inputs are high. The two switches in parallel represent an OR gate so output will be high when at least one input is high. The schematic focuses on the connection ports of the device with respect to the overall  circuit design.
+The above image is a schematic of a 5 switches connected to digital port 11, 12, and 13 of the Close Control Loop arduino.   of dual 4 to 1 mux connected to 7 switches which translate the concept of logic gates.  The two switches in series represent an AND gate so output will be high only when both inputs are high. The two switches in parallel represent an OR gate so output will be high when at least one input is high. The schematic focuses on the design of the switches with respect to the overall  circuit design.
 
 
 # Analysis
-The SN74LS153 is a dual 4-to-1 multiplexer, with two 4 to 1 mux integrated. It is a combinational circuit that selects one of four input data lines and forwards it to a single output line based on the control inputs. Each multiplexer has four data inputs, two control inputs (A and B) shared together, one enable input each and one output each. The control inputs determine which data input is routed to the output and the enable inputs determine which multiplexer is on.
 
-<sup>1</sup>	The system shall allow only one multiplexer to work at a time. The System is designed so that the switch representing the NOT gate is connected to the first multiplexer and the switches representing the AND and OR gates are connected to the second multiplexer. The enable inputs are active low inputs meaning that they will allow the multiplexer to work when they are off. Since the NOT gate input is connected to the second multiplexer's enable input, whenever it is high the second multiplexer will be off allowing only the first multiplexer to be on. Additionally, when the NOT gate  input is off or low, the second multiplexer will be on leaving the first multiplexer off with its enable output being high connected to the AND gate and the OR gate switch. With this circuit design the system will allow only one multiplexer to work at a time.
-
-<sup>2</sup> System shall receive between 4.75V to 5.25V from Close Loop Control System to operate. The output of the system will be 2 arduino pins directly form the Close Loop Control system. Since the arduino is supplying 5V, the system will directly receives  power from the Close Loop Control Sytem. The Datasheet of the SN74LS153 specifies that the chip operates at a voltage between 4.75V to 5.5V. The 5V from the Arduino is within that range so this following specification will be met.
+<sup>2</sup> System shall receive between 7V to 12V from Close Loop Control System to operate. The output of the system will be 2 arduino pins directly form the Close Loop Control system. Since the arduino is supplying 5V, the system will directly receives  power from the Close Loop Control Sytem. The Datasheet of the SN74LS153 specifies that the chip operates at a voltage between 4.75V to 5.5V. The 5V from the Arduino is within that range so this following specification will be met.
 
 <sup>3</sup> System shall have an output current no more than 16mA. Keeping the output current under 16 mA (recommended in the datasheet) is he current regulator resistor whole purpose. with about 5v entering the mux, a 5k resistor will keep the resistor as low as 1 mA .The system can easily operate on a perf board powered by the Close Loop Control system. The resistor in the schematic is a current regulator resistor limiting the current flow through the multiplexer will ensure a maximum current rating less than 16 mA.
 
@@ -86,7 +84,7 @@ The two switches in parallel represent an OR gate, output will be high when at l
 | DEVICE                | Quantity | Price Per Unit | Total Price | Source |
 | --------------------- | -------- | -------------- | ----------- | -------| 
 | Switches              | 7        | $0.65          | $4.55         | Mouser |
-| 4 to 1 Mux (SN74LS153)| 1        | $1.13          | $1.13       | Mouser |
+| LED                   | 2       | $1.13          | $1.13       | Mouser |
 |  5k Resistor          | 1        | $0.29          | $0.29        |  Jameco    |
  
  
