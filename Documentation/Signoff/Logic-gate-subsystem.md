@@ -8,7 +8,7 @@ The function of this subsystem is to introduce the concept of logic gates throug
 
 | Description | Constraints                                                   | Origin            |
 | --- | --------------------------------------------------------------------- | -----------------|
-| Current Safety | Current in the system shall be between 12 mA and 30 mA [3] | LED Constraint |
+| Current regulation | Current in the system shall be between 15 mA and 30 mA [3] | LED Constraint |
 | Voltage regulation | System shall use 5v from the Arduino UNO to operate | Device Constraint |
 |  Explicit  | Switches shall be labeled for a user-friendly interaction  | simplicity Constraint|
 | Cost Limit  |Any components and equipment within this subsystem should not exceed $40 dollars and the subsystems total cost should not exceed $120 to help keep the project budget in the 400-900 range| Conceptual Design|
@@ -24,10 +24,10 @@ The above image is a schematic of 5 switches and 2 LEDs connected to digital por
 
 
 # Analysis
-If we are analyzing the current constraint, it shall not be less thant 12 mA and no more than 50 mA as it is specified in the datasheet [1]. Excessive current can lead to component frying or malfunctionning the reason why we have this constraint in place. Since the arduino is operating on 5v [2], our subsystem will need 2 current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
-V = 5V , I = 12 mA.   
+If we are analyzing the current constraint, it shall not be less thant 15 mA and no more than 30 mA as it is specified in the datasheet [1]. Excessive current can lead to component frying or malfunctionning the reason why we have this constraint in place. Since the arduino is operating on 5v [2], our subsystem will need 2 current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
+V = 5V , I = 15 mA.   
 
-R = $\frac{5}{0.012}$ = 417 ohms. To keep the current between 12mA and 30mA, a 300 ohm resistor is perfect because it brings the current to about 16mA with a voltage of 5V.
+R = $\frac{5}{0.015}$ = 334 ohms. To keep the current between 15mA and 30mA, a 300 ohm resistor is perfect because it brings the current to about 16mA with a voltage of 5V.
 
 How will the Subsystem work? 
 The user will interact with the switches sending signals to the arduino. There are five switches total. The single switch represents the NOT gate, responsible for moving the EV car backwards. It is connected to digital pin 11 of the arduino uno where appropriate codes will instruct it to do such things. The two switches in series represents the AND gate, current/signal will go through only when both switches are on, staying in the same definition spectrum of the "AND Gate". It is connected to digital pin 12 of the Arduino. They ( switches in series) move the car forward when both are on. Appropriate codes will also instruct the uno board to do so.
