@@ -61,23 +61,18 @@ This submenu “Interact with the car” will have 4 parts, the car’s proximit
 
 The first example is distance measuring with ultrasonic sensors. The sensor's output, or distance, is printed on the screen and will allow the user to pick the units, centimeters or inches, with the touch screen.
 
-The car’s headlight control shall be done by controlling an RGB LED with
-three RGB sliders that will change its color. For example, if we
-begin to slide the blue slider, the LED will light up in blue and
-increase the brightness as we approach the maximum setting. So the
-sliders may range from 0 to 255, and we can use their combination to set
-any color to the RGB LED.
+The car’s headlight control shall be done by controlling 4 LED lights with
+2 sliders (one red and one white) that will change their brightness. For example, if we slide the red slider, the LED will light up in red and increase the brightness as we approach the maximum setting. So the sliders may range from 0 to 255, and we can use their combination to set any color to the RGB LED.
 
-The Birduino game is a copy of a mobile game called Flappy Bird. It
-shall be played using the push button or directly on the touch screen.
+The Birduino game is a copy of a mobile game called Flappy Bird. It shall be played directly on the touch screen.
 
 <p align="center">
   <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/747f0542-4bd5-4fb9-9e47-66f278e23ccb" height="300" />  <img src="https://github.com/abdoulm366/TTU-Capstone--Electrical-Class-Kit/assets/125443044/4d75f17c-c9ea-4969-92aa-f96c67de9c3b" height="300" />
 </p>
 
-The fan represents the A/C unit of the car. It shall be turned on using by pressing on the “Turn On Fan” button and turned off by pressing the “Turn Off Fan” button.
+The fan represents the A/C unit of the car. It shall be turned ON by pressing the “Turn On Fan” button and turned off by pressing the “Turn Off Fan” button.
 
-This system demonstrates the fundamental concepts of digital electronics but also offers a more interactive digital framework for the user to experiment with. It uses sensors, actuators, and graphical interfaces to provide users with a better understanding of the concepts of ECE. The LCD subsystem's overall performance includes assessing the correctness of users' input or interactions with the system. In order to make sure that the designed specifications for a better user experience are met, a response time to user inputs will be evaluated. A deeper analysis shall be conducted to align with the task's performance goals. In addition, user interface (UI) effects shall be analyzed to confirm easy navigation and ease of use. Most of the analysis shall be conducted via a test run coding format.
+This system demonstrates the fundamental concepts of digital electronics but also offers a more interactive digital framework for the user to experiment with. It uses a graphical interface to provide users with a better understanding of the concepts of ECE. The LCD subsystem's overall performance includes assessing the correctness of users' input or interactions with the system. In order to make sure that the designed specifications for a better user experience are met, a response time to user inputs will be evaluated. A deeper analysis shall be conducted to align with the task's performance goals. In addition, user interface (UI) effects shall be analyzed to confirm easy navigation and ease of use. Most of the analysis shall be conducted via a test run coding format.
 
 The LCD Block Subsystem is integrated by pairing a 3.2" TFT touchscreen with a TFT LCD Arduino Mega Shield. A shield is needed since the TFT Touch screen operates at 3.3V while the Arduino Mega outputs at 5V. An HC-SR04 ultrasonic sensor is required for the distance sensor. The headlights' functionalities and details are incorporated into the Headlight Subsystem. A push button is needed to turn ON and Off the screen. Also, 2 Fans are needed for the A/C unit.
 
