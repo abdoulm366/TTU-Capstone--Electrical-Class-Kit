@@ -68,7 +68,7 @@ Above demonstrates how the subsystem will be configured on a pcb. All the hardwa
 | Push Button | DigiKey |CW industries | $1.85 | 1 | CW181-ND|
 | Mini Speaker |DigiKey|CUI devices| $3.70 | 1 |  102-3841-ND|
 | SPDT switch | DigiKey| E-switch |$2.82 | 1 | EG2355-ND|
-| 8 Ω resistor| Jameco | Vishay |$1.70 | 1 | 71-CPF38R0000FEE14| 
+| 8 Ω resistor| Mouser | Vishay |$1.70 | 1 | 71-CPF38R0000FEE14| 
 
 Total cost for subsystem: $10.07 ( not including tax or shipping)
 
