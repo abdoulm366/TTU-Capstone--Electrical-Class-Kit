@@ -14,8 +14,8 @@ The function of this subsystem is to introduce the concept of logic gates throug
 | Cost Limit  |Any components and equipment within this subsystem should not exceed $40 dollars and the subsystems total cost should not exceed $120 to help keep the project budget in the 400-900 range| Conceptual Design|
 
 ## Buildable schematic
+![image](https://github.com/user-attachments/assets/cff989bc-b4f0-4335-a2e1-3d9a95cced7f)
 
-![image](https://github.com/user-attachments/assets/726d0e72-cc31-455a-bc9a-9b4c88de9018)
 
 
 
@@ -30,11 +30,11 @@ V = 5V , I = 15 mA.
 R = $\frac{5}{0.015}$ = 334 ohms. To keep the current above 15mA, a 300 ohm resistor is perfect because it brings the current to about 16mA with a voltage of 5V.
 
 How will the Subsystem work? 
-The user will interact with the primary screen first and then the switches. Selecting which mode to go into through the screen, the user will then interact with the switches to move the car. In AND mode the car drives forward when switch 1 and 2 are pressed. This simulates an AND gate inside the micro-controller. If switch 3 if flipped the output of the AND gate is inverted. In OR mode the car drives forward when switch 1 or 2 are pressed. This simulates an OR gate inside the micro-controller. If switch 3 if flipped the output of the OR gate is inverted. 
+The user will interact with the primary screen first and then the switches. Selecting which mode to go into through the screen, the user will then interact with the switches to move the car. In AND mode the car drives forward when switch 1 and 2 are flipped. This simulates an AND gate inside the micro-controller. If switch 3 if flipped, the output of the AND gate is inverted. In OR mode the car drives forward when switch 1 or 2 are pressed. This simulates an OR gate inside the micro-controller. If switch 3 if flipped the output of the OR gate is inverted. The LED output will turn on whenever the car is moving indicating that a gate is being used. 
 
 
 
-Below are the truth table for NOT,AND and OR gates.
+### Truth table for NOT,AND and OR gates.
 
 ## AND Gate
 The two switches in series represent an AND gate, output will be high only when both inputs are high.
@@ -69,17 +69,20 @@ The two switches in parallel represent an OR gate, output will be high when at l
 | 1          | 0        |
 
 ## PCB Layout
+![image](https://github.com/user-attachments/assets/3f45ed0d-a5c9-421b-a379-0d246bbc472f)
+![image](https://github.com/user-attachments/assets/9594b8c4-4765-4cfc-bac9-cb0a07af2a6f)
+![image](https://github.com/user-attachments/assets/7bfb2ec6-5f4d-459d-a661-68dbb1f99cda)
 
 
 ## BOM
 | DEVICE                | Quantity | Price Per Unit | Total Price | Source |        Link|
 | --------------------- | -------- | -------------- | ----------- | -------|------- |
-| Switches              | 3       | $0.65          | $3.25       | Mouser | https://www.mouser.com/ProductDetail/CUI-Devices/DS04-254-1S-01BK?qs=wnTfsH77Xs41j%252BLlbi1wiw%3D%3D    |
-| LED                   | 1      | $0.16          | $0.32       | Mouser |https://www.mouser.com/ProductDetail/Cree-LED/C5SMF-RJE-CT0W0BB1?qs=sGAEpiMZZMuCm2JlHBGefrW%252BuZaT7rx%2FrgviDEgrvNI%3D|
-| 300 Ohms Resistor     | 1        | $0.10          | $0.20        |  mouser   |https://www.mouser.com/ProductDetail/KOA-Speer/MF1-4LCT52R301G?qs=91WPSIiQh9J0pu6y%252B4d0Wg%3D%3D|
+| Switches              | 3       | $0.65          | $1.95       | Mouser | https://www.mouser.com/ProductDetail/CUI-Devices/DS04-254-1S-01BK?qs=wnTfsH77Xs41j%252BLlbi1wiw%3D%3D    |
+| LED                   | 1      | $0.16          | $0.16       | Mouser |https://www.mouser.com/ProductDetail/Cree-LED/C5SMF-RJE-CT0W0BB1?qs=sGAEpiMZZMuCm2JlHBGefrW%252BuZaT7rx%2FrgviDEgrvNI%3D|
+| 300 Ohms Resistor     | 1        | $0.10          | $0.10        |  mouser   |https://www.mouser.com/ProductDetail/KOA-Speer/MF1-4LCT52R301G?qs=91WPSIiQh9J0pu6y%252B4d0Wg%3D%3D|
  
  
- Total Cost: $3.77
+ Total Cost: $2.21
 
 
 # References
