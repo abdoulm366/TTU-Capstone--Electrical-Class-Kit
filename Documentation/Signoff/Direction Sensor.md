@@ -70,15 +70,15 @@ Since the motors speed of 2.32 mph fit the constraint, any mile per hour less th
 ## Bill of Materials (BOM)
 | Item Name | Details | Manufacture | Part Number | Quantity | Cost | Source |
 |-----------|---------|-------------|-------------|----------|------|--------|
-| Arduino Uno | Rev 3 | Arduino | A000066 | 1 | $27.60 | https://shorturl.at/Oy4Ch |
-| IMU Chip | BNO055 | Adafruit Industries | 4646 | 1 | $29.95 | https://shorturl.at/tnMpC |
-| Motor Driver Shield | Arduino V2 Kit | Adafruit Industries | 1438 | 1 | $19.95 | https://shorturl.at/0jVxw |
-| DC motors/Wheels | TT Motors | Mixse | 4MW | 4 | $8.99 | https://shorturl.at/hUIP2 |
-| Switch | On/Off | Criotech | 086-005 | 1 | $1.68 | https://tinyurl.com/4v464t8m |
-| Connector | Unpluggable | PPCS | PPCS-MICROJST | 1 | $0.59 | https://tinyurl.com/39tmh9n4 |
+| Arduino Uno | Rev 3 | Arduino | A000066 | 1 | $27.60 | https://tinyurl.com/j4s57wzy |
+| IMU Chip | BNO055 | Adafruit Industries | 4646 | 1 | $29.95 | https://tinyurl.com/nthcww8y |
+| Motor Driver Shield | Shield Arduino V2 Kit | Adafruit Industries | 1438 | 1 | $19.95 | https://tinyurl.com/mtk6a69d |
+| DC Motors/Wheels | TT Package | Mixse | 4MW | 1 | $8.99 | https://tinyurl.com/2shnpn4w |
+| Switch | Digikey Rocker Switch | E-Switch | RA1113112R | 1 | $0.69 | https://tinyurl.com/29wxdrpc |
+| Connector | Digikey Unpluggable Connector | Sparkfun Electronics | CAB-14574 | 1 | $1.06 | https://tinyurl.com/y886th7r |
 | Jumper Wires | Female/Male | Adafruit Industries | 1953 | 1 | $1.95 | https://tinyurl.com/2zdpf96w |
 
-Total cost for subsystem: $90.71 (not including tax or shipping)
+Total cost for subsystem: $90.19 (not including tax or shipping)
 
 ## References 
 [1] Ada, Lady. “Adafruit Motor Shield V2.” Adafruit Learning System, learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/overview. Accessed 21 Apr. 2024. 
