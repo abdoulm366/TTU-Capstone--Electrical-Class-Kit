@@ -75,12 +75,12 @@ The two switches in parallel represent an OR gate, output will be high when at l
 
 
 ## BOM
-| DEVICE                | Quantity | Price | manufacture | Location |        Link|
+| DEVICE                | Quantity | Price | manufacture | Location |        Part Number|
 | --------------------- | -------- | -------------- | ----------- | -------|------- |
-| double Switch         | 1       | $0.57         | Same Sky     | Digikey |https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-02BK-SMT/11310860  |
-| Single switch         |  1       |$0.67            |Same Sky             | Digikey | https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-01BK-SMT/11310848     |
-| LED                   | 1      | $0.18          | Wurth Elektronic      | Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982|
-| 220 Ohms Resistor     | 1        | $0.10          | Jameco elektronic        |  Jameco  |https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
+| double Switch         | 1       | $0.57         | Same Sky     | Digikey |2223-DS04-254-2-02BK-SMT-ND  |
+| Single switch         |  1       |$0.67            |Same Sky             | Digikey | 2223-DS04-254-2-01BK-SMT-ND     |
+| LED                   | 1      | $0.18          | 	Würth Elektronik      | Digikey |732-5006-ND|
+| 220 Ohms Resistor     | 1        | $0.10          | Jameco ValuPro       |  Jameco  |2237167|
  
  
  Total Cost: $2.21
