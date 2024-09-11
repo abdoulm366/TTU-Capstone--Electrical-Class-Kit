@@ -14,7 +14,8 @@ The function of this subsystem is to introduce the concept of logic gates throug
 | Cost Limit  |Any components and equipment within this subsystem should not exceed $40 dollars and the subsystems total cost should not exceed $120 to help keep the project budget in the 400-900 range| Conceptual Design|
 
 ## Buildable schematic
-![image](https://github.com/user-attachments/assets/cff989bc-b4f0-4335-a2e1-3d9a95cced7f)
+![image](https://github.com/user-attachments/assets/51ad26e2-d074-4c35-a2c9-f11e91a238be)
+
 
 
 
@@ -80,7 +81,7 @@ The two switches in parallel represent an OR gate, output will be high when at l
 | double Switch         | 1       | $0.57         | Same Sky     | Digikey |2223-DS04-254-2-02BK-SMT-ND  |
 | Single switch         |  1       |$0.67            |Same Sky             | Digikey | 2223-DS04-254-2-01BK-SMT-ND     |
 | LED                   | 1      | $0.18          | 	Würth Elektronik      | Digikey |732-5006-ND|
-| 220 Ohms Resistor     | 1        | $0.10          | Jameco ValuPro       |  Jameco  |2237167|
+| 220 Ohms Resistor     | 1        | $0.10          | YAGEO     |  Digikey  |220QBK-ND|
  
  
  Total Cost: $2.21
@@ -99,7 +100,7 @@ The two switches in parallel represent an OR gate, output will be high when at l
 
 [6] Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982
 
-[7] https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
+[7] https://www.digikey.com/en/products/detail/yageo/CFR-25JB-52-220R/1295
 
 
 
