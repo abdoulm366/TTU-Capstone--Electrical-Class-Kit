@@ -75,12 +75,12 @@ The two switches in parallel represent an OR gate, output will be high when at l
 
 
 ## BOM
-| DEVICE                | Quantity | Price Per Unit | Total Price | Source |        Link|
+| DEVICE                | Quantity | Price | manufacture | Location |        Link|
 | --------------------- | -------- | -------------- | ----------- | -------|------- |
-| double Switch         | 1       | $0.57         | $0.57       | Digikey |https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-02BK-SMT/11310860  |
-| Single switch         |  1       |$0.67            |$0.67             | Digikey | https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-01BK-SMT/11310848     |
-| LED                   | 1      | $0.18          | $0.18       | Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982|
-| 220 Ohms Resistor     | 1        | $0.10          | $0.10        |  Jameco  |https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
+| double Switch         | 1       | $0.57         | Same Sky     | Digikey |https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-02BK-SMT/11310860  |
+| Single switch         |  1       |$0.67            |Same Sky             | Digikey | https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-01BK-SMT/11310848     |
+| LED                   | 1      | $0.18          | Wurth Elektronic      | Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982|
+| 220 Ohms Resistor     | 1        | $0.10          | Jameco elektronic        |  Jameco  |https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
  
  
  Total Cost: $2.21
@@ -92,3 +92,14 @@ The two switches in parallel represent an OR gate, output will be high when at l
 [2]  “Arduino Uno REV3.” Arduino Online Shop, store-usa.arduino.cc/products/arduino-uno-rev3?gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyu4hsJT3p0tzEam3W_WHjW9Dal0CS2KojE_k9SLhoPBFiI5uEDC_3GxoCv1wQAvD_BwE. Accessed 28 Aug. 2024.
 
 [3] https://www.ledsupply.com/blog/how-does-a-5mm-led-work/#:~:text=5mm%20LED%20Current.%20Now
+
+[4] Digikey |https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-02BK-SMT/11310860
+
+[5] https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-01BK-SMT/11310848
+
+[6] Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982
+
+[7] https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
+
+
+
