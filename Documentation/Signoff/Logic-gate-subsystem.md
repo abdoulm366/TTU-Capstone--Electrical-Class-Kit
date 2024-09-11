@@ -24,10 +24,10 @@ The above image is a schematic of 3 switches, a current limiting resitor and a L
 
 
 # Analysis
-If we are analyzing the current constraint, it shall not be less thant 15 mA as it is specified in the datasheet [1]. Since the arduino is operating on 5v [2], and the foward voltage of the LED is 2.1V [1], our actual voltage is 5V - 2.1V = 3.9V. Our subsystem will need a current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
-V = 3.9V, I = 15 mA.   
+If we are analyzing the current constraint, it shall not be less thant 15 mA as it is specified in the datasheet [1]. Since the arduino is operating on 5v [2], and the foward voltage of the LED is 2.2V [1], our actual voltage is 5V - 2.2V = 3.8V. Our subsystem will need a current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
+V = 3.8V, I = 15 mA.   
 
-R = $\frac{3.9}{0.015}$ = 260 ohms. To keep the current above 15mA, a 220 ohm resistor is perfect because it brings the current to about 17.7mA with a voltage of 3.9V.
+R = $\frac{3.8}{0.015}$ = 253 ohms. To keep the current above 15mA, a 220 ohm resistor is perfect because it brings the current to about 17.7mA with a voltage of 3.8V.
 
 How will the Subsystem work? 
 The user will interact with the primary screen first and then the switches. Selecting which mode to go into through the screen, the user will then interact with the switches to move the car. In AND mode the car drives forward when switch 1 and 2 are flipped. This simulates an AND gate inside the micro-controller. If switch 3 if flipped, the output of the AND gate is inverted. In OR mode the car drives forward when switch 1 or 2 are pressed. This simulates an OR gate inside the micro-controller. If switch 3 if flipped the output of the OR gate is inverted. The LED output will turn on whenever the car is moving indicating that a gate is being used. 
