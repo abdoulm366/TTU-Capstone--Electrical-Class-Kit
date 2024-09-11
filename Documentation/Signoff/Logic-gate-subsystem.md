@@ -24,10 +24,10 @@ The above image is a schematic of 3 switches, a current limiting resitor and a L
 
 
 # Analysis
-If we are analyzing the current constraint, it shall not be less thant 15 mA and no more than 30 mA as it is specified in the datasheet [1]. Excessive current can lead to component frying or malfunctionning the reason why we have this constraint in place. Since the arduino is operating on 5v [2], our subsystem will need a current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
-V = 5V , I = 15 mA.   
+If we are analyzing the current constraint, it shall not be less thant 15 mA as it is specified in the datasheet [1]. Since the arduino is operating on 5v [2], and the foward voltage of the LED is 2.1V [1], our actual voltage is 5V - 2.1V = 3.9V. Our subsystem will need a current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
+V = 3.9V, I = 15 mA.   
 
-R = $\frac{5}{0.015}$ = 334 ohms. To keep the current above 15mA, a 300 ohm resistor is perfect because it brings the current to about 16mA with a voltage of 5V.
+R = $\frac{3.9}{0.015}$ = 260 ohms. To keep the current above 15mA, a 220 ohm resistor is perfect because it brings the current to about 17.7mA with a voltage of 3.9V.
 
 How will the Subsystem work? 
 The user will interact with the primary screen first and then the switches. Selecting which mode to go into through the screen, the user will then interact with the switches to move the car. In AND mode the car drives forward when switch 1 and 2 are flipped. This simulates an AND gate inside the micro-controller. If switch 3 if flipped, the output of the AND gate is inverted. In OR mode the car drives forward when switch 1 or 2 are pressed. This simulates an OR gate inside the micro-controller. If switch 3 if flipped the output of the OR gate is inverted. The LED output will turn on whenever the car is moving indicating that a gate is being used. 
@@ -79,7 +79,7 @@ The two switches in parallel represent an OR gate, output will be high when at l
 | --------------------- | -------- | -------------- | ----------- | -------|------- |
 | Switches              | 3       | $0.65          | $1.95       | Mouser | https://www.mouser.com/ProductDetail/CUI-Devices/DS04-254-1S-01BK?qs=wnTfsH77Xs41j%252BLlbi1wiw%3D%3D    |
 | LED                   | 1      | $0.16          | $0.16       | Mouser |https://www.mouser.com/ProductDetail/Cree-LED/C5SMF-RJE-CT0W0BB1?qs=sGAEpiMZZMuCm2JlHBGefrW%252BuZaT7rx%2FrgviDEgrvNI%3D|
-| 300 Ohms Resistor     | 1        | $0.10          | $0.10        |  mouser   |https://www.mouser.com/ProductDetail/KOA-Speer/MF1-4LCT52R301G?qs=91WPSIiQh9J0pu6y%252B4d0Wg%3D%3D|
+| 220 Ohms Resistor     | 1        | $0.10          | $0.10        |  Jameco  |https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
  
  
  Total Cost: $2.21
