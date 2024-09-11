@@ -77,8 +77,9 @@ The two switches in parallel represent an OR gate, output will be high when at l
 ## BOM
 | DEVICE                | Quantity | Price Per Unit | Total Price | Source |        Link|
 | --------------------- | -------- | -------------- | ----------- | -------|------- |
-| Switches              | 3       | $0.65          | $1.95       | Mouser | https://www.mouser.com/ProductDetail/CUI-Devices/DS04-254-1S-01BK?qs=wnTfsH77Xs41j%252BLlbi1wiw%3D%3D    |
-| LED                   | 1      | $0.16          | $0.16       | Mouser |https://www.mouser.com/ProductDetail/Cree-LED/C5SMF-RJE-CT0W0BB1?qs=sGAEpiMZZMuCm2JlHBGefrW%252BuZaT7rx%2FrgviDEgrvNI%3D|
+| double Switch         | 1       | $0.57         | $0.57       | Digikey |https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-02BK-SMT/11310860  |
+| Single switch         |  1       |$0.67            |$0.67             | Digikey | https://www.digikey.com/en/products/detail/same-sky/DS04-254-2-01BK-SMT/11310848     |
+| LED                   | 1      | $0.18          | $0.18       | Digikey |https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151031SS06000/4489982|
 | 220 Ohms Resistor     | 1        | $0.10          | $0.10        |  Jameco  |https://www.jameco.com/z/RC1W220EJT-Jameco-ValuePro-Resistor-Carbon-Film-220-Ohm-1-Watt-5-_2237167.html
  
  
