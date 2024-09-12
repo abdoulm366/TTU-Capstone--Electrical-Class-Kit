@@ -73,6 +73,8 @@ The two switches in parallel represent an OR gate, output will be high when at l
 
 ![image](https://github.com/user-attachments/assets/786d235c-17eb-4e40-896e-4b721865623e)
 
+Above demonstrates how the subsystem will be configured on a pcb. All the hardware for this subsystem will be implemented on the main input breadboard PCB.
+
 
 
 ## BOM
