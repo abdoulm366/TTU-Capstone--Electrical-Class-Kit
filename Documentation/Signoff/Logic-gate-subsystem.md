@@ -28,7 +28,7 @@ The above image is a schematic of 3 switches, a current limiting resitor and a L
 If we are analyzing the current constraint, it shall not be less thant 15 mA as it is specified in the datasheet [1]. Since the arduino is operating on 5v [2], and the foward voltage of the LED is 2.2V [1], our actual voltage is 5V - 2.2V = 3.8V. Our subsystem will need a current limiting resistor to limit the current throught the LEDs. V = RI => R = $\frac{v}{I}$.     
 V = 3.8V, I = 15 mA.   
 
-R = $\frac{3.8}{0.015}$ = 253 ohms. To keep the current above 15mA, a 220 ohm resistor is perfect because it brings the current to about 17.7mA with a voltage of 3.8V.
+R = $\frac{3.8}{0.015}$ = 253 ohms. To keep the current above 15mA, a 220 ohm resistor is perfect because it brings the current to about 17.7mA with a voltage of 3.8V. Moreover, this current is foward biased through the LED.
 
 How will the Subsystem work? 
 The user will interact with the primary screen first and then the switches. Selecting which mode to go into through the screen, the user will then interact with the switches to move the car. In AND mode the car drives forward when switch 1 and 2 are flipped. This simulates an AND gate inside the micro-controller. If switch 3 if flipped, the output of the AND gate is inverted. In OR mode the car drives forward when switch 1 or 2 are pressed. This simulates an OR gate inside the micro-controller. If switch 3 if flipped the output of the OR gate is inverted. The LED output will turn on whenever the car is moving indicating that a gate is being used. 
@@ -70,9 +70,9 @@ The two switches in parallel represent an OR gate, output will be high when at l
 | 1          | 0        |
 
 ## PCB Layout
-![image](https://github.com/user-attachments/assets/3f45ed0d-a5c9-421b-a379-0d246bbc472f)
-![image](https://github.com/user-attachments/assets/9594b8c4-4765-4cfc-bac9-cb0a07af2a6f)
-![image](https://github.com/user-attachments/assets/7bfb2ec6-5f4d-459d-a661-68dbb1f99cda)
+
+![image](https://github.com/user-attachments/assets/786d235c-17eb-4e40-896e-4b721865623e)
+
 
 
 ## BOM
