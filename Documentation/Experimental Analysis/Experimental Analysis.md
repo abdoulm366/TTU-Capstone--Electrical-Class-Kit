@@ -96,7 +96,9 @@ Constraint: The kit's speed shall be limited to a max of -3 to 3 mph, since high
 
 The constraint from the conceptual design says the car shall go no more than 3 mph forward and backward. As shown in figure 12 and 13, the team tested how many seconds it takes for the car to go 35 inches. The math is shown and the car goes 0.685 mph or 0.7 mph which meets the constraint.
 
+Constraint: The menu should allow easy navigation at any point with buttons such as "Return to Menu" or "Next" or "Back".
 
+The LCD screen will have a very user-friendly menu where any user can move back and forth through the menus without having to fully reset. The screen itself is set up so that it has an interactive menu that will say user manual, activities, etc. This allows the user to step their way into an activity or user manual so they know where they are at. It will step them through the menu with next, back, or challenge buttons so they can go forward or back out if needed. This is sufficient for this design to meet the easy navigation constraint. 
 
 
 
