@@ -57,7 +57,7 @@ As shown above, the breadbaord system is capable of detecting two unique compone
 As shown in both Figure 6 and Figure 7, the breadboard can make measurements in under 100ms. This value is well within the constraint of 1.25 seconds between readings, so, for both the speed and the precision of the measurement circuit of the project, the constraints have been met adequately.
 
 
-Constraint: The LEDs in this subsystem shall take no less than 3V and no more than 7V to prevent damage and to ensure safe and correct operation. 
+*Constraint: The LEDs in this subsystem shall take no less than 3V and no more than 7V to prevent damage and to ensure safe and correct operation.*
 
 This was the LED subsystem detail design constraint that was actually affecting to the project design.
 
@@ -78,7 +78,7 @@ The figure above shows that we measured within the 3-7 volt range and that prove
 
 Figure 11: Shows the cars error margin.
 
-Constraint: The system must detect if the car is veering off then immediately correct it and put it back on track. For this, the system must operate within the accepted error margin of 1.18 inches for effective correction.
+*Constraint: The system must detect if the car is veering off then immediately correct it and put it back on track. For this, the system must operate within the accepted error margin of 1.18 inches for effective correction.*
 
 As shown in figure 11, the constraint from the closed loop control subsystem is a little off. The error margin is about 3 to 4 inches or 1.5 to 2 inches on each side of the IMU chip. It still allows for effective correction, but the car corrects itself in a wider area.
 
@@ -92,11 +92,11 @@ Figure 12: Shows the testing of the cars speed.
 
 Figure 13: Shows the math to figure out the cars speed.
 
-Constraint: The kit's speed shall be limited to a max of -3 to 3 mph, since higher speeds may cause the car's motor to overheat.
+*Constraint: The kit's speed shall be limited to a max of -3 to 3 mph, since higher speeds may cause the car's motor to overheat.*
 
 The constraint from the conceptual design says the car shall go no more than 3 mph forward and backward. As shown in figure 12 and 13, the team tested how many seconds it takes for the car to go 35 inches. The math is shown and the car goes 0.685 mph or 0.7 mph which meets the constraint.
 
-Constraint: The menu should allow easy navigation at any point with buttons such as "Return to Menu" or "Next" or "Back".
+*Constraint: The menu should allow easy navigation at any point with buttons such as "Return to Menu" or "Next" or "Back".*
 
 The LCD screen will have a very user-friendly menu where any user can move back and forth through the menus without having to fully reset. The screen itself is set up so that it has an interactive menu that will say user manual, activities, etc. This allows the user to step their way into an activity or user manual so they know where they are at. It will step them through the menu with next, back, or challenge buttons so they can go forward or back out if needed. This is sufficient for this design to meet the easy navigation constraint. 
 
