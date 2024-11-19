@@ -115,7 +115,20 @@ Figure 15: Shows the user friendly switch
 
 These switches are easy to control and require no additional tools to help control the subsystem. This switch change will help ensure a user-friendly experience. 
 
+*Current Regulation Constraint: current through the LED shall be no less then 15mA.* 
 
+For this constraint within the logic gates subsystem we tested the voltage going into the switches and made sure it was 5 volts or close, after that we proceeded to calculate based on the voltage coming in and the LEDs forward voltage the value of resistance that we would need to confirm that the current never can go below 15mA with the voltage that is being applied. 
+
+<img src="https://github.com/user-attachments/assets/7fdfee36-4813-4f52-943f-6f3f2e84d14d" width="600" height="600">
+
+Figure 16. Measuring voltage into the switches. 
+
+![IMG_6077](https://github.com/user-attachments/assets/ac4c876f-c0d7-4f51-bce4-4e00d6bd31dd)
+
+Figure 17. Voltage Read from the DMM when measuring. 
+
+
+Figure 18. Calculations on Paper. 
 
 
 
