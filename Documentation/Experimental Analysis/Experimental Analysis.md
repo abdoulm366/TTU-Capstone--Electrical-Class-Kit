@@ -72,7 +72,7 @@ As you can see in Figure 9. we tested the voltage using a multimeter to determin
 Figure 10. The voltage that we measured and read at the LED input pins. 
 
 
-The figure above shows that we measured within the 3-7 volt range and that proves that the constraint of no less than 3V and no more than 7V to prevent damage and to ensure safe and correct operation was met since the multimeter read 4.705 volts which is between 3 volts and 7 volts which is sufficient to operate the LEDs without also supplying to much power. 
+The figure above shows that we measured within the 3-7 volt range and that proves that the constraint of no less than 3V and no more than 7V to prevent damage and to ensure safe and correct operation was met since the multimeter read 4.705 volts which is between 3 volts and 7 volts which is sufficient to operate the LEDs without also supplying too much power. 
 
 ![image](https://github.com/user-attachments/assets/0f404413-f10c-4217-8699-7dfbe2a07d9d)
 
@@ -87,12 +87,17 @@ As shown in figure 11, the constraint from the closed loop control subsystem is 
 
 Figure 12: Shows the testing of the cars speed.
 
-![image](https://github.com/user-attachments/assets/cd99e899-ebef-4453-85ea-dc2e95bacbbf)
+Using the 35-inch measurement stick and the time it took to go that distance this constraint was calculated below to convert to miles per hour of the car: 
+
+ $\frac{35}{2.88}$ = 12.15
+
+ MPH = $12.15 * \frac{3600}{63380}$
+
+ MPH = 0.685 mph
 
 
-Figure 13: Shows the math to figure out the cars speed.
 
-*Car Speed Constraint: The kit's speed shall be limited to a max of -3 to 3 mph, since higher speeds may cause the car's motor to overheat.*
+*Car Speed Constraint: The kit's speed shall be limited to a max of 3 mph, since higher speeds may cause the car's motor to overheat.*
 
 The constraint from the conceptual design says the car shall go no more than 3 mph forward and backward. As shown in figure 12 and 13, the team tested how many seconds it takes for the car to go 35 inches. The math is shown and the car goes 0.685 mph or 0.7 mph which meets the constraint.
 
@@ -117,7 +122,7 @@ These switches are easy to control and require no additional tools to help contr
 
 *Current Regulation Constraint: current through the LED shall be no less then 15mA.* 
 
-For this constraint within the logic gates subsystem we tested the voltage going into the switches and made sure it was 5 volts or close, after that we proceeded to calculate based on the voltage coming in and the LEDs forward voltage the value of resistance that we would need to confirm that the current never can go below 15mA with the voltage that is being applied. 
+For this constraint within the logic gates subsystem we tested the voltage going into the switches and made sure it was 5 volts, after that we proceeded to calculate based on the voltage coming in and the LEDs forward voltage the value of resistance that we would need to confirm that the current never can go below 15mA with the voltage that is being applied. 
 
 <img src="https://github.com/user-attachments/assets/7fdfee36-4813-4f52-943f-6f3f2e84d14d" width="600" height="600">
 
@@ -127,8 +132,13 @@ Figure 16. Measuring voltage into the switches.
 
 Figure 17. Voltage Read from the DMM when measuring. 
 
+$R  = \frac{5 - 2.0}{0.015}$
 
-Figure 18. Calculations on Paper. 
+$200 Ω  = \frac{5 - 2.0}{0.015}$
+
+$R = 200 Ω$
+
+Here are the calculations to show that 200 ohms is the maximum resistance we can use. This subsystem will use 200 ohm resistors to meet this constraint and allow the LEDs to operate at sufficient lighting. This also will make sure the user interaction with the logic gates is much easier and visual to the users along with the movement of the car. This calculation also would meet any overcurrent constraints as well. 
 
 
 
