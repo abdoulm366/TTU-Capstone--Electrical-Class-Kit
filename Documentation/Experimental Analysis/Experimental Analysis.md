@@ -101,6 +101,22 @@ The constraint from the conceptual design says the car shall go no more than 3 m
 The LCD screen will have a very user-friendly menu where any user can move back and forth through the menus without having to fully reset. The screen itself is set up so that it has an interactive menu that will say user manual, activities, etc. This allows the user to step their way into an activity or user manual so they know where they are at. It will step them through the menu with next, back, or challenge buttons so they can go forward or back out if needed. This is sufficient for this design to meet the easy navigation constraint. 
 
 
+*User Friendly Constraint: The kit shall contain clear instructions, labeled components, and user-friendly interface.*
+
+After ordering the parts for each subsystem, we noticed that the switches controlling the logic gate subsystem were hard to use. To use the switches the team needed a pencil to switch between states because they were too small to be controlled by hand. This led the team to redesign the subsystem with a more friendly component.
+
+<img src="https://github.com/user-attachments/assets/b5baf72d-64cf-4072-9590-d7e2c20aa571" width="300" height="300">
+
+Figure 14: Shows the orginal switch design
+
+<img src="https://github.com/user-attachments/assets/9633c87e-155d-4bbb-a03e-5fe9f0c4716a" width="300" height="300">
+
+Figure 15: Shows the user friendly switch
+
+These switches are easy to control and require no additional tools to help control the subsystem. This switch change will help ensure a user-friendly experience. 
+
+
+
 
 
 
